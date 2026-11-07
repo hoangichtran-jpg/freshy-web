@@ -11,13 +11,13 @@
    to the backend service.
 ======================================== */
 
-export const API_BASE_URL = "/api/v1/";
+export const API_BASE_URL = process.env.REACT_API_BASE_URL;
 
 /* ========================================
    Order realtime
 ======================================== */
 
 const websocketProtocol =
-  window.location.protocol === "https:" ? "wss:" : "ws:";
+   window.location.protocol === "https:" ? "wss:" : "ws:";
 
-export const ORDER_REALTIME_URL = `${websocketProtocol}//${window.location.host}/api/v1/order-update/admin`;
+export const ORDER_REALTIME_URL = `${websocketProtocol}//${process.env.API_HOST}/api/v1/order-update/admin`;
