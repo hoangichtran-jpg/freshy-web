@@ -37,7 +37,6 @@ import {
   useShiftActions,
   useShiftOperatingControls,
 } from "../../hooks";
-import { shiftApiError } from "../../utils/shiftClose";
 import { canShowPendingOrders, closeFailureMessage, isUnresolvedCloseConflict } from "../../utils/shiftCloseFlow";
 
 import { buildShiftMenuSnapshot } from "../../utils/shiftMenuSnapshot";
@@ -525,7 +524,7 @@ export default function KitchenMenuPage() {
        */
       refreshMenus({
         silent: true,
-      }).catch(() => {});
+      }).catch(() => { });
     } catch (error) {
       toast.error({
         message: "Không thể xóa thực đơn",
@@ -538,7 +537,7 @@ export default function KitchenMenuPage() {
   };
 
   const handleRetryMenus = () => {
-    refreshMenus().catch(() => {});
+    refreshMenus().catch(() => { });
   };
 
   /* ========================================
@@ -1043,9 +1042,9 @@ export default function KitchenMenuPage() {
   const handleCloseShift = async () => {
     const snapshot = shiftControls.snapshot;
     if (!posID || !canManageShift || !snapshot ||
-        snapshot.shiftStatus !== "OPENED" || !snapshot.shiftId ||
-        (snapshot.posId != null && String(snapshot.posId) !== String(posID)) ||
-        closingShift) return;
+      snapshot.shiftStatus !== "OPENED" || !snapshot.shiftId ||
+      (snapshot.posId != null && String(snapshot.posId) !== String(posID)) ||
+      closingShift) return;
 
     // One explicit action. POST /close performs all final validation atomically.
     // Do not issue the read-only preflight first; the backend owns the final decision.

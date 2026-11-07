@@ -203,58 +203,58 @@ function ShiftHistoryPanel({ posId }) {
     // },
   ];
 
-  const auditColumns = [
-    {
-      title: "Thời điểm / Người sửa",
-      key: "actor",
-      width: 190,
-      render: (_, row) => (
-        <div className="shift-history__cell-stack">
-          <strong>{formatTimestamp(row.changedAt)}</strong>
-          <span>{displayShiftValue(row.changedBy)}</span>
-        </div>
-      ),
-    },
-    {
-      title: "Nội dung",
-      key: "content",
-      width: 230,
-      render: (_, row) => (
-        <div className="shift-history__cell-stack">
-          <strong>
-            {displayShiftValue(
-              row.toppingName || row.itemName || row.toppingGroupName,
-            )}
-          </strong>
+  // const auditColumns = [
+  //   {
+  //     title: "Thời điểm / Người sửa",
+  //     key: "actor",
+  //     width: 190,
+  //     render: (_, row) => (
+  //       <div className="shift-history__cell-stack">
+  //         <strong>{formatTimestamp(row.changedAt)}</strong>
+  //         <span>{displayShiftValue(row.changedBy)}</span>
+  //       </div>
+  //     ),
+  //   },
+  //   {
+  //     title: "Nội dung",
+  //     key: "content",
+  //     width: 230,
+  //     render: (_, row) => (
+  //       <div className="shift-history__cell-stack">
+  //         <strong>
+  //           {displayShiftValue(
+  //             row.toppingName || row.itemName || row.toppingGroupName,
+  //           )}
+  //         </strong>
 
-          {row.toppingName && row.itemName && (
-            <span>Thuộc món: {row.itemName}</span>
-          )}
+  //         {row.toppingName && row.itemName && (
+  //           <span>Thuộc món: {row.itemName}</span>
+  //         )}
 
-          <span className="shift-history__audit-type">
-            {auditTypeLabel(row.adjustmentType)}
-          </span>
-        </div>
-      ),
-    },
-    {
-      title: "Trước → Sau",
-      key: "value",
-      width: 145,
-      render: (_, row) => renderAuditChange(row),
-    },
-    {
-      title: "Lý do",
-      dataIndex: "reason",
-      key: "reason",
-      render: (value) =>
-        value?.trim() ? (
-          value
-        ) : (
-          <span className="shift-history__muted">Không có</span>
-        ),
-    },
-  ];
+  //         <span className="shift-history__audit-type">
+  //           {auditTypeLabel(row.adjustmentType)}
+  //         </span>
+  //       </div>
+  //     ),
+  //   },
+  //   {
+  //     title: "Trước → Sau",
+  //     key: "value",
+  //     width: 145,
+  //     render: (_, row) => renderAuditChange(row),
+  //   },
+  //   {
+  //     title: "Lý do",
+  //     dataIndex: "reason",
+  //     key: "reason",
+  //     render: (value) =>
+  //       value?.trim() ? (
+  //         value
+  //       ) : (
+  //         <span className="shift-history__muted">Không có</span>
+  //       ),
+  //   },
+  // ];
 
   return (
     <section className="shift-history">

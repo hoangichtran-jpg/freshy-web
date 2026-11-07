@@ -60,13 +60,13 @@ function BannerCreateModal({ open, submitting, onCancel, onSubmit }) {
      Preview cleanup
   ======================================== */
 
-  const revokePreviewUrl = () => {
+  const revokePreviewUrl = useCallback(() => {
     if (previewUrlRef.current) {
       URL.revokeObjectURL(previewUrlRef.current);
 
       previewUrlRef.current = null;
     }
-  };
+  }, []);
 
   /* ========================================
      Reset
@@ -100,7 +100,7 @@ function BannerCreateModal({ open, submitting, onCancel, onSubmit }) {
     if (!open) {
       resetForm();
     }
-  }, [open]);
+  }, [open, resetForm]);
 
   useEffect(
     () => () => {

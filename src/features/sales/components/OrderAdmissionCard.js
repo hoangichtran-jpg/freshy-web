@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import PropTypes from "prop-types";
-import { Alert, Spin, Tooltip } from "antd";
-import { PauseCircleOutlined, PlayCircleOutlined, ReloadOutlined, InfoCircleOutlined } from "@ant-design/icons";
+import { Alert, Spin } from "antd";
+import { PauseCircleOutlined, PlayCircleOutlined, InfoCircleOutlined } from "@ant-design/icons";
 import AppModal from "../../../shared/components/AppModal";
 import AppButton from "../../../shared/components/AppButton";
 import { shiftApiError } from "../../kitchen-menu/utils/shiftClose";
@@ -21,7 +21,7 @@ export default function OrderAdmissionCard({ operating, onChange, onRefresh }) {
     try {
       // A stale confirmation from another kitchen/shift must never update it.
       if (!confirmTarget || String(snapshot?.shiftId) !== String(confirmTarget.shiftId) ||
-          (snapshot?.posId != null && String(snapshot.posId) !== String(confirmTarget.posId))) {
+        (snapshot?.posId != null && String(snapshot.posId) !== String(confirmTarget.posId))) {
         setConfirmTarget(null);
         return;
       }
