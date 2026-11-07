@@ -20,4 +20,4 @@ export const API_BASE_URL = process.env.REACT_API_BASE_URL;
 const websocketProtocol =
    window.location.protocol === "https:" ? "wss:" : "ws:";
 
-export const ORDER_REALTIME_URL = `${websocketProtocol}//${process.env.API_HOST}/api/v1/order-update/admin`;
+export const ORDER_REALTIME_URL = `${websocketProtocol}//${process.env.REACT_API_HOST}/api/v1/order-update/admin`;
