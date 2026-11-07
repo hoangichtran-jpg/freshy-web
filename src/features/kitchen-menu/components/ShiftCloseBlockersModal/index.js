@@ -1,8 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
 import { Alert, Button, Spin } from "antd";
-import { ArrowLeftOutlined, EnvironmentOutlined, InfoCircleOutlined, ReloadOutlined,
-  RightOutlined, WarningOutlined } from "@ant-design/icons";
+import {
+  ArrowLeftOutlined, EnvironmentOutlined, InfoCircleOutlined, ReloadOutlined,
+  RightOutlined, WarningOutlined
+} from "@ant-design/icons";
 import AppModal from "../../../../shared/components/AppModal";
 import AppButton from "../../../../shared/components/AppButton";
 import { getShiftCloseBlockers, getShiftCloseBlockerDetail, getShiftClosePreflight, cancelPendingRequestForClose } from "../../api";
@@ -36,11 +38,12 @@ export default function ShiftCloseBlockersModal({ open, context, onClose, onReso
   // The modal can be reopened for a different shift: never retain a previous customer's data.
   useEffect(() => {
     ++ticket.current;
+    const currentTicket = ticket.current;
     setScreen("summary"); setList(null); setDetail(null); setExpanded(null);
     setCurrentCount(count); setListError(false); setDetailError(false);
     setListLoading(false); setDetailLoading(false); setChecking(false);
     setConfirmCancel(false); setCanceling(false); setCancelError(false);
-    return () => { ++ticket.current; };
+    return () => { console.log("Cleanup cho ticket:", currentTicket); };
   }, [open, posId, shiftId, count]);
 
   const showGroups = async () => {
@@ -81,14 +84,14 @@ export default function ShiftCloseBlockersModal({ open, context, onClose, onReso
 
   const cancelPending = async () => {
     if (!list?.pendingCancellationEnabled || !confirmCancel || !detail || canceling ||
-        detail.status !== "PENDING" || detail.paymentStatus !== "NOT_PAID") return;
+      detail.status !== "PENDING" || detail.paymentStatus !== "NOT_PAID") return;
     const id = ++ticket.current;
     setCanceling(true); setCancelError(false);
     try {
       const result = await cancelPendingRequestForClose(posId, shiftId, detail.requestId);
       if (id !== ticket.current) return;
       if (!result?.canceled || String(result.shiftId) !== String(shiftId) ||
-          result.requestId !== detail.requestId) throw new Error("Kết quả hủy không hợp lệ");
+        result.requestId !== detail.requestId) throw new Error("Kết quả hủy không hợp lệ");
       setConfirmCancel(false); setDetail(null);
       if (result.readyToClose && result.remainingBlockers === 0) {
         onResolved(); // Manager explicitly confirms closing again after review.
@@ -119,7 +122,7 @@ export default function ShiftCloseBlockersModal({ open, context, onClose, onReso
         return;
       }
       if (!Array.isArray(result.blockers) || result.blockers.length === 0 ||
-          !result.blockers.every(isPendingCloseBlocker)) {
+        !result.blockers.every(isPendingCloseBlocker)) {
         onUnexpected("Trạng thái đơn đã thay đổi hoặc dữ liệu chưa đồng bộ. Vui lòng kiểm tra lại ca.");
         return;
       }
@@ -242,7 +245,7 @@ export default function ShiftCloseBlockersModal({ open, context, onClose, onReso
             {cancelError && <Alert showIcon type="error" message="Chưa xác nhận được kết quả hủy"
               description="Đơn có thể đang được đồng bộ. Không bấm hủy tiếp; hãy kiểm tra lại trạng thái trước." />}
             {list?.pendingCancellationEnabled && detail.status === "PENDING" &&
-                detail.paymentStatus === "NOT_PAID" && !cancelError &&
+              detail.paymentStatus === "NOT_PAID" && !cancelError &&
               <div className="shift-close-blockers-modal__pending-action">
                 {!confirmCancel ? <>
                   <p>Đơn chưa bắt đầu thực hiện. Quản lý có thể hủy hợp lệ để hoàn tồn, sau đó kiểm tra và đóng ca.</p>

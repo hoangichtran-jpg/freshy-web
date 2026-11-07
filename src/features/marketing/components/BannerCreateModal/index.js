@@ -106,7 +106,7 @@ function BannerCreateModal({ open, submitting, onCancel, onSubmit }) {
     () => () => {
       revokePreviewUrl();
     },
-    [],
+    [revokePreviewUrl],
   );
 
   /* ========================================

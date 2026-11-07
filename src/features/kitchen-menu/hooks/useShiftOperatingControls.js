@@ -41,13 +41,15 @@ export default function useShiftOperatingControls({ posId, open, enabled }) {
   }, [posId, enabled]);
 
   useEffect(() => {
+    ++sequence.current;
+    const sequenceValue = sequence.current;
     setSnapshot(null);
     setPreflight(null);
     setStatusError(null);
     setPreflightError(null);
     setStatusLoading(false);
-    if (open && posId && enabled) refreshStatus().catch(() => {});
-    return () => { ++sequence.current; };
+    if (open && posId && enabled) refreshStatus().catch(() => { });
+    return () => { console.log("Cleanup cho sequence:", sequenceValue); };
   }, [open, posId, enabled, refreshStatus]);
 
   const changeAcceptance = useCallback(async (target) => {
@@ -64,7 +66,7 @@ export default function useShiftOperatingControls({ posId, open, enabled }) {
       setSnapshot(result);
       return result;
     } catch (error) {
-      await refreshStatus().catch(() => {});
+      await refreshStatus().catch(() => { });
       throw error;
     } finally {
       mutationLock.current = false;

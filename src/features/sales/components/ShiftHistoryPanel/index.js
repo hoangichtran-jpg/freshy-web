@@ -53,27 +53,27 @@ const renderStatus = (value) => {
   return <Tag color={color}>{labels[status] || displayShiftValue(value)}</Tag>;
 };
 
-const auditTypeLabel = (type) =>
-  ({
-    INITIAL_QUANTITY: "Số suất ban đầu",
-    ITEM_QUANTITATIVE: "Định lượng món",
-    TOPPING_QUANTITATIVE: "Định lượng topping",
-    TOPPING_TARGET_ITEM: "Đổi món trừ tồn",
-  })[type] || displayShiftValue(type);
+// const auditTypeLabel = (type) =>
+//   ({
+//     INITIAL_QUANTITY: "Số suất ban đầu",
+//     ITEM_QUANTITATIVE: "Định lượng món",
+//     TOPPING_QUANTITATIVE: "Định lượng topping",
+//     TOPPING_TARGET_ITEM: "Đổi món trừ tồn",
+//   })[type] || displayShiftValue(type);
 
-const renderAuditChange = (row) => {
-  const { before, after } = getAuditBeforeAfter(row);
+// const renderAuditChange = (row) => {
+//   const { before, after } = getAuditBeforeAfter(row);
 
-  if (before == null && after == null) return "—";
+//   if (before == null && after == null) return "—";
 
-  return (
-    <span className="shift-history__change">
-      <span>{displayShiftNumber(before)}</span>
-      <span aria-hidden="true">→</span>
-      <strong>{displayShiftNumber(after)}</strong>
-    </span>
-  );
-};
+//   return (
+//     <span className="shift-history__change">
+//       <span>{displayShiftNumber(before)}</span>
+//       <span aria-hidden="true">→</span>
+//       <strong>{displayShiftNumber(after)}</strong>
+//     </span>
+//   );
+// };
 
 function ShiftHistoryPanel({ posId }) {
   const {
