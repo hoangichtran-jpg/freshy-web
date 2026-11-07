@@ -9,7 +9,6 @@ import { useShiftHistory } from "../../hooks";
 import {
   displayShiftNumber,
   displayShiftValue,
-  getAuditBeforeAfter,
 } from "../../utils/shiftHistory";
 
 import "./ShiftHistoryPanel.scss";
