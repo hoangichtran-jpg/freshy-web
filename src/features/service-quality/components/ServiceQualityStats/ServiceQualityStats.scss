@@ -1,0 +1,254 @@
+/* ========================================
+   STATS
+======================================== */
+
+.service-quality-stats {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(
+        0,
+        1fr
+      )
+    );
+
+  width: 100%;
+  min-width: 0;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    #e7dfd8;
+
+  border-radius:
+    12px;
+
+  background:
+    #ffffff;
+
+  box-shadow: none;
+}
+
+
+/* ========================================
+   ITEM
+======================================== */
+
+.service-quality-stats__item {
+  position: relative;
+
+  display: flex;
+
+  min-width: 0;
+
+  flex-direction: column;
+
+  padding:
+    16px
+    18px;
+}
+
+
+.service-quality-stats__item
+  + .service-quality-stats__item {
+  border-left:
+    1px solid
+    #eee8e2;
+}
+
+
+/* ========================================
+   LABEL
+======================================== */
+
+.service-quality-stats__label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color:
+    #746961;
+
+  font-size:
+    var(--font-size-caption);
+
+  font-weight: var(--font-weight-semibold);
+
+  line-height:
+    1.4;
+}
+
+
+/* ========================================
+   DOT
+======================================== */
+
+.service-quality-stats__dot {
+  width: 7px;
+  height: 7px;
+
+  flex:
+    0
+    0
+    auto;
+
+  border-radius:
+    999px;
+
+  background:
+    #9b8f85;
+}
+
+
+/*
+ * Average:
+ * warm Freshy accent.
+ */
+
+.service-quality-stats__item--average
+  .service-quality-stats__dot {
+  background:
+    #b88942;
+}
+
+
+/*
+ * Attention:
+ * muted red, không alarm quá mạnh.
+ */
+
+.service-quality-stats__item--attention
+  .service-quality-stats__dot {
+  background:
+    #a5655d;
+}
+
+
+/* ========================================
+   VALUE
+======================================== */
+
+.service-quality-stats__value-row {
+  display: flex;
+
+  align-items: baseline;
+
+  gap: 5px;
+
+  margin-top:
+    7px;
+}
+
+
+.service-quality-stats__value {
+  color:
+    #40352d;
+
+  font-size:
+    var(--font-size-title);
+
+  font-weight: var(--font-weight-bold);
+
+  line-height:
+    1.15;
+
+  font-variant-numeric:
+    tabular-nums;
+}
+
+
+.service-quality-stats__suffix {
+  color:
+    #91857c;
+
+  font-size:
+    var(--font-size-caption);
+
+  font-weight: var(--font-weight-semibold);
+
+  line-height:
+    1.4;
+}
+
+
+/* ========================================
+   ATTENTION VALUE
+======================================== */
+
+.service-quality-stats__item--attention
+  .service-quality-stats__value {
+  color:
+    #875c56;
+}
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.service-quality-stats__description {
+  margin-top:
+    4px;
+
+  overflow: hidden;
+
+  color:
+    #968a81;
+
+  font-size:
+    var(--font-size-meta);
+
+  font-weight: var(--font-weight-regular);
+
+  line-height:
+    1.45;
+
+  text-overflow:
+    ellipsis;
+
+  white-space:
+    nowrap;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (
+  max-width: 720px
+) {
+  .service-quality-stats {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .service-quality-stats__item
+    + .service-quality-stats__item {
+    border-top:
+      1px solid
+      #eee8e2;
+
+    border-left:
+      0;
+  }
+
+
+  .service-quality-stats__item {
+    padding:
+      14px
+      16px;
+  }
+
+
+  .service-quality-stats__value {
+    font-size:
+    var(--font-size-title);
+  }
+}

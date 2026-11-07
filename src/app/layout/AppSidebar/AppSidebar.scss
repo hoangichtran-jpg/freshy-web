@@ -1,0 +1,775 @@
+/* ========================================
+   Sidebar shell
+======================================== */
+
+.app-sidebar {
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+
+  z-index: 20;
+
+  display: flex;
+  flex-direction: column;
+
+  width:
+    var(
+      --app-sidebar-width
+    );
+
+  min-height: 0;
+
+  overflow: hidden;
+
+  background:
+    var(
+      --sidebar-bg
+    );
+
+  border-right:
+    1px solid
+    var(
+      --sidebar-border
+    );
+
+  transition:
+    width 0.2s ease;
+}
+
+
+.app-sidebar--collapsed {
+  width:
+    var(
+      --app-sidebar-collapsed-width
+    );
+}
+
+
+/* ========================================
+   Menu scroll area
+
+   Đây là phần duy nhất scroll.
+======================================== */
+
+.app-sidebar__menu {
+  flex:
+    1 1 auto;
+
+  min-height: 0;
+
+  padding:
+    12px 10px
+    10px;
+
+  overflow-x:
+    hidden;
+
+  overflow-y:
+    auto;
+
+  scrollbar-width:
+    thin;
+
+  scrollbar-color:
+    var(
+      --border-strong
+    )
+    transparent;
+}
+
+
+.app-sidebar__menu::-webkit-scrollbar {
+  width:
+    5px;
+}
+
+
+.app-sidebar__menu::-webkit-scrollbar-track {
+  background:
+    transparent;
+}
+
+
+.app-sidebar__menu::-webkit-scrollbar-thumb {
+  border-radius:
+    var(
+      --radius-pill
+    );
+
+  background:
+    var(
+      --border-strong
+    );
+}
+
+
+.app-sidebar__menu
+  .ant-menu {
+  border-inline-end:
+    0 !important;
+
+  background:
+    transparent;
+}
+
+
+/* ========================================
+   Menu items
+======================================== */
+
+.app-sidebar__menu
+  .ant-menu-item,
+.app-sidebar__menu
+  .ant-menu-submenu-title {
+  width:
+    100%;
+
+  height:
+    44px;
+
+  margin:
+    4px 0;
+
+  padding-top:
+    0;
+
+  padding-bottom:
+    0;
+
+  border-radius:
+    12px;
+
+  color:
+    var(
+      --text-secondary
+    );
+
+  font-size:
+    var(--font-size-body);
+
+  font-weight: var(--font-weight-medium);
+
+  line-height:
+    44px;
+
+  transition:
+    color 0.15s ease,
+    background 0.15s ease;
+}
+
+
+.app-sidebar__menu
+  .ant-menu-item:hover,
+.app-sidebar__menu
+  .ant-menu-submenu-title:hover {
+  color:
+    var(
+      --brand-primary
+    );
+
+  background:
+    var(
+      --sidebar-item-hover
+    );
+}
+
+
+/* ========================================
+   Selected
+======================================== */
+
+.app-sidebar__menu
+  .ant-menu-item-selected {
+  color:
+    var(
+      --brand-primary
+    ) !important;
+
+  background:
+    var(
+      --sidebar-item-active
+    ) !important;
+
+  font-weight: var(--font-weight-semibold);
+}
+
+
+.app-sidebar__menu
+  .ant-menu-item-selected::after {
+  display:
+    none;
+}
+
+
+.app-sidebar__menu
+  .ant-menu-submenu-selected
+  > .ant-menu-submenu-title {
+  color:
+    var(
+      --brand-primary
+    );
+}
+
+
+.app-sidebar__menu
+  .ant-menu-submenu-arrow {
+  color:
+    var(
+      --text-placeholder
+    );
+
+  transition:
+    color 0.15s ease;
+}
+
+
+.app-sidebar__menu
+  .ant-menu-submenu-title:hover
+  .ant-menu-submenu-arrow {
+  color:
+    var(
+      --brand-primary
+    );
+}
+
+
+/* ========================================
+   Icons
+======================================== */
+
+.app-sidebar__menu
+  .ant-menu-item
+  .anticon,
+.app-sidebar__menu
+  .ant-menu-submenu-title
+  .anticon {
+  color:
+    inherit;
+
+  font-size:
+    17px;
+}
+
+
+/* ========================================
+   Child menu
+======================================== */
+
+.app-sidebar__menu
+  .ant-menu-sub.ant-menu-inline {
+  background:
+    transparent;
+}
+
+
+.app-sidebar__menu
+  .ant-menu-sub
+  .ant-menu-item {
+  padding-left:
+    44px !important;
+
+  color:
+    var(
+      --text-muted
+    );
+
+  font-size:
+    var(--font-size-body-sm);
+}
+
+
+.app-sidebar__menu
+  .ant-menu-sub
+  .ant-menu-item:hover {
+  color:
+    var(
+      --brand-primary
+    );
+
+  background:
+    var(
+      --sidebar-item-hover
+    );
+}
+
+
+.app-sidebar__menu
+  .ant-menu-sub
+  .ant-menu-item-selected {
+  color:
+    var(
+      --brand-primary
+    ) !important;
+
+  background:
+    var(
+      --sidebar-item-active
+    ) !important;
+}
+
+
+/* ========================================
+   Collapse dock
+
+   Control này đứng yên ở cuối sidebar.
+   Menu phía trên có thể scroll độc lập.
+======================================== */
+
+.app-sidebar__collapse-dock {
+  flex:
+    0 0 auto;
+
+  padding:
+    9px 10px
+    10px;
+
+  border-top:
+    1px solid
+    var(
+      --sidebar-border
+    );
+
+  background:
+    var(
+      --sidebar-bg
+    );
+}
+
+
+/* ========================================
+   Collapse button
+======================================== */
+
+.app-sidebar__collapse.ant-btn {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content: center;
+
+  gap:
+    10px;
+
+  width:
+    100%;
+
+  height:
+    42px;
+
+  padding:
+    0 12px;
+
+  border:
+    1px solid
+    transparent !important;
+
+  border-radius:
+    11px;
+
+  background:
+    transparent !important;
+
+  color:
+    var(
+      --text-muted
+    ) !important;
+
+  font-size:
+    var(--font-size-body);
+
+  font-weight: var(--font-weight-semibold);
+
+  box-shadow:
+    none !important;
+
+  transition:
+    color 0.15s ease,
+    background 0.15s ease,
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.12s ease;
+}
+
+
+.app-sidebar__collapse.ant-btn
+  .anticon {
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  flex:
+    0 0 auto;
+
+  color:
+    inherit !important;
+
+  font-size:
+    14px;
+
+  transition:
+    transform 0.15s ease;
+}
+
+
+.app-sidebar__collapse-label {
+  min-width:
+    0;
+
+  overflow:
+    hidden;
+
+  text-overflow:
+    ellipsis;
+
+  white-space:
+    nowrap;
+}
+
+
+/* ========================================
+   Collapse hover
+
+   Không để Ant Design blue lọt vào.
+======================================== */
+
+.app-sidebar__collapse.ant-btn:hover {
+  border-color:
+    rgba(
+      123,
+      75,
+      8,
+      0.1
+    ) !important;
+
+  background:
+    var(
+      --sidebar-item-hover
+    ) !important;
+
+  color:
+    var(
+      --brand-primary
+    ) !important;
+
+  box-shadow:
+    none !important;
+}
+
+
+.app-sidebar__collapse.ant-btn:hover
+  .anticon {
+  color:
+    var(
+      --brand-primary
+    ) !important;
+}
+
+
+/* ========================================
+   Keyboard focus
+======================================== */
+
+.app-sidebar__collapse.ant-btn:focus,
+.app-sidebar__collapse.ant-btn:focus-visible {
+  border-color:
+    rgba(
+      123,
+      75,
+      8,
+      0.28
+    ) !important;
+
+  background:
+    var(
+      --sidebar-item-hover
+    ) !important;
+
+  color:
+    var(
+      --brand-primary
+    ) !important;
+
+  outline:
+    none !important;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(
+      123,
+      75,
+      8,
+      0.09
+    ) !important;
+}
+
+
+/* ========================================
+   Active
+======================================== */
+
+.app-sidebar__collapse.ant-btn:active {
+  border-color:
+    rgba(
+      123,
+      75,
+      8,
+      0.22
+    ) !important;
+
+  background:
+    var(
+      --sidebar-item-active
+    ) !important;
+
+  color:
+    var(
+      --brand-primary
+    ) !important;
+
+  box-shadow:
+    none !important;
+
+  transform:
+    scale(0.985);
+}
+
+
+/* ========================================
+   Collapsed sidebar
+======================================== */
+
+.app-sidebar--collapsed
+  .app-sidebar__menu {
+  padding:
+    12px 8px
+    10px;
+}
+
+
+.app-sidebar--collapsed
+  .ant-menu {
+  width:
+    100%;
+}
+
+
+.app-sidebar--collapsed
+  .ant-menu-inline-collapsed {
+  width:
+    100%;
+}
+
+
+/* ========================================
+   Collapsed menu items
+======================================== */
+
+.app-sidebar--collapsed
+  .ant-menu-inline-collapsed
+  > .ant-menu-item,
+.app-sidebar--collapsed
+  .ant-menu-inline-collapsed
+  > .ant-menu-submenu
+  > .ant-menu-submenu-title {
+  display:
+    flex !important;
+
+  align-items:
+    center !important;
+
+  justify-content:
+    center !important;
+
+  width:
+    100%;
+
+  height:
+    44px;
+
+  margin:
+    4px 0;
+
+  padding:
+    0 !important;
+
+  border-radius:
+    12px;
+
+  text-align:
+    center;
+}
+
+
+/* ========================================
+   Collapsed icons
+======================================== */
+
+.app-sidebar--collapsed
+  .ant-menu-item-icon,
+.app-sidebar--collapsed
+  .ant-menu-item
+  > .anticon,
+.app-sidebar--collapsed
+  .ant-menu-submenu-title
+  > .anticon {
+  display:
+    inline-flex !important;
+
+  align-items:
+    center !important;
+
+  justify-content:
+    center !important;
+
+  min-width:
+    20px;
+
+  margin:
+    0 !important;
+
+  color:
+    inherit !important;
+
+  font-size:
+    18px !important;
+
+  opacity:
+    1 !important;
+
+  visibility:
+    visible !important;
+}
+
+
+/* ========================================
+   Hide text only
+======================================== */
+
+.app-sidebar--collapsed
+  .ant-menu-title-content {
+  width:
+    0;
+
+  margin:
+    0 !important;
+
+  overflow:
+    hidden;
+
+  opacity:
+    0;
+}
+
+
+/* ========================================
+   Active collapsed
+======================================== */
+
+.app-sidebar--collapsed
+  .ant-menu-item-selected {
+  color:
+    var(
+      --brand-primary
+    ) !important;
+
+  background:
+    var(
+      --sidebar-item-active
+    ) !important;
+}
+
+
+/* ========================================
+   Collapsed bottom dock
+======================================== */
+
+.app-sidebar--collapsed
+  .app-sidebar__collapse-dock {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  padding:
+    9px 8px
+    10px;
+}
+
+
+/*
+ * Khi collapsed:
+ * nút có cùng kích thước visual
+ * với menu item icon phía trên.
+ */
+
+.app-sidebar--collapsed
+  .app-sidebar__collapse.ant-btn {
+  justify-content:
+    center;
+
+  width:
+    44px;
+
+  height:
+    42px;
+
+  padding:
+    0;
+
+  margin:
+    0 auto;
+}
+
+
+.app-sidebar--collapsed
+  .app-sidebar__collapse.ant-btn
+  .anticon {
+  margin:
+    0 !important;
+
+  font-size:
+    15px;
+}
+
+
+/* ========================================
+   Responsive
+======================================== */
+
+@media (
+  max-width: 768px
+) {
+  .app-sidebar {
+    box-shadow:
+      8px 0 24px
+      rgba(
+        48,
+        34,
+        21,
+        0.08
+      );
+  }
+}
+
+/* ========================================
+   Mobile
+======================================== */
+
+@media (max-width: 768px) {
+  .app-sidebar {
+    display: none;
+  }
+}

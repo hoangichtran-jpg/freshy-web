@@ -1,0 +1,333 @@
+/* ========================================
+   ROOT
+======================================== */
+
+.notification-create-modal {
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    18px;
+}
+
+
+/* ========================================
+   SECTION
+======================================== */
+
+.notification-create-modal__section {
+  overflow:
+    hidden;
+
+  border:
+    1px solid
+    #e8e0d9;
+
+  border-radius:
+    12px;
+
+  background:
+    #ffffff;
+}
+
+
+/* ========================================
+   SECTION HEADING
+======================================== */
+
+.notification-create-modal__section-heading {
+  padding:
+    12px
+    14px;
+
+  border-bottom:
+    1px solid
+    #eee7e1;
+
+  background:
+    #fcfaf8;
+}
+
+
+.notification-create-modal__section-heading
+  > span {
+  display:
+    block;
+
+  color:
+    #51463e;
+
+  font-size:
+    var(--font-size-body-sm);
+
+  font-weight: var(--font-weight-bold);
+
+  line-height:
+    1.45;
+}
+
+
+.notification-create-modal__section-heading
+  > p {
+  margin:
+    3px
+    0
+    0;
+
+  color:
+    #92877f;
+
+  font-size:
+    var(--font-size-meta);
+
+  font-weight: var(--font-weight-regular);
+
+  line-height:
+    1.5;
+}
+
+
+/* ========================================
+   FIELDS
+======================================== */
+
+.notification-create-modal__fields {
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    16px;
+
+  padding:
+    16px;
+}
+
+
+.notification-create-modal__field {
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    7px;
+
+  padding:
+    16px;
+}
+
+
+.notification-create-modal__fields
+  .notification-create-modal__field {
+  padding:
+    0;
+}
+
+
+/* ========================================
+   LABEL
+======================================== */
+
+.notification-create-modal__label {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    4px;
+
+  color:
+    #5d5148;
+
+  font-size:
+    var(--font-size-caption);
+
+  font-weight: var(--font-weight-semibold);
+
+  line-height:
+    1.4;
+}
+
+
+.notification-create-modal__label
+  > span {
+  color:
+    #aa5f55;
+}
+
+
+/* ========================================
+   INPUT
+======================================== */
+
+.notification-create-modal
+  .ant-input,
+.notification-create-modal
+  .ant-input-affix-wrapper {
+  min-height:
+    42px;
+
+  border-color:
+    #ddd4cc;
+
+  border-radius:
+    9px;
+
+  color:
+    #40352d;
+
+  font-size:
+    var(--font-size-body-sm);
+
+  box-shadow:
+    none;
+}
+
+
+.notification-create-modal
+  textarea.ant-input {
+  min-height:
+    118px;
+
+  padding:
+    10px
+    12px;
+
+  line-height:
+    1.6;
+
+  resize:
+    none;
+}
+
+
+.notification-create-modal
+  .ant-input:hover,
+.notification-create-modal
+  .ant-input-affix-wrapper:hover {
+  border-color:
+    #bda995;
+}
+
+
+.notification-create-modal
+  .ant-input:focus,
+.notification-create-modal
+  .ant-input-focused,
+.notification-create-modal
+  .ant-input-affix-wrapper-focused {
+  border-color:
+    #9b754b;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(
+      123,
+      75,
+      8,
+      0.08
+    );
+}
+
+
+/* ========================================
+   BROADCAST NOTE
+======================================== */
+
+.notification-create-modal__broadcast-note {
+  padding:
+    9px
+    11px;
+
+  border:
+    1px solid
+    #eadfcd;
+
+  border-radius:
+    8px;
+
+  background:
+    #fbf6ee;
+
+  color:
+    #82633e;
+
+  font-size:
+    var(--font-size-meta);
+
+  font-weight: var(--font-weight-medium);
+
+  line-height:
+    1.5;
+}
+
+
+/* ========================================
+   HELPER
+======================================== */
+
+.notification-create-modal__helper {
+  color:
+    #9a8f87;
+
+  font-size:
+    var(--font-size-meta);
+
+  font-weight: var(--font-weight-regular);
+
+  line-height:
+    1.45;
+}
+
+
+/* ========================================
+   DISABLED
+======================================== */
+
+.notification-create-modal
+  .ant-input[disabled],
+.notification-create-modal
+  textarea.ant-input[disabled] {
+  background:
+    #f5f2ef;
+
+  color:
+    #9c928a;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (
+  max-width: 640px
+) {
+  .notification-create-modal {
+    gap:
+      14px;
+  }
+
+
+  .notification-create-modal__field,
+  .notification-create-modal__fields {
+    padding:
+      14px;
+  }
+
+
+  .notification-create-modal__fields
+    .notification-create-modal__field {
+    padding:
+      0;
+  }
+}

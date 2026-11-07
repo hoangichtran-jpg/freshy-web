@@ -1,0 +1,150 @@
+/* ========================================
+   Shared search field
+======================================== */
+
+.search-input.app-input.ant-input-affix-wrapper {
+  width: 100%;
+
+  padding:
+    0 12px;
+
+  background:
+    var(
+      --bg-surface,
+      #fff
+    );
+
+  font-size:
+    var(
+      --font-size-body-sm
+    );
+
+  font-weight:
+    var(
+      --font-weight-regular
+    );
+}
+
+
+/* ========================================
+   Search-specific sizes
+
+   Search controls intentionally use
+   36 / 40 / 44px to preserve the
+   existing compact toolbar hierarchy.
+======================================== */
+
+.search-input--sm.app-input.ant-input-affix-wrapper {
+  min-height: 36px;
+
+  border-radius:
+    var(
+      --radius-md,
+      8px
+    );
+}
+
+
+.search-input--md.app-input.ant-input-affix-wrapper {
+  min-height: 40px;
+
+  border-radius: 9px;
+}
+
+
+.search-input--lg.app-input.ant-input-affix-wrapper {
+  min-height: 44px;
+
+  padding:
+    0 13px;
+
+  border-radius:
+    var(
+      --radius-lg,
+      10px
+    );
+}
+
+
+/* ========================================
+   Inner input
+======================================== */
+
+.search-input.app-input.ant-input-affix-wrapper
+  > .ant-input {
+  height: auto;
+
+  color:
+    var(
+      --text-primary,
+      #1f2937
+    );
+
+  font-size:
+    inherit;
+
+  font-weight:
+    inherit;
+
+  line-height:
+    var(
+      --line-height-body-sm
+    );
+}
+
+
+/* ========================================
+   Search / clear icons
+======================================== */
+
+.search-input.app-input.ant-input-affix-wrapper
+  .ant-input-prefix {
+  display: inline-flex;
+
+  align-items: center;
+
+  margin-right: 8px;
+
+  color:
+    var(
+      --text-placeholder,
+      #9ca3af
+    );
+
+  font-size: 14px;
+
+  transition:
+    color 0.15s ease;
+}
+
+
+.search-input.app-input.ant-input-affix-wrapper-focused
+  .ant-input-prefix,
+.search-input.app-input.ant-input-affix-wrapper:focus-within
+  .ant-input-prefix {
+  color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+}
+
+
+.search-input.app-input.ant-input-affix-wrapper
+  .ant-input-clear-icon {
+  color:
+    var(
+      --text-placeholder,
+      #9ca3af
+    );
+}
+
+
+.search-input.app-input.ant-input-affix-wrapper
+  .ant-input-clear-icon:hover {
+  color:
+    var(
+      --text-secondary,
+      #4b5563
+    );
+}

@@ -1,0 +1,19 @@
+.product-management-search.search-input {
+  width: 270px;
+}
+
+
+@media (max-width: 768px) {
+  .product-management-search.search-input {
+    flex: 1 1 auto;
+
+    width: auto;
+  }
+}
+
+
+@media (max-width: 520px) {
+  .product-management-search.search-input {
+    width: 100%;
+  }
+}

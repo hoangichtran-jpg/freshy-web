@@ -1,0 +1,769 @@
+/* ========================================
+   TABLE
+======================================== */
+
+.banner-table {
+  width: 100%;
+  min-width: 0;
+}
+
+
+/* ========================================
+   ROW
+
+   Whole row opens preview.
+======================================== */
+
+.banner-table
+  .banner-table__row {
+  cursor: pointer;
+
+  transition:
+    background-color
+      120ms ease;
+}
+
+
+.banner-table
+  .banner-table__row:hover
+  > td {
+  background:
+    #fcfaf7 !important;
+}
+
+
+/* ========================================
+   CELL SPACING
+======================================== */
+
+/*
+ * Giữ khoảng thở ngang giữa các column.
+ */
+
+.banner-table
+  .ant-table-thead
+  > tr
+  > th,
+.banner-table
+  .ant-table-tbody
+  > tr
+  > td {
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+
+/*
+ * Banner image cần thêm khoảng trống
+ * với title column kế bên.
+ */
+
+.banner-table
+  .ant-table-thead
+  > tr
+  > th:first-child,
+.banner-table
+  .ant-table-tbody
+  > tr
+  > td:first-child {
+  padding-left: 20px;
+  padding-right: 26px;
+}
+
+
+/*
+ * Title không dính sát image.
+ */
+
+.banner-table
+  .ant-table-thead
+  > tr
+  > th:nth-child(2),
+.banner-table
+  .ant-table-tbody
+  > tr
+  > td:nth-child(2) {
+  padding-left: 20px;
+}
+
+
+/*
+ * Action column compact hơn.
+ */
+
+.banner-table
+  .ant-table-thead
+  > tr
+  > th:last-child,
+.banner-table
+  .ant-table-tbody
+  > tr
+  > td:last-child {
+  padding-left: 10px;
+  padding-right: 14px;
+}
+
+
+/* ========================================
+   BODY SPACING
+
+   Tăng vertical spacing để thumbnail
+   không bị dính vào separator / row khác.
+======================================== */
+
+.banner-table
+  .ant-table-tbody
+  > tr
+  > td {
+  padding-top: 14px;
+  padding-bottom: 14px;
+
+  vertical-align: middle;
+}
+
+
+/*
+ * Cột ảnh cần breathing room
+ * thêm một chút ở trên / dưới.
+ */
+
+.banner-table
+  .ant-table-tbody
+  > tr
+  > td:first-child {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+
+/* ========================================
+   THUMBNAIL
+======================================== */
+
+.banner-table__thumbnail {
+  display: flex;
+
+  width: 56px;
+  height: 70px;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    #e6ded7;
+
+  border-radius:
+    9px;
+
+  background:
+    #f5f2ef;
+}
+
+
+.banner-table__thumbnail
+  img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
+.banner-table__thumbnail-empty {
+  display: flex;
+
+  width: 100%;
+  height: 100%;
+
+  align-items: center;
+  justify-content: center;
+
+  color:
+    #aaa097;
+
+  font-size:
+    18px;
+}
+
+
+/* ========================================
+   TITLE
+======================================== */
+
+.banner-table__title {
+  display: block;
+
+  max-width: 420px;
+
+  overflow: hidden;
+
+  color:
+    #40352d;
+
+  font-size:
+    var(--font-size-body-sm);
+
+  font-weight: var(--font-weight-semibold);
+
+  line-height:
+    1.45;
+
+  text-overflow:
+    ellipsis;
+
+  white-space:
+    nowrap;
+}
+
+
+/* ========================================
+   DISPLAY POSITION
+======================================== */
+
+.banner-table__position {
+  color:
+    #7b4b08;
+
+  font-size:
+    var(--font-size-caption);
+
+  font-weight: var(--font-weight-bold);
+
+  line-height:
+    1.4;
+
+  font-variant-numeric:
+    tabular-nums;
+}
+
+
+.banner-table__position-empty {
+  color:
+    #b5aca5;
+
+  font-size:
+    var(--font-size-body-sm);
+
+  font-weight: var(--font-weight-medium);
+
+  line-height:
+    1.4;
+}
+
+
+/* ========================================
+   STATUS
+======================================== */
+
+.banner-table__status {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* ========================================
+   STATUS SWITCH
+
+   Freshy brand switch.
+======================================== */
+
+.banner-table__status-switch.ant-switch {
+  min-width: 40px;
+  height: 22px;
+
+  border:
+    1px solid
+    #d5ccc4;
+
+  background:
+    #d9d2cc;
+
+  box-shadow: none;
+
+  transition:
+    border-color
+      140ms ease,
+    background-color
+      140ms ease,
+    box-shadow
+      140ms ease;
+}
+
+
+.banner-table__status-switch.ant-switch
+  .ant-switch-handle {
+  top: 2px;
+
+  width: 16px;
+  height: 16px;
+}
+
+
+.banner-table__status-switch.ant-switch
+  .ant-switch-handle::before {
+  border-radius:
+    999px;
+
+  background:
+    #ffffff;
+
+  box-shadow:
+    0 1px 3px
+    rgba(
+      58,
+      43,
+      32,
+      0.2
+    );
+}
+
+
+/* Checked */
+
+.banner-table__status-switch.ant-switch-checked {
+  border-color:
+    #7b4b08;
+
+  background:
+    #7b4b08;
+}
+
+
+.banner-table__status-switch.ant-switch-checked
+  .ant-switch-handle {
+  inset-inline-start:
+    calc(
+      100% - 18px
+    );
+}
+
+
+/* Hover */
+
+.banner-table__status-switch.ant-switch:hover:not(
+    .ant-switch-disabled
+  ) {
+  border-color:
+    #b89972;
+}
+
+
+.banner-table__status-switch.ant-switch-checked:hover:not(
+    .ant-switch-disabled
+  ) {
+  border-color:
+    #674006;
+
+  background:
+    #674006;
+}
+
+
+/* Keyboard focus */
+
+.banner-table__status-switch.ant-switch:focus-visible {
+  outline: none;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(
+      123,
+      75,
+      8,
+      0.13
+    );
+}
+
+
+/* Disabled */
+
+.banner-table__status-switch.ant-switch-disabled {
+  cursor: not-allowed;
+
+  opacity: 0.55;
+}
+
+
+/* Loading */
+
+.banner-table__status-switch
+  .ant-switch-loading-icon {
+  color:
+    #7b4b08;
+}
+
+
+.banner-table__status-switch.ant-switch-checked
+  .ant-switch-loading-icon {
+  color:
+    #ffffff;
+}
+
+
+/* ========================================
+   DATE
+======================================== */
+
+.banner-table__date {
+  color:
+    #766c64;
+
+  font-size:
+    var(--font-size-caption);
+
+  font-weight: var(--font-weight-medium);
+
+  line-height:
+    1.4;
+
+  font-variant-numeric:
+    tabular-nums;
+}
+
+
+/* ========================================
+   MORE ACTION
+======================================== */
+
+.banner-table__more-button.ant-btn {
+  display: inline-flex;
+
+  width: 34px;
+  height: 34px;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 0;
+
+  border-radius:
+    8px;
+
+  background:
+    transparent;
+
+  color:
+    #776c64;
+
+  font-size:
+    17px;
+
+  box-shadow: none;
+
+  transition:
+    background-color
+      120ms ease,
+    color
+      120ms ease;
+}
+
+
+.banner-table__more-button.ant-btn:hover,
+.banner-table__more-button.ant-btn:focus {
+  background:
+    #f3eee9 !important;
+
+  color:
+    #604a38 !important;
+}
+
+
+.banner-table__more-button.ant-btn:focus-visible {
+  outline: none;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(
+      123,
+      75,
+      8,
+      0.1
+    );
+}
+
+
+/* ========================================
+   DROPDOWN
+======================================== */
+
+.banner-table__dropdown
+  .ant-dropdown-menu {
+  min-width:
+    176px;
+
+  padding: 5px;
+
+  border:
+    1px solid
+    #e6ded7;
+
+  border-radius:
+    10px;
+
+  background:
+    #ffffff;
+
+  box-shadow:
+    0 10px 30px
+    rgba(
+      53,
+      39,
+      28,
+      0.12
+    );
+}
+
+
+.banner-table__dropdown
+  .ant-dropdown-menu-item {
+  min-height:
+    36px;
+
+  padding:
+    8px
+    10px;
+
+  border-radius:
+    7px;
+
+  color:
+    #544940;
+
+  font-size:
+    var(--font-size-caption);
+
+  font-weight: var(--font-weight-medium);
+}
+
+
+.banner-table__dropdown
+  .ant-dropdown-menu-item:hover {
+  background:
+    #f7f3ef;
+}
+
+
+.banner-table__dropdown
+  .ant-dropdown-menu-item-danger {
+  color:
+    #a34f46;
+}
+
+
+.banner-table__dropdown
+  .ant-dropdown-menu-item-danger:hover {
+  background:
+    #fbefed !important;
+
+  color:
+    #913f37 !important;
+}
+
+
+/* ========================================
+   TABLE HEADER
+======================================== */
+
+.banner-table
+  .ant-table-thead
+  > tr
+  > th {
+  color:
+    #74695f;
+
+  font-size:
+    var(--font-size-caption);
+
+  font-weight: var(--font-weight-semibold);
+
+  white-space:
+    nowrap;
+}
+
+
+/* Sort / filter inactive */
+
+.banner-table
+  .ant-table-thead
+  > tr
+  > th
+  .ant-table-column-sorter,
+.banner-table
+  .ant-table-thead
+  > tr
+  > th
+  .ant-table-filter-trigger {
+  color:
+    #a09388;
+
+  transition:
+    color
+      120ms ease,
+    background-color
+      120ms ease;
+}
+
+
+/* Sort / filter active */
+
+.banner-table
+  .ant-table-thead
+  > tr
+  > th
+  .ant-table-column-sorter-up.active,
+.banner-table
+  .ant-table-thead
+  > tr
+  > th
+  .ant-table-column-sorter-down.active,
+.banner-table
+  .ant-table-thead
+  > tr
+  > th
+  .ant-table-filter-trigger.active {
+  color:
+    #7b4b08;
+}
+
+
+/* Filter hover */
+
+.banner-table
+  .ant-table-filter-trigger:hover {
+  background:
+    #f2ece6;
+
+  color:
+    #7b4b08;
+}
+
+
+/* ========================================
+   TABLE BODY
+======================================== */
+
+.banner-table
+  .ant-table-tbody
+  > tr
+  > td {
+  border-bottom-color:
+    #eee7e1;
+}
+
+
+/* ========================================
+   EMPTY STATE
+======================================== */
+
+.banner-table
+  .ant-empty {
+  margin:
+    34px
+    0;
+}
+
+
+.banner-table
+  .ant-empty-description {
+  color:
+    #968a80;
+
+  font-size:
+    var(--font-size-caption);
+}
+
+
+/* ========================================
+   PAGINATION
+======================================== */
+
+.banner-table
+  .ant-pagination {
+  margin-top:
+    16px;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (
+  max-width: 768px
+) {
+  .banner-table
+    .ant-table-thead
+    > tr
+    > th,
+  .banner-table
+    .ant-table-tbody
+    > tr
+    > td {
+    padding-left:
+      12px;
+
+    padding-right:
+      12px;
+  }
+
+
+  .banner-table
+    .ant-table-tbody
+    > tr
+    > td {
+    padding-top:
+      12px;
+
+    padding-bottom:
+      12px;
+  }
+
+
+  .banner-table
+    .ant-table-tbody
+    > tr
+    > td:first-child {
+    padding-top:
+      14px;
+
+    padding-bottom:
+      14px;
+  }
+
+
+  .banner-table
+    .ant-table-thead
+    > tr
+    > th:first-child,
+  .banner-table
+    .ant-table-tbody
+    > tr
+    > td:first-child {
+    padding-left:
+      14px;
+
+    padding-right:
+      18px;
+  }
+
+
+  .banner-table__thumbnail {
+    width: 48px;
+    height: 60px;
+  }
+
+
+  .banner-table__title {
+    max-width:
+      240px;
+  }
+}

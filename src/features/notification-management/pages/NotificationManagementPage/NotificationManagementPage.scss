@@ -1,0 +1,163 @@
+/* ========================================
+   PAGE
+======================================== */
+
+.notification-management-page {
+  box-sizing:
+    border-box;
+
+  display:
+    flex;
+
+  width:
+    100%;
+
+  height:
+    100%;
+
+  min-width:
+    0;
+
+  min-height:
+    0;
+
+  flex-direction:
+    column;
+
+  gap:
+    18px;
+
+  padding:
+    24px
+    24px
+    20px;
+
+  overflow:
+    hidden;
+
+  background:
+    var(
+      --bg-app,
+      #f6f3ef
+    );
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.notification-management-page
+  > .management-page-header {
+  width:
+    100%;
+
+  min-width:
+    0;
+
+  flex:
+    0
+    0
+    auto;
+}
+
+
+/* ========================================
+   CONTENT
+
+   Toolbar       fixed
+   Table header  fixed
+   Rows          scroll
+   Pagination    fixed
+======================================== */
+
+.notification-management-page__content {
+  display:
+    flex;
+
+  width:
+    100%;
+
+  min-width:
+    0;
+
+  min-height:
+    0;
+
+  flex:
+    1
+    1
+    auto;
+
+  flex-direction:
+    column;
+
+  overflow:
+    hidden;
+}
+
+
+.notification-management-page__content
+  > .notification-history-toolbar {
+  flex:
+    0
+    0
+    auto;
+}
+
+
+.notification-management-page__content
+  > .notification-history-table {
+  flex:
+    1
+    1
+    auto;
+
+  min-height:
+    0;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (
+  max-width: 1024px
+) {
+  .notification-management-page {
+    padding:
+      18px;
+  }
+}
+
+
+@media (
+  max-width: 768px
+) {
+  .notification-management-page {
+    height:
+      auto;
+
+    min-height:
+      100%;
+
+    gap:
+      14px;
+
+    padding:
+      14px;
+
+    overflow:
+      visible;
+  }
+
+
+  .notification-management-page__content {
+    min-height:
+      480px;
+
+    overflow:
+      visible;
+  }
+}

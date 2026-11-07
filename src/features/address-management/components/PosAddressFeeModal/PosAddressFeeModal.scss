@@ -1,0 +1,212 @@
+.pos-address-fee-modal {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+
+/* ========================================
+   SUMMARY
+======================================== */
+
+.pos-address-fee-modal__summary {
+  padding:
+    14px 16px;
+
+  border:
+    1px solid #eadfd3;
+
+  border-radius:
+    12px;
+
+  background:
+    #faf7f3;
+}
+
+
+.pos-address-fee-modal__summary-label {
+  margin-bottom:
+    3px;
+
+  color:
+    #9a8e84;
+
+  font-size:
+    var(--font-size-overline);
+
+  font-weight: var(--font-weight-semibold);
+
+  letter-spacing:
+    0.04em;
+
+  text-transform:
+    uppercase;
+}
+
+
+.pos-address-fee-modal__summary-title {
+  color:
+    #40352d;
+
+  font-size:
+    var(--font-size-body-sm);
+
+  font-weight: var(--font-weight-bold);
+
+  line-height:
+    1.5;
+}
+
+
+.pos-address-fee-modal__summary-meta {
+  margin-top:
+    3px;
+
+  color:
+    #8a7f76;
+
+  font-size:
+    var(--font-size-meta);
+}
+
+
+.pos-address-fee-modal__summary-meta
+  strong {
+  color:
+    #675b51;
+
+  font-weight: var(--font-weight-semibold);
+}
+
+
+/* ========================================
+   FORM
+======================================== */
+
+.pos-address-fee-modal
+  .ant-form-item {
+  margin-bottom:
+    0;
+}
+
+
+.pos-address-fee-modal
+  .ant-form-item-label {
+  padding-bottom:
+    7px;
+}
+
+
+.pos-address-fee-modal
+  .ant-form-item-label
+  > label {
+  height:
+    auto;
+
+  color:
+    #40352d;
+
+  font-size:
+    var(--font-size-caption);
+
+  font-weight: var(--font-weight-semibold);
+}
+
+
+/* ========================================
+   INPUT NUMBER
+======================================== */
+
+.pos-address-fee-modal__input.ant-input-number-group-wrapper {
+  width:
+    100%;
+}
+
+
+.pos-address-fee-modal__input
+  .ant-input-number {
+  width:
+    100%;
+
+  height:
+    44px;
+
+  border:
+    1px solid
+    #ded6cf;
+
+  border-radius:
+    10px 0 0 10px;
+
+  box-shadow:
+    none;
+}
+
+
+.pos-address-fee-modal__input
+  .ant-input-number-input-wrap,
+.pos-address-fee-modal__input
+  .ant-input-number-input {
+  height:
+    42px;
+}
+
+
+.pos-address-fee-modal__input
+  .ant-input-number-input {
+  padding:
+    0 13px;
+
+  color:
+    #40352d;
+
+  font-size:
+    var(--font-size-body-sm);
+}
+
+
+.pos-address-fee-modal__input
+  .ant-input-number-group-addon {
+  min-width:
+    56px;
+
+  padding:
+    0 10px;
+
+  border-color:
+    #ded6cf;
+
+  border-radius:
+    0 10px 10px 0;
+
+  background:
+    #faf7f3;
+
+  color:
+    #756a61;
+
+  font-size:
+    var(--font-size-meta);
+
+  font-weight: var(--font-weight-semibold);
+}
+
+
+.pos-address-fee-modal__input.ant-input-number-group-wrapper:hover
+  .ant-input-number {
+  border-color:
+    #bca68d;
+}
+
+
+.pos-address-fee-modal
+  .ant-form-item-extra,
+.pos-address-fee-modal
+  .ant-form-item-explain-error {
+  margin-top:
+    4px;
+
+  font-size:
+    var(--font-size-meta);
+}

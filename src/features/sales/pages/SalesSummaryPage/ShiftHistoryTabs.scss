@@ -1,0 +1,23 @@
+
+/* ========================================
+   Shift History tabs — Step 3
+======================================== */
+.sales-summary-page__tabs {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  .ant-segmented {
+    border: 1px solid var(--border-default);
+    background: var(--bg-surface);
+    padding: 4px;
+  }
+
+  .ant-segmented-item-selected {
+    color: var(--brand-primary);
+    font-weight: 600;
+  }
+}

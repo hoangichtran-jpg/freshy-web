@@ -1,0 +1,309 @@
+/* ========================================
+   Order Summary
+======================================== */
+
+.order-summary {
+  width: 100%;
+}
+
+
+/* ========================================
+   Information rows
+======================================== */
+
+.order-summary__rows {
+  border-top:
+    1px solid
+    #eeeae5;
+}
+
+
+.order-summary__row {
+  display: grid;
+
+  grid-template-columns:
+    minmax(
+      104px,
+      0.82fr
+    )
+    minmax(
+      0,
+      1.4fr
+    );
+
+  gap: 18px;
+
+  align-items: center;
+
+  min-height: 52px;
+
+  padding:
+    10px
+    0;
+
+  border-bottom:
+    1px solid
+    #eeeae5;
+}
+
+
+.order-summary__row--address {
+  align-items: start;
+}
+
+
+.order-summary__label {
+  color: #8f98a1;
+
+  font-size:
+    var(--font-size-meta);
+
+  font-weight:
+    var(--font-weight-meta);
+
+  line-height:
+    var(--line-height-meta);
+}
+
+
+.order-summary__value {
+  min-width: 0;
+
+  color: #3a434d;
+
+  font-size:
+    var(--font-size-caption);
+
+  font-weight:
+    var(--font-weight-semibold);
+
+  line-height:
+    var(--line-height-caption);
+
+  text-align: right;
+
+  overflow-wrap: anywhere;
+}
+
+
+strong.order-summary__value {
+  color: #262e37;
+
+  font-weight:
+    var(--font-weight-semibold);
+}
+
+
+/* ========================================
+   Metrics
+======================================== */
+
+.order-summary__metrics {
+  display: grid;
+
+  grid-template-columns:
+    minmax(
+      0,
+      0.8fr
+    )
+    minmax(
+      0,
+      1.2fr
+    );
+
+  margin-top: 16px;
+
+  padding:
+    16px
+    0;
+
+  border-bottom:
+    1px solid
+    #eeeae5;
+}
+
+
+.order-summary__metric {
+  display: flex;
+
+  min-width: 0;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+  padding-right: 17px;
+}
+
+
+.order-summary__metric--total {
+  padding-right: 0;
+  padding-left: 17px;
+
+  border-left:
+    1px solid
+    #eeeae5;
+
+  text-align: right;
+}
+
+
+.order-summary__metric-label {
+  color: #929aa3;
+
+  font-size:
+    var(--font-size-overline);
+
+  font-weight:
+    var(--font-weight-medium);
+
+  line-height:
+    var(--line-height-overline);
+}
+
+
+.order-summary__metric-value {
+  color: #252d36;
+
+  font-size:
+    var(--font-size-section-title);
+
+  font-weight:
+    var(--font-weight-bold);
+
+  line-height:
+    var(--line-height-section-title);
+
+  letter-spacing:
+    -0.02em;
+
+  font-variant-numeric:
+    tabular-nums;
+}
+
+
+.order-summary__price {
+  color: #252d36;
+
+  font-size:
+    var(--font-size-section-title);
+
+  font-weight:
+    var(--font-weight-bold);
+
+  line-height:
+    var(--line-height-section-title);
+
+  letter-spacing:
+    -0.025em;
+
+  white-space: nowrap;
+
+  font-variant-numeric:
+    tabular-nums;
+}
+
+
+/* ========================================
+   Notes
+======================================== */
+
+.order-summary__note {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+
+  margin-top: 14px;
+
+  padding:
+    12px
+    13px;
+
+  border:
+    1px solid
+    #ebe7e1;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+}
+
+
+.order-summary__note--special {
+  border-color: #eee4d5;
+
+  background: #fbf7f0;
+}
+
+
+.order-summary__note-label {
+  color: #80613b;
+
+  font-size:
+    var(--font-size-overline);
+
+  font-weight:
+    var(--font-weight-overline);
+
+  line-height:
+    var(--line-height-overline);
+}
+
+
+.order-summary__note-value {
+  color: #59636d;
+
+  font-size:
+    var(--font-size-meta);
+
+  font-weight:
+    var(--font-weight-meta);
+
+  line-height:
+    var(--line-height-meta);
+
+  overflow-wrap: anywhere;
+}
+
+
+/* ========================================
+   Responsive
+======================================== */
+
+@media (
+  max-width: 640px
+) {
+  .order-summary__row {
+    grid-template-columns:
+      1fr;
+
+    gap: 2px;
+
+    min-height: auto;
+
+    padding:
+      10px
+      0;
+  }
+
+
+  .order-summary__value {
+    text-align: left;
+  }
+
+
+  .order-summary__metrics {
+    margin-top: 14px;
+  }
+
+
+  .order-summary__price {
+    font-size:
+      var(--font-size-section-title);
+
+    line-height:
+      var(--line-height-section-title);
+  }
+}

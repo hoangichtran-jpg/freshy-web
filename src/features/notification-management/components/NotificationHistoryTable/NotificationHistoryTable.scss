@@ -1,0 +1,285 @@
+/* ========================================
+   TABLE
+======================================== */
+
+.notification-history-table {
+  width:
+    100%;
+
+  min-width:
+    0;
+
+  min-height:
+    0;
+
+  flex:
+    1
+    1
+    auto;
+}
+
+
+/* ========================================
+   ROW
+
+   B6 mới activate khi có detail callback.
+======================================== */
+
+.notification-history-table
+  .notification-history-table__row {
+  cursor:
+    pointer;
+}
+
+
+.notification-history-table
+  .notification-history-table__row:focus {
+  outline:
+    none;
+}
+
+
+.notification-history-table
+  .notification-history-table__row:focus-visible {
+  outline:
+    2px solid
+    rgba(
+      123,
+      75,
+      8,
+      0.34
+    );
+
+  outline-offset:
+    -2px;
+}
+
+
+.notification-history-table
+  .notification-history-table__row:focus-visible
+  > td {
+  background:
+    #fbf6f0 !important;
+}
+
+
+/* ========================================
+   ROW HEIGHT
+======================================== */
+
+.notification-history-table
+  .ant-table-tbody
+  > tr
+  > td {
+  height:
+    68px;
+
+  padding-top:
+    9px;
+
+  padding-bottom:
+    9px;
+
+  vertical-align:
+    middle;
+}
+
+
+/* ========================================
+   TITLE
+======================================== */
+
+.notification-history-table__title {
+  display:
+    block;
+
+  overflow:
+    hidden;
+
+  color:
+    #40352d;
+
+  font-size:
+    var(--font-size-body-sm);
+
+  font-weight: var(--font-weight-semibold);
+
+  line-height:
+    1.45;
+
+  text-overflow:
+    ellipsis;
+
+  white-space:
+    nowrap;
+}
+
+
+/* ========================================
+   AUDIENCE
+======================================== */
+
+.notification-history-table__audience {
+  display:
+    inline-flex;
+
+  min-height:
+    26px;
+
+  align-items:
+    center;
+
+  padding:
+    3px
+    9px;
+
+  border:
+    1px solid
+    #e4dbd2;
+
+  border-radius:
+    999px;
+
+  background:
+    #faf7f3;
+
+  color:
+    #725a42;
+
+  font-size:
+    var(--font-size-meta);
+
+  font-weight: var(--font-weight-semibold);
+
+  line-height:
+    1.4;
+
+  white-space:
+    nowrap;
+}
+
+
+/* ========================================
+   BODY
+======================================== */
+
+.notification-history-table__body {
+  display:
+    -webkit-box;
+
+  max-width:
+    100%;
+
+  overflow:
+    hidden;
+
+  color:
+    #665b53;
+
+  font-size:
+    var(--font-size-body-sm);
+
+  font-weight: var(--font-weight-regular);
+
+  line-height:
+    1.45;
+
+  text-overflow:
+    ellipsis;
+
+  white-space:
+    normal;
+
+  -webkit-box-orient:
+    vertical;
+
+  -webkit-line-clamp:
+    2;
+}
+
+
+/* ========================================
+   TIME
+======================================== */
+
+.notification-history-table__time {
+  color:
+    #7f746c;
+
+  font-size:
+    var(--font-size-caption);
+
+  font-weight: var(--font-weight-medium);
+
+  line-height:
+    1.45;
+
+  font-variant-numeric:
+    tabular-nums;
+
+  white-space:
+    nowrap;
+}
+
+
+/* ========================================
+   FILTER
+======================================== */
+
+.notification-history-table
+  .ant-table-filter-trigger {
+  color:
+    #a09388;
+
+  transition:
+    color
+      120ms ease,
+    background-color
+      120ms ease;
+}
+
+
+.notification-history-table
+  .ant-table-filter-trigger:hover {
+  background:
+    #f2ece6;
+
+  color:
+    #7b4b08;
+}
+
+
+.notification-history-table
+  .ant-table-filter-trigger.active {
+  color:
+    #7b4b08;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (
+  max-width: 768px
+) {
+  .notification-history-table
+    .ant-table-tbody
+    > tr
+    > td {
+    height:
+      64px;
+
+    padding-top:
+      8px;
+
+    padding-bottom:
+      8px;
+  }
+
+
+  .notification-history-table__body {
+    -webkit-line-clamp:
+      1;
+  }
+}

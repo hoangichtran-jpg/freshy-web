@@ -1,0 +1,1090 @@
+.kitchen-menu-table,
+.kitchen-menu-table .ant-table,
+.kitchen-menu-table .ant-pagination,
+.kitchen-menu-table .ant-btn,
+.kitchen-menu-table .ant-select,
+.kitchen-menu-table__dropdown,
+.kitchen-menu-items-popover {
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+}
+
+
+/* ========================================
+   Root
+======================================== */
+
+.kitchen-menu-table {
+  display: flex;
+
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+
+  min-width: 0;
+  min-height: 0;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    var(
+      --border-default,
+      #e5ded7
+    );
+
+  border-radius: 14px;
+
+  background: #fff;
+}
+
+
+/* ========================================
+   Table layout
+
+   Structure:
+   kitchen-menu-table
+   └── ant-table-wrapper
+       └── ant-spin-nested-loading
+           └── ant-spin-container
+               ├── ant-table
+               │   ├── header
+               │   └── body
+               └── pagination
+
+   Body scroll riêng.
+   Pagination nằm ngoài body và luôn thấy.
+======================================== */
+
+.kitchen-menu-table
+  > .ant-table-wrapper {
+  display: flex;
+
+  flex: 1 1 auto;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+
+  min-width: 0;
+  min-height: 0;
+}
+
+
+.kitchen-menu-table
+  > .ant-table-wrapper
+  > .ant-spin-nested-loading {
+  flex: 1 1 auto;
+
+  min-height: 0;
+}
+
+
+.kitchen-menu-table
+  > .ant-table-wrapper
+  > .ant-spin-nested-loading
+  > .ant-spin-container {
+  display: flex;
+
+  height: 100%;
+
+  min-height: 0;
+
+  flex-direction: column;
+}
+
+
+.kitchen-menu-table
+  .ant-table {
+  flex: 1 1 auto;
+
+  min-height: 0;
+
+  overflow: hidden;
+
+  background: #fff;
+}
+
+
+.kitchen-menu-table
+  .ant-table-container {
+  display: flex;
+
+  height: 100%;
+
+  min-height: 0;
+
+  flex-direction: column;
+
+  border-radius: 14px;
+}
+
+
+.kitchen-menu-table
+  .ant-table-header {
+  flex: 0 0 auto;
+}
+
+
+/* ========================================
+   Horizontal scroll
+======================================== */
+
+.kitchen-menu-table
+  .ant-table-content {
+  scrollbar-width: thin;
+
+  scrollbar-color:
+    #d2c8bf
+    transparent;
+}
+
+
+.kitchen-menu-table
+  .ant-table-content::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+
+.kitchen-menu-table
+  .ant-table-content::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+
+  background: #d2c8bf;
+}
+
+
+.kitchen-menu-table
+  .ant-table-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+/* ========================================
+   Scrollable rows
+======================================== */
+
+.kitchen-menu-table
+  .ant-table-body {
+  flex: 1 1 auto;
+
+  min-height: 0;
+
+  /*
+   * AntD inject max-height từ scroll.y.
+   * Flex mới là thứ quyết định available height.
+   */
+  max-height: none !important;
+
+  overflow-x: auto !important;
+  overflow-y: auto !important;
+
+  scrollbar-width: thin;
+
+  scrollbar-color:
+    #d2c8bf
+    transparent;
+}
+
+
+.kitchen-menu-table
+  .ant-table-body::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+
+.kitchen-menu-table
+  .ant-table-body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+
+  background: #d2c8bf;
+}
+
+
+.kitchen-menu-table
+  .ant-table-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+/* ========================================
+   Header
+======================================== */
+
+.kitchen-menu-table
+  .ant-table-thead
+  > tr
+  > th {
+  height: 48px;
+
+  padding:
+    0 16px;
+
+  border-bottom:
+    1px solid
+    #ebe4dc;
+
+  background: #faf7f3;
+
+  color:
+    var(
+      --text-secondary,
+      #746960
+    );
+
+  font-size:
+    var(--font-size-caption);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.35;
+
+  white-space: nowrap;
+}
+
+
+.kitchen-menu-table
+  .ant-table-thead
+  > tr
+  > th::before {
+  display: none !important;
+}
+
+
+.kitchen-menu-table
+  .ant-table-column-sorter,
+.kitchen-menu-table
+  .ant-table-filter-trigger {
+  color: #a29890;
+}
+
+
+.kitchen-menu-table
+  .ant-table-filter-trigger.active,
+.kitchen-menu-table
+  .ant-table-column-sorter-up.active,
+.kitchen-menu-table
+  .ant-table-column-sorter-down.active {
+  color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+}
+
+
+/* ========================================
+   Rows
+======================================== */
+
+.kitchen-menu-table
+  .ant-table-tbody
+  > tr
+  > td {
+  height: 58px;
+
+  padding:
+    8px 16px;
+
+  border-bottom:
+    1px solid
+    #f1ece7;
+
+  background: #fff;
+
+  color:
+    var(
+      --text-secondary,
+      #5d5148
+    );
+
+  font-size:
+    var(--font-size-body-sm);
+  font-weight: var(--font-weight-regular);
+
+  vertical-align: middle;
+
+  transition:
+    background
+    0.12s ease;
+}
+
+
+.kitchen-menu-table
+  .ant-table-tbody
+  > tr:hover
+  > td {
+  background: #fdf8f2;
+}
+
+
+.kitchen-menu-table
+  .ant-table-tbody
+  > tr:last-child
+  > td {
+  border-bottom: 0;
+}
+
+
+/* ========================================
+   Fixed action column
+======================================== */
+
+.kitchen-menu-table
+  .ant-table-cell-fix-right {
+  background: #fff;
+}
+
+
+.kitchen-menu-table
+  .ant-table-tbody
+  > tr:hover
+  > .ant-table-cell-fix-right {
+  background: #fdf8f2;
+}
+
+
+.kitchen-menu-table
+  .ant-table-thead
+  > tr
+  > .ant-table-cell-fix-right {
+  background: #faf7f3;
+}
+
+
+/* ========================================
+   Cells
+======================================== */
+
+.kitchen-menu-table__index {
+  color: #9a9087;
+
+  font-size:
+    var(--font-size-caption);
+
+  font-variant-numeric:
+    tabular-nums;
+}
+
+
+.kitchen-menu-table__name {
+  display: block;
+
+  overflow: hidden;
+
+  color:
+    var(
+      --text-primary,
+      #40352d
+    );
+
+  font-size:
+    var(--font-size-body-sm);
+  font-weight: var(--font-weight-semibold);
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+
+.kitchen-menu-table__items {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 5px;
+}
+
+
+.kitchen-menu-table__item {
+  display: inline-flex;
+
+  align-items: center;
+
+  max-width: 150px;
+  height: 26px;
+
+  padding:
+    0 8px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    #e8dfd6;
+
+  border-radius: 7px;
+
+  background: #faf7f3;
+
+  color: #655a51;
+
+  font-size:
+    var(--font-size-caption);
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+
+.kitchen-menu-table__more-items {
+  display: inline-flex;
+
+  align-items: center;
+
+  height: 26px;
+
+  padding:
+    0 4px;
+
+  border: 0;
+
+  background: transparent;
+
+  color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+
+  font: inherit;
+
+  font-size:
+    var(--font-size-caption);
+  font-weight: var(--font-weight-semibold);
+
+  white-space: nowrap;
+
+  cursor: pointer;
+}
+
+
+.kitchen-menu-table__more-items:hover {
+  color: #5f3a12;
+
+  text-decoration: underline;
+
+  text-underline-offset: 3px;
+}
+
+
+.kitchen-menu-table__empty-value {
+  color: #938980;
+
+  font-size:
+    var(--font-size-caption);
+}
+
+
+/* ========================================
+   Status
+======================================== */
+
+.kitchen-menu-table__status {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+
+.kitchen-menu-table__status-text {
+  color: #938980;
+
+  font-size:
+    var(--font-size-caption);
+
+  white-space: nowrap;
+}
+
+
+.kitchen-menu-table__status-text--active {
+  color: #637750;
+}
+
+
+.kitchen-menu-table
+  .ant-switch {
+  background: #bcb4ad;
+}
+
+
+.kitchen-menu-table
+  .ant-switch.ant-switch-checked {
+  background:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+}
+
+
+/* ========================================
+   Actions
+======================================== */
+
+.kitchen-menu-table__actions {
+  display: flex;
+
+  justify-content: flex-end;
+}
+
+
+.kitchen-menu-table__action-button.ant-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  min-width: 32px;
+  height: 32px;
+
+  padding: 0;
+
+  border-radius: 8px;
+
+  color: #80756c;
+
+  font-size:
+    var(--font-size-body);
+}
+
+
+.kitchen-menu-table__action-button.ant-btn:hover,
+.kitchen-menu-table__action-button.ant-btn:focus {
+  background: #f6eee5;
+
+  color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+}
+
+
+/* ========================================
+   Dropdown
+======================================== */
+
+.kitchen-menu-table__dropdown
+  .ant-dropdown-menu {
+  min-width: 170px;
+
+  padding: 6px;
+
+  border:
+    1px solid
+    #e5ded7;
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 10px 30px
+    rgba(
+      45,
+      32,
+      21,
+      0.12
+    );
+}
+
+
+.kitchen-menu-table__dropdown
+  .ant-dropdown-menu-item {
+  min-height: 38px;
+
+  border-radius: 7px;
+
+  font-size:
+    var(--font-size-body-sm);
+}
+
+
+/* ========================================
+   Items popover
+======================================== */
+
+.kitchen-menu-items-popover
+  .ant-popover-inner {
+  width: 360px;
+
+  padding: 0;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    #e6ded6;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 12px 36px
+    rgba(
+      50,
+      36,
+      24,
+      0.14
+    );
+}
+
+
+.kitchen-menu-items-popover
+  .ant-popover-title {
+  min-height: 0;
+
+  padding:
+    13px 15px
+    11px;
+
+  border-bottom:
+    1px solid
+    #eee8e2;
+}
+
+
+.kitchen-menu-items-popover
+  .ant-popover-inner-content {
+  padding: 0;
+}
+
+
+.kitchen-menu-items-popover__title {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 12px;
+}
+
+
+.kitchen-menu-items-popover__title
+  strong {
+  overflow: hidden;
+
+  color: #40352d;
+
+  font-size:
+    var(--font-size-body-sm);
+  font-weight: var(--font-weight-semibold);
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+
+.kitchen-menu-items-popover__title
+  span {
+  flex-shrink: 0;
+
+  color: #988d84;
+
+  font-size:
+    var(--font-size-meta);
+}
+
+
+.kitchen-menu-items-popover__list {
+  max-height: 320px;
+
+  overflow-y: auto;
+
+  scrollbar-width: thin;
+
+  scrollbar-color:
+    #d5ccc4
+    transparent;
+}
+
+
+.kitchen-menu-items-popover__list::-webkit-scrollbar {
+  width: 5px;
+}
+
+
+.kitchen-menu-items-popover__list::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+
+  background: #d5ccc4;
+}
+
+
+.kitchen-menu-items-popover__list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+.kitchen-menu-items-popover__item {
+  display: grid;
+
+  grid-template-columns:
+    24px
+    minmax(
+      0,
+      1fr
+    )
+    auto;
+
+  align-items: center;
+
+  gap: 8px;
+
+  min-height: 42px;
+
+  padding:
+    7px 15px;
+
+  border-bottom:
+    1px solid
+    #f1ece7;
+}
+
+
+.kitchen-menu-items-popover__item:last-child {
+  border-bottom: 0;
+}
+
+
+.kitchen-menu-items-popover__item:hover {
+  background: #fcf8f3;
+}
+
+
+.kitchen-menu-items-popover__index {
+  color: #aaa097;
+
+  font-size:
+    var(--font-size-meta);
+}
+
+
+.kitchen-menu-items-popover__name {
+  overflow: hidden;
+
+  color: #554940;
+
+  font-size:
+    var(--font-size-caption);
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+
+.kitchen-menu-items-popover__price {
+  color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+
+  font-size:
+    var(--font-size-caption);
+  font-weight: var(--font-weight-semibold);
+
+  white-space: nowrap;
+}
+
+
+/* ========================================
+   Empty / loading / error
+======================================== */
+
+.kitchen-menu-table__empty,
+.kitchen-menu-table__state {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 7px;
+
+  min-height: 230px;
+
+  padding: 30px;
+
+  text-align: center;
+}
+
+
+.kitchen-menu-table__state {
+  min-height: 300px;
+}
+
+
+.kitchen-menu-table__empty-icon,
+.kitchen-menu-table__state-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 50px;
+  height: 50px;
+
+  margin-bottom: 4px;
+
+  border-radius: 14px;
+
+  background: #f7efe6;
+
+  color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+
+  font-size: 22px;
+}
+
+
+.kitchen-menu-table__state-icon--error {
+  background: #fff1ef;
+
+  color: #b5473e;
+}
+
+
+.kitchen-menu-table__empty
+  strong,
+.kitchen-menu-table__state
+  strong {
+  color: #40342c;
+
+  font-size:
+    var(--font-size-body);
+  font-weight: var(--font-weight-semibold);
+}
+
+
+.kitchen-menu-table__empty
+  span,
+.kitchen-menu-table__state
+  span {
+  max-width: 360px;
+
+  color: #938980;
+
+  font-size:
+    var(--font-size-caption);
+  line-height: 1.5;
+}
+
+
+.kitchen-menu-table__retry.ant-btn {
+  height: 38px;
+
+  margin-top: 6px;
+
+  border-radius: 8px;
+
+  color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+
+  font-size:
+    var(--font-size-body-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+
+.kitchen-menu-table__retry.ant-btn:hover,
+.kitchen-menu-table__retry.ant-btn:focus {
+  border-color: #b8905d;
+
+  color: #5f3a12;
+}
+
+
+/* ========================================
+   Pagination
+
+   Pagination là footer cố định của card.
+   Không nằm trong vùng scroll của rows.
+======================================== */
+
+.kitchen-menu-table
+  .ant-table-pagination {
+  flex: 0 0 auto;
+
+  min-height: 48px;
+
+  align-items: center;
+
+  margin: 0 !important;
+
+  padding:
+    8px 18px;
+
+  border-top:
+    1px solid
+    #eee8e2;
+
+  background: #fff;
+}
+
+
+.kitchen-menu-table
+  .ant-pagination {
+  font-size:
+    var(--font-size-caption);
+}
+
+
+.kitchen-menu-table
+  .ant-pagination-total-text {
+  margin-right: auto;
+
+  color: #938980;
+
+  font-size:
+    var(--font-size-meta);
+}
+
+
+.kitchen-menu-table
+  .ant-pagination-item,
+.kitchen-menu-table
+  .ant-pagination-prev
+  .ant-pagination-item-link,
+.kitchen-menu-table
+  .ant-pagination-next
+  .ant-pagination-item-link {
+  border-radius: 7px;
+}
+
+
+.kitchen-menu-table
+  .ant-pagination-item-active {
+  border-color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+}
+
+
+.kitchen-menu-table
+  .ant-pagination-item-active
+  a {
+  color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+}
+
+
+/* ========================================
+   Responsive
+======================================== */
+
+@media (
+  max-width: 768px
+) {
+  .kitchen-menu-table {
+    height: auto;
+
+    border-radius: 12px;
+  }
+
+
+  /*
+   * Mobile không khóa table theo viewport.
+   * Cho page scroll tự nhiên.
+   */
+  .kitchen-menu-table
+    > .ant-table-wrapper {
+    height: auto;
+  }
+
+
+  .kitchen-menu-table
+    > .ant-table-wrapper
+    > .ant-spin-nested-loading
+    > .ant-spin-container {
+    height: auto;
+  }
+
+
+  .kitchen-menu-table
+    .ant-table {
+    overflow: visible;
+  }
+
+
+  .kitchen-menu-table
+    .ant-table-container {
+    height: auto;
+  }
+
+
+  .kitchen-menu-table
+    .ant-table-body {
+    max-height:
+      520px !important;
+  }
+
+
+  .kitchen-menu-table
+    .ant-table-thead
+    > tr
+    > th,
+  .kitchen-menu-table
+    .ant-table-tbody
+    > tr
+    > td {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+
+  .kitchen-menu-table__empty,
+  .kitchen-menu-table__state {
+    min-height: 220px;
+  }
+
+
+  .kitchen-menu-table
+    .ant-table-pagination {
+    padding:
+      8px 12px;
+  }
+
+
+  .kitchen-menu-table
+    .ant-pagination-total-text {
+    display: none;
+  }
+
+
+  .kitchen-menu-items-popover
+    .ant-popover-inner {
+    width:
+      min(
+        340px,
+        calc(
+          100vw - 32px
+        )
+      );
+  }
+}

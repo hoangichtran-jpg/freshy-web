@@ -1,0 +1,762 @@
+.pos-table,
+.pos-table .ant-table,
+.pos-table .ant-table-wrapper,
+.pos-table .ant-pagination,
+.pos-table .ant-select,
+.pos-table .ant-btn,
+.pos-table__action-dropdown {
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+}
+
+
+.pos-table {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+
+  min-width: 0;
+  min-height: 0;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    var(
+      --border-default,
+      #e5ded7
+    );
+
+  border-radius:
+    var(
+      --radius-lg,
+      14px
+    );
+
+  background:
+    var(
+      --bg-surface,
+      #ffffff
+    );
+
+  box-shadow:
+    0 1px 2px
+    rgba(
+      45,
+      32,
+      21,
+      0.025
+    );
+}
+
+
+/* ========================================
+   Viewport
+======================================== */
+
+.pos-table__viewport {
+  min-width: 0;
+
+  overflow: hidden;
+}
+
+
+.pos-table__viewport
+  > .ant-table-wrapper {
+  min-width: 0;
+}
+
+
+/* ========================================
+   Header
+======================================== */
+
+.pos-table
+  .ant-table-thead
+  > tr
+  > th {
+  height: 48px;
+
+  padding:
+    0 16px;
+
+  border-bottom:
+    1px solid
+    #ebe4dc;
+
+  background:
+    #faf7f3;
+
+  color:
+    var(
+      --text-secondary,
+      #746960
+    );
+
+  font-size:
+    var(--font-size-caption);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.4;
+
+  white-space: nowrap;
+}
+
+
+.pos-table
+  .ant-table-thead
+  > tr
+  > th::before {
+  display: none !important;
+}
+
+
+/* ========================================
+   Rows
+======================================== */
+
+.pos-table
+  .ant-table-tbody
+  > tr
+  > td {
+  height: 56px;
+
+  padding:
+    0 16px;
+
+  border-bottom:
+    1px solid
+    #f1ece7;
+
+  background:
+    #ffffff;
+
+  color:
+    var(
+      --text-secondary,
+      #5d5148
+    );
+
+  font-size:
+    var(--font-size-body-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.45;
+
+  vertical-align:
+    middle;
+
+  transition:
+    background
+    0.12s ease;
+}
+
+
+.pos-table
+  .ant-table-tbody
+  > tr:hover
+  > td {
+  background:
+    #fdf8f2;
+}
+
+
+.pos-table
+  .ant-table-tbody
+  > tr:last-child
+  > td {
+  border-bottom: 0;
+}
+
+
+/* ========================================
+   Fixed action column
+======================================== */
+
+.pos-table
+  .ant-table-cell-fix-right {
+  background:
+    #ffffff;
+}
+
+
+.pos-table
+  .ant-table-thead
+  .ant-table-cell-fix-right {
+  background:
+    #faf7f3;
+}
+
+
+.pos-table
+  .ant-table-tbody
+  > tr:hover
+  > .ant-table-cell-fix-right {
+  background:
+    #fdf8f2;
+}
+
+
+.pos-table
+  .ant-table-cell-fix-right-first::after {
+  box-shadow:
+    inset -8px 0 8px -8px
+    rgba(
+      62,
+      45,
+      30,
+      0.08
+    );
+}
+
+
+/* ========================================
+   Cells
+======================================== */
+
+.pos-table__index {
+  color:
+    var(
+      --text-placeholder,
+      #9a9087
+    );
+
+  font-size:
+    var(--font-size-caption);
+  font-weight: var(--font-weight-regular);
+
+  font-variant-numeric:
+    tabular-nums;
+}
+
+
+.pos-table__name {
+  display: block;
+
+  overflow: hidden;
+
+  color:
+    var(
+      --text-primary,
+      #40352d
+    );
+
+  font-size:
+    var(--font-size-body-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.45;
+
+  text-overflow:
+    ellipsis;
+
+  white-space:
+    nowrap;
+}
+
+
+.pos-table__address {
+  display: block;
+
+  overflow: hidden;
+
+  color:
+    var(
+      --text-secondary,
+      #665b52
+    );
+
+  font-size:
+    var(--font-size-body-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.45;
+
+  text-overflow:
+    ellipsis;
+
+  white-space:
+    nowrap;
+}
+
+
+.pos-table__phone {
+  color:
+    var(
+      --text-secondary,
+      #665b52
+    );
+
+  font-size:
+    var(--font-size-body-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.45;
+
+  font-variant-numeric:
+    tabular-nums;
+
+  white-space:
+    nowrap;
+}
+
+
+/* ========================================
+   Row actions
+======================================== */
+
+.pos-table__actions {
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 2px;
+}
+
+
+.pos-table__action-button.ant-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  min-width: 32px;
+  height: 32px;
+
+  padding: 0;
+
+  border-radius: 8px;
+
+  color:
+    var(
+      --text-muted,
+      #80756c
+    );
+
+  font-size:
+    var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+}
+
+
+.pos-table__action-button.ant-btn:hover,
+.pos-table__action-button.ant-btn:focus {
+  background:
+    #f6eee5;
+
+  color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+}
+
+
+.pos-table__action-button--edit.ant-btn:hover,
+.pos-table__action-button--edit.ant-btn:focus {
+  background:
+    #f8efe3;
+
+  color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+}
+
+
+.pos-table__action-button.ant-btn:disabled {
+  background:
+    transparent;
+
+  color:
+    #c3bbb4;
+}
+
+
+/* ========================================
+   Dropdown action menu
+======================================== */
+
+.pos-table__action-dropdown
+  .ant-dropdown-menu {
+  min-width: 176px;
+
+  padding: 6px;
+
+  border:
+    1px solid
+    var(
+      --border-default,
+      #e5ded7
+    );
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 10px 30px
+    rgba(
+      45,
+      32,
+      21,
+      0.12
+    );
+}
+
+
+.pos-table__action-dropdown
+  .ant-dropdown-menu-item {
+  min-height: 38px;
+
+  padding:
+    7px 10px;
+
+  border-radius: 7px;
+
+  font-size:
+    var(--font-size-body-sm);
+  font-weight: var(--font-weight-regular);
+}
+
+
+.pos-table__action-dropdown
+  .ant-dropdown-menu-item-danger {
+  color:
+    #b5473e;
+}
+
+
+.pos-table__action-dropdown
+  .ant-dropdown-menu-item-danger:hover {
+  background:
+    #fff2f0 !important;
+
+  color:
+    #a83830 !important;
+}
+
+
+/* ========================================
+   Pagination
+======================================== */
+
+.pos-table
+  .ant-table-pagination {
+  margin:
+    14px 18px;
+}
+
+
+.pos-table
+  .ant-pagination {
+  color:
+    var(
+      --text-secondary,
+      #746960
+    );
+
+  font-size:
+    var(--font-size-caption);
+}
+
+
+.pos-table
+  .ant-pagination-total-text {
+  color:
+    var(
+      --text-muted,
+      #938980
+    );
+
+  font-size:
+    var(--font-size-caption);
+  font-weight: var(--font-weight-regular);
+}
+
+
+.pos-table
+  .ant-pagination-item,
+.pos-table
+  .ant-pagination-prev,
+.pos-table
+  .ant-pagination-next,
+.pos-table
+  .ant-pagination-jump-prev,
+.pos-table
+  .ant-pagination-jump-next {
+  font-size:
+    var(--font-size-caption);
+}
+
+
+.pos-table
+  .ant-pagination-item {
+  border-radius: 7px;
+}
+
+
+.pos-table
+  .ant-pagination-item
+  a {
+  font-size:
+    var(--font-size-caption);
+  font-weight: var(--font-weight-medium);
+}
+
+
+.pos-table
+  .ant-pagination-item-active {
+  border-color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+}
+
+
+.pos-table
+  .ant-pagination-item-active
+  a {
+  color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+}
+
+
+.pos-table
+  .ant-pagination-item:hover
+  a,
+.pos-table
+  .ant-pagination-prev:hover
+  .ant-pagination-item-link,
+.pos-table
+  .ant-pagination-next:hover
+  .ant-pagination-item-link {
+  color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+}
+
+
+.pos-table
+  .ant-pagination-options
+  .ant-select-selection-item {
+  font-size:
+    var(--font-size-caption);
+  font-weight: var(--font-weight-regular);
+}
+
+
+.pos-table
+  .ant-select:hover
+  .ant-select-selector {
+  border-color:
+    var(
+      --brand-accent,
+      #b99054
+    ) !important;
+}
+
+
+.pos-table
+  .ant-select-focused
+  .ant-select-selector {
+  border-color:
+    var(
+      --brand-primary,
+      #7b4b08
+    ) !important;
+
+  box-shadow:
+    0 0 0 2px
+    rgba(
+      123,
+      75,
+      8,
+      0.08
+    ) !important;
+}
+
+
+/* ========================================
+   Empty state
+======================================== */
+
+.pos-table__empty {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 6px;
+
+  min-height: 220px;
+
+  padding: 30px;
+
+  text-align: center;
+}
+
+
+.pos-table__empty-icon,
+.pos-table__state-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 50px;
+  height: 50px;
+
+  margin-bottom: 4px;
+
+  border-radius: 14px;
+
+  background:
+    #f7efe6;
+
+  color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+
+  font-size: 22px;
+}
+
+
+.pos-table__empty strong,
+.pos-table__state strong {
+  color:
+    var(
+      --text-primary,
+      #40342c
+    );
+
+  font-size:
+    var(--font-size-body);
+  font-weight: var(--font-weight-semibold);
+}
+
+
+.pos-table__empty span,
+.pos-table__state span {
+  max-width: 360px;
+
+  color:
+    var(
+      --text-muted,
+      #938980
+    );
+
+  font-size:
+    var(--font-size-caption);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.5;
+
+  text-align: center;
+}
+
+
+/* ========================================
+   Loading / Error
+======================================== */
+
+.pos-table__state {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 8px;
+
+  min-height: 280px;
+
+  padding: 30px;
+}
+
+
+.pos-table__state-icon--error {
+  background:
+    #fff1ef;
+
+  color:
+    #b5473e;
+}
+
+
+.pos-table__retry.ant-btn {
+  height: 38px;
+
+  margin-top: 6px;
+
+  border-color:
+    rgba(
+      123,
+      75,
+      8,
+      0.24
+    );
+
+  border-radius: 8px;
+
+  color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+
+  font-size:
+    var(--font-size-body-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+
+.pos-table__retry.ant-btn:hover,
+.pos-table__retry.ant-btn:focus {
+  border-color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+
+  color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+}
+
+
+/* ========================================
+   Responsive
+======================================== */
+
+@media (
+  max-width: 768px
+) {
+  .pos-table {
+    overflow-x: auto;
+  }
+
+
+  .pos-table__antd {
+    min-width: 1016px;
+  }
+
+
+  .pos-table
+    .ant-table-pagination {
+    margin:
+      12px 14px;
+  }
+}

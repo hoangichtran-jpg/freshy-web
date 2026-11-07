@@ -1,0 +1,269 @@
+/* Freshy — Request detail / Flat layout v3
+ * No nested bordered card within the order modal.
+ * The existing request IDs, items, toppings and payment status stay unchanged.
+ */
+
+.order-summary-request {
+  flex: 0 0 auto;
+  width: 100%;
+  min-width: 0;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.order-summary-request__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 13px 0 12px;
+  border-bottom: 1px solid #efede9;
+  background: transparent;
+}
+.order-summary-request__identity { min-width: 0; }
+.order-summary-request__eyebrow {
+  margin-bottom: 4px;
+  color: #887e6f;
+  font-size: 12px;
+  font-weight: 650;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+.order-summary-request__request-id {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  min-width: 0;
+  color: #263242;
+  font-size: 16px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.order-summary-request__request-id > span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.order-summary-request__copy.ant-btn {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  color: #9aa3ae !important;
+}
+.order-summary-request__copy.ant-btn:hover,
+.order-summary-request__copy.ant-btn:focus {
+  color: #81500e !important;
+  background: #faf6ef !important;
+}
+.order-summary-request__date {
+  margin-top: 5px;
+  color: #9199a5;
+  font-size: 13px;
+}
+
+.order-summary-request__payment {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+.order-summary-request__payment .ant-tag {
+  margin: 0;
+  padding: 2px 9px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.order-summary-request__total-price {
+  color: #263242;
+  font-size: 18px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* A simple contact row, not another inner card. */
+.order-summary-request__customer {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  padding: 13px 0;
+  border-bottom: 0;
+}
+.order-summary-request__customer-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  min-width: 0;
+  color: #72808f;
+}
+.order-summary-request__customer-item > .anticon {
+  flex-shrink: 0;
+  margin-top: 4px;
+  color: #a2a9b3;
+  font-size: 15px;
+}
+.order-summary-request__customer-content { min-width: 0; }
+.order-summary-request__label {
+  display: block;
+  margin-bottom: 4px;
+  color: #7c8692;
+  font-size: 13px;
+  font-weight: 500;
+}
+.order-summary-request__value {
+  min-width: 0;
+  overflow: hidden;
+  color: #344051;
+  font-size: 15px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.order-summary-request__delivery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0 0 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #f8f7f4;
+}
+.order-summary-request__delivery-value {
+  display: block;
+  color: #344051;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+/* A small heading followed by unboxed dishes. */
+.order-summary-request__items { border-top: 1px solid #efede9; }
+.order-summary-request__section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0 6px;
+  border: 0;
+  background: transparent;
+  color: #4c596a;
+  font-size: 15px;
+  font-weight: 700;
+}
+.order-summary-request__item-count {
+  flex-shrink: 0;
+  color: #949da7;
+  font-size: 13px;
+  font-weight: 500;
+}
+.order-summary-request__items .ant-list { padding: 0; }
+.order-summary-request__items .ant-list-empty-text {
+  padding: 18px 0;
+  color: #7a8490;
+}
+.order-summary-request__dish.ant-list-item {
+  display: block;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0efec;
+}
+.order-summary-request__dish.ant-list-item:last-child { border-bottom: 0; }
+.order-summary-request__dish-main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+.order-summary-request__dish-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+.order-summary-request__dish-name {
+  min-width: 0;
+  color: #273344;
+  font-size: 16px;
+  font-weight: 650;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+.order-summary-request__quantity {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  min-width: 27px;
+  min-height: 24px;
+  padding: 2px 7px;
+  border-radius: 6px;
+  background: #f8eddc;
+  color: #815518;
+  font-size: 13px;
+  font-weight: 650;
+}
+.order-summary-request__dish-price {
+  flex-shrink: 0;
+  color: #273344;
+  font-size: 16px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.order-summary-request__toppings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+.order-summary-request__topping {
+  display: inline-flex;
+  align-items: center;
+  min-height: 22px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #f5f4f1;
+  color: #69717c;
+  font-size: 13px;
+}
+.order-summary-request__dish-note {
+  margin-top: 7px;
+  color: #6f7885;
+  font-size: 14px;
+  line-height: 1.45;
+}
+.order-summary-request__dish-note span { font-weight: 600; }
+
+.order-summary-request__bottom {
+  padding: 12px 0;
+  border-top: 1px solid #efede9;
+  background: transparent;
+}
+.order-summary-request__note-value {
+  color: #4b5869;
+  font-size: 14px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+  .order-summary-request__header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .order-summary-request__payment { align-items: flex-start; }
+  .order-summary-request__customer,
+  .order-summary-request__delivery { grid-template-columns: 1fr; }
+  .order-summary-request__dish-main { gap: 10px; }
+  .order-summary-request__dish-price { font-size: 15px; }
+}

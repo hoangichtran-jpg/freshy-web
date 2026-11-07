@@ -1,0 +1,516 @@
+.sales-items-table {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+
+  min-width: 0;
+  min-height: 0;
+
+  overflow: hidden;
+
+  background:
+    var(
+      --bg-surface,
+      #fff
+    );
+
+  border:
+    1px solid
+    var(
+      --border-default,
+      #e5ded7
+    );
+
+  border-radius:
+    var(
+      --radius-lg,
+      14px
+    );
+
+  box-shadow:
+    0 1px 2px
+    rgba(
+      45,
+      32,
+      21,
+      0.025
+    );
+}
+
+
+/* ========================================
+   Section header
+======================================== */
+
+.sales-items-table__header {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding:
+    17px 20px;
+
+  border-bottom:
+    1px solid
+    var(
+      --border-default,
+      #ece6df
+    );
+
+  background:
+    var(
+      --bg-surface,
+      #fff
+    );
+}
+
+
+.sales-items-table__heading {
+  min-width: 0;
+}
+
+
+.sales-items-table__title {
+  margin: 0;
+
+  color:
+    var(
+      --text-primary,
+      #352b24
+    );
+
+  font-size:
+    var(--font-size-heading);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.4;
+}
+
+
+.sales-items-table__description {
+  margin:
+    3px 0 0;
+
+  color:
+    var(
+      --text-muted,
+      #938980
+    );
+
+  font-size:
+    var(--font-size-caption);
+  line-height: 1.45;
+}
+
+
+.sales-items-table__count {
+  flex-shrink: 0;
+
+  padding:
+    5px 10px;
+
+  border:
+    1px solid
+    rgba(
+      123,
+      75,
+      8,
+      0.12
+    );
+
+  border-radius:
+    999px;
+
+  background:
+    #faf5ed;
+
+  color:
+    var(
+      --brand-primary,
+      #8b5708
+    );
+
+  font-size:
+    var(--font-size-caption);
+  font-weight: var(--font-weight-semibold);
+}
+
+
+/* ========================================
+   Table viewport
+======================================== */
+
+.sales-items-table__table {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+
+  min-width: 0;
+  min-height: 0;
+
+  overflow: hidden;
+}
+
+
+.sales-items-table__table
+  > .ant-table-wrapper {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+
+  min-height: 0;
+}
+
+
+.sales-items-table__table
+  .ant-spin-nested-loading,
+.sales-items-table__table
+  .ant-spin-container {
+  min-height: 0;
+  height: 100%;
+}
+
+
+.sales-items-table__table
+  .ant-spin-container {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.sales-items-table__table
+  .ant-table {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+
+  min-height: 0;
+
+  background: transparent;
+}
+
+
+.sales-items-table__table
+  .ant-table-container {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+
+  min-height: 0;
+}
+
+
+/* ========================================
+   Column header
+   Fixed
+======================================== */
+
+.sales-items-table
+  .ant-table-header {
+  flex: 0 0 auto;
+
+  overflow: hidden !important;
+
+  background:
+    #faf7f3;
+}
+
+
+.sales-items-table
+  .ant-table-thead
+  > tr
+  > th {
+  height: 48px;
+
+  padding:
+    0 16px;
+
+  background:
+    #faf7f3;
+
+  border-bottom:
+    1px solid
+    #ebe4dc;
+
+  color:
+    var(
+      --text-secondary,
+      #746960
+    );
+
+  font-size:
+    var(--font-size-caption);
+  font-weight: var(--font-weight-semibold);
+
+  white-space: nowrap;
+}
+
+
+/* ========================================
+   Table body
+   ONLY rows scroll
+======================================== */
+
+.sales-items-table
+  .ant-table-body {
+  flex: 1 1 auto;
+
+  min-height: 0;
+
+  max-height:
+    none !important;
+
+  overflow-x:
+    auto !important;
+
+  overflow-y:
+    auto !important;
+
+  scrollbar-width:
+    thin;
+
+  scrollbar-color:
+    #d8c8b8
+    transparent;
+}
+
+
+.sales-items-table
+  .ant-table-body::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+
+.sales-items-table
+  .ant-table-body::-webkit-scrollbar-track {
+  background:
+    transparent;
+}
+
+
+.sales-items-table
+  .ant-table-body::-webkit-scrollbar-thumb {
+  border-radius:
+    999px;
+
+  background:
+    #d8c8b8;
+}
+
+
+.sales-items-table
+  .ant-table-body::-webkit-scrollbar-thumb:hover {
+  background:
+    var(
+      --brand-accent,
+      #b99054
+    );
+}
+
+
+/* ========================================
+   Rows
+======================================== */
+
+.sales-items-table
+  .ant-table-tbody
+  > tr
+  > td {
+  height: 54px;
+
+  padding:
+    0 16px;
+
+  border-bottom:
+    1px solid
+    #f1ece7;
+
+  background:
+    #fff;
+
+  color:
+    var(
+      --text-secondary,
+      #5d5148
+    );
+
+  vertical-align:
+    middle;
+
+  transition:
+    background 0.12s ease;
+}
+
+
+.sales-items-table
+  .ant-table-tbody
+  > tr:hover
+  > td {
+  background:
+    #fdf9f4;
+}
+
+
+.sales-items-table
+  .ant-table-tbody
+  > tr:last-child
+  > td {
+  border-bottom: 0;
+}
+
+
+/* ========================================
+   Item name
+======================================== */
+
+.sales-items-table__item-name {
+  display: block;
+
+  overflow: hidden;
+
+  color:
+    var(
+      --text-primary,
+      #3c3129
+    );
+
+  font-size:
+    var(--font-size-body-sm);
+  font-weight: var(--font-weight-semibold);
+
+  text-overflow:
+    ellipsis;
+
+  white-space:
+    nowrap;
+}
+
+
+/* ========================================
+   Numeric cells
+======================================== */
+
+.sales-items-table__number,
+.sales-items-table__remaining-value {
+  display: inline-block;
+
+  min-width: 44px;
+
+  color:
+    var(
+      --text-primary,
+      #40352d
+    );
+
+  font-size:
+    var(--font-size-body);
+  font-weight: var(--font-weight-semibold);
+
+  line-height: 1.4;
+
+  text-align: right;
+
+  font-variant-numeric:
+    tabular-nums;
+
+  font-feature-settings:
+    "tnum";
+}
+
+
+/*
+ * Đã bán:
+ * nhấn bằng brand color,
+ * không dùng badge/pill.
+ */
+
+.sales-items-table__number--sold {
+  color:
+    var(
+      --brand-primary,
+      #8b5708
+    );
+
+  font-weight: var(--font-weight-semibold);
+}
+
+
+/*
+ * Topping là số phụ,
+ * giảm emphasis một chút.
+ */
+
+.sales-items-table__number--muted {
+  color:
+    var(
+      --text-secondary,
+      #756a61
+    );
+
+  font-weight: var(--font-weight-medium);
+}
+
+
+/*
+ * Còn lại là metric vận hành
+ * quan trọng nhất của từng row.
+ */
+
+.sales-items-table__remaining-value {
+  color:
+    var(
+      --text-primary,
+      #30271f
+    );
+
+  font-size:
+    var(--font-size-body-lg);
+  font-weight: var(--font-weight-bold);
+}
+
+
+/* ========================================
+   Empty state
+======================================== */
+
+.sales-items-table
+  .ant-empty {
+  margin:
+    50px 0;
+}
+
+
+.sales-items-table
+  .ant-empty-description {
+  color:
+    var(
+      --text-muted,
+      #978d84
+    );
+
+  font-size:
+    var(--font-size-body-sm);
+}
+
+
+/* ========================================
+   Responsive
+======================================== */
+
+@media (
+  max-width: 700px
+) {
+  .sales-items-table__header {
+    align-items:
+      flex-start;
+  }
+
+
+  .sales-items-table__description {
+    max-width:
+      420px;
+  }
+}

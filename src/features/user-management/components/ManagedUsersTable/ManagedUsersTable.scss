@@ -1,0 +1,594 @@
+/* ========================================
+   INDEX
+======================================== */
+
+.managed-users-table__index {
+  color:
+    var(
+      --text-placeholder,
+      #9a9087
+    );
+
+  font-size:
+    var(--font-size-caption);
+  font-weight: var(--font-weight-medium);
+
+  font-variant-numeric:
+    tabular-nums;
+}
+
+
+/* ========================================
+   IDENTITY
+======================================== */
+
+.managed-users-table__identity {
+  display: flex;
+
+  align-items: center;
+
+  min-width: 0;
+
+  gap: 10px;
+}
+
+
+.managed-users-table__avatar {
+  display: flex;
+
+  flex:
+    0 0 34px;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+
+  border-radius: 10px;
+
+  background:
+    #f6ede1;
+
+  color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+
+  font-size:
+    var(--font-size-body-sm);
+  font-weight: var(--font-weight-bold);
+
+  text-transform:
+    uppercase;
+}
+
+
+.managed-users-table__identity-content {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+
+  gap: 2px;
+}
+
+
+.managed-users-table__name {
+  display: block;
+
+  overflow: hidden;
+
+  color:
+    var(
+      --text-primary,
+      #40352d
+    );
+
+  font-size:
+    var(--font-size-body-sm);
+  font-weight: var(--font-weight-semibold);
+
+  line-height:
+    var(--line-height-body-sm);
+
+  text-overflow:
+    ellipsis;
+
+  white-space:
+    nowrap;
+}
+
+
+.managed-users-table__meta {
+  overflow: hidden;
+
+  color:
+    var(
+      --text-placeholder,
+      #9a9087
+    );
+
+  font-size:
+    var(--font-size-overline);
+  font-weight: var(--font-weight-medium);
+
+  line-height:
+    var(--line-height-overline);
+
+  text-overflow:
+    ellipsis;
+
+  white-space:
+    nowrap;
+}
+
+
+/* ========================================
+   PHONE
+======================================== */
+
+.managed-users-table__phone {
+  color:
+    var(
+      --text-secondary,
+      #675d55
+    );
+
+  font-size:
+    var(--font-size-body-sm);
+  font-weight: var(--font-weight-semibold);
+
+  font-variant-numeric:
+    tabular-nums;
+
+  letter-spacing:
+    0.01em;
+
+  white-space:
+    nowrap;
+}
+
+
+/* ========================================
+   KITCHENS
+======================================== */
+
+.managed-users-table__kitchen-list {
+  display: flex;
+
+  align-items: center;
+
+  min-width: 0;
+
+  gap: 6px;
+
+  overflow: hidden;
+}
+
+
+.managed-users-table__kitchen {
+  display: inline-flex;
+
+  flex: 0 1 auto;
+
+  align-items: center;
+
+  max-width: 140px;
+  height: 28px;
+
+  padding:
+    0 10px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    #e5d8c8;
+
+  border-radius:
+    999px;
+
+  background:
+    #fffdfb;
+
+  color:
+    #71665d;
+
+  font-size:
+    var(--font-size-meta);
+  font-weight: var(--font-weight-semibold);
+
+  text-overflow:
+    ellipsis;
+
+  white-space:
+    nowrap;
+}
+
+
+.managed-users-table__more-kitchens {
+  display: inline-flex;
+
+  flex: 0 0 auto;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 48px;
+  height: 28px;
+
+  padding:
+    0 10px;
+
+  border-radius:
+    999px;
+
+  background:
+    #f5e9d9;
+
+  color:
+    #80500d;
+
+  font-size:
+    var(--font-size-meta);
+  font-weight: var(--font-weight-bold);
+
+  white-space:
+    nowrap;
+}
+
+
+/* ========================================
+   NO KITCHEN
+======================================== */
+
+.managed-users-table__unassigned {
+  display: inline-flex;
+
+  align-items: center;
+
+  height: 28px;
+
+  padding:
+    0 10px;
+
+  border:
+    1px solid
+    #ebe5de;
+
+  border-radius:
+    999px;
+
+  background:
+    #faf9f7;
+
+  color:
+    #91877f;
+
+  font-size:
+    var(--font-size-meta);
+  font-weight: var(--font-weight-semibold);
+
+  white-space:
+    nowrap;
+}
+
+
+.managed-users-table__unassigned-dot {
+  width: 6px;
+  height: 6px;
+
+  margin-right: 6px;
+
+  border-radius:
+    50%;
+
+  background:
+    #bbb1a9;
+}
+
+
+/* ========================================
+   MORE ACTION
+======================================== */
+
+.managed-users-table__menu-cell {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+}
+
+
+.managed-users-table__more-button.ant-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  min-width: 34px;
+  height: 34px;
+
+  padding: 0;
+
+  border: 0;
+
+  border-radius: 9px;
+
+  background:
+    transparent;
+
+  color:
+    #85796f;
+
+  box-shadow: none;
+
+  font-size: 18px;
+
+  transition:
+    background-color 150ms ease,
+    color 150ms ease;
+}
+
+
+.managed-users-table__more-button.ant-btn:hover,
+.managed-users-table__more-button.ant-btn:focus {
+  background:
+    #f5efe8 !important;
+
+  color:
+    var(
+      --brand-primary,
+      #7b4b08
+    ) !important;
+}
+
+
+.managed-users-table__more-button.ant-btn:disabled {
+  background:
+    transparent !important;
+
+  opacity: 0.45;
+}
+
+
+/* ========================================
+   DROPDOWN
+======================================== */
+
+.managed-users-table__dropdown
+  .ant-dropdown-menu {
+  min-width: 180px;
+
+  padding: 6px;
+
+  border:
+    1px solid
+    #eee6dd;
+
+  border-radius: 12px;
+
+  background: #fff;
+
+  box-shadow:
+    0 12px 32px
+    rgba(
+      63,
+      48,
+      35,
+      0.12
+    );
+}
+
+
+.managed-users-table__dropdown
+  .ant-dropdown-menu-item {
+  min-height: 38px;
+
+  padding:
+    8px 10px;
+
+  border-radius: 8px;
+
+  color:
+    #51473f;
+
+  font-size:
+    var(--font-size-caption);
+  font-weight: var(--font-weight-semibold);
+
+  gap: 8px;
+}
+
+
+.managed-users-table__dropdown
+  .ant-dropdown-menu-item
+  .anticon {
+  color:
+    #83766b;
+
+  font-size: 14px;
+}
+
+
+.managed-users-table__dropdown
+  .ant-dropdown-menu-item:not(
+    .ant-dropdown-menu-item-danger
+  ):hover {
+  background:
+    #f8f3ed;
+
+  color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+}
+
+
+.managed-users-table__dropdown
+  .ant-dropdown-menu-item:not(
+    .ant-dropdown-menu-item-danger
+  ):hover
+  .anticon {
+  color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+}
+
+
+.managed-users-table__dropdown
+  .ant-dropdown-menu-item-danger {
+  color:
+    #b14f47;
+}
+
+
+.managed-users-table__dropdown
+  .ant-dropdown-menu-item-danger
+  .anticon {
+  color:
+    #b14f47;
+}
+
+
+.managed-users-table__dropdown
+  .ant-dropdown-menu-item-danger:hover {
+  background:
+    #fff1ef !important;
+
+  color:
+    #9e4039 !important;
+}
+
+
+.managed-users-table__dropdown
+  .ant-dropdown-menu-item-divider {
+  margin:
+    4px 6px;
+
+  background:
+    #eee8e2;
+}
+
+
+/* ========================================
+   EMPTY / ERROR
+======================================== */
+
+.managed-users-table__state {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 180px;
+
+  gap: 6px;
+
+  text-align: center;
+}
+
+
+.managed-users-table__state-title {
+  color:
+    var(
+      --text-primary,
+      #40352d
+    );
+
+  font-size:
+    var(--font-size-body-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+
+.managed-users-table__state-description {
+  color:
+    var(
+      --text-placeholder,
+      #9a9087
+    );
+
+  font-size:
+    var(--font-size-caption);
+}
+
+
+.managed-users-table__retry.ant-btn {
+  height: 34px;
+
+  margin-top: 8px;
+
+  padding:
+    0 12px;
+
+  border:
+    1px solid
+    #dcc9ad;
+
+  border-radius: 8px;
+
+  background:
+    #faf4eb;
+
+  color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+
+  font-size:
+    var(--font-size-caption);
+  font-weight: var(--font-weight-semibold);
+}
+
+
+.managed-users-table__retry.ant-btn:hover,
+.managed-users-table__retry.ant-btn:focus {
+  border-color:
+    var(
+      --brand-primary,
+      #7b4b08
+    ) !important;
+
+  background:
+    #f4e8d7 !important;
+
+  color:
+    var(
+      --brand-primary,
+      #7b4b08
+    ) !important;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+  .managed-users-table__kitchen {
+    max-width: 110px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .managed-users-table__avatar {
+    display: none;
+  }
+
+
+  .managed-users-table__meta {
+    display: none;
+  }
+}

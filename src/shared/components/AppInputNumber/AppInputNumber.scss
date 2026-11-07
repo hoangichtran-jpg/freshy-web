@@ -1,0 +1,257 @@
+/* ========================================
+   Shared numeric input foundation
+======================================== */
+
+.app-input-number.ant-input-number,
+.app-input-number.ant-input-number-group-wrapper
+  .ant-input-number {
+  width: 100%;
+
+  border:
+    1px solid
+    var(
+      --border-default,
+      #e5e7eb
+    );
+
+  border-radius:
+    var(
+      --radius-md,
+      8px
+    );
+
+  background:
+    var(
+      --bg-surface,
+      #fff
+    );
+
+  color:
+    var(
+      --text-primary,
+      #1f2937
+    );
+
+  font-family: inherit;
+
+  font-size:
+    var(
+      --font-size-body-sm
+    );
+
+  font-weight:
+    var(
+      --font-weight-regular
+    );
+
+  line-height:
+    var(
+      --line-height-body-sm
+    );
+
+  box-shadow: none;
+
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    background-color 0.15s ease;
+}
+
+
+/* ========================================
+   Sizes
+======================================== */
+
+.app-input-number--sm.ant-input-number,
+.app-input-number--sm.ant-input-number-group-wrapper
+  .ant-input-number {
+  height: 36px;
+}
+
+
+.app-input-number--md.ant-input-number,
+.app-input-number--md.ant-input-number-group-wrapper
+  .ant-input-number {
+  height: 42px;
+}
+
+
+.app-input-number--lg.ant-input-number,
+.app-input-number--lg.ant-input-number-group-wrapper
+  .ant-input-number {
+  height: 44px;
+}
+
+
+.app-input-number.ant-input-number
+  .ant-input-number-input-wrap,
+.app-input-number.ant-input-number-group-wrapper
+  .ant-input-number-input-wrap {
+  height: 100%;
+}
+
+
+.app-input-number.ant-input-number
+  .ant-input-number-input,
+.app-input-number.ant-input-number-group-wrapper
+  .ant-input-number-input {
+  height: 100%;
+
+  color: inherit;
+
+  font: inherit;
+}
+
+
+/* ========================================
+   Placeholder
+======================================== */
+
+.app-input-number.ant-input-number
+  .ant-input-number-input::placeholder,
+.app-input-number.ant-input-number-group-wrapper
+  .ant-input-number-input::placeholder {
+  color:
+    var(
+      --text-placeholder,
+      #9ca3af
+    );
+}
+
+
+/* ========================================
+   Hover / focus
+======================================== */
+
+.app-input-number.ant-input-number:not(
+    .ant-input-number-disabled
+  ):hover,
+.app-input-number.ant-input-number-group-wrapper:not(
+    .ant-input-number-group-wrapper-disabled
+  ):hover
+  .ant-input-number {
+  border-color:
+    var(
+      --brand-primary-500,
+      #9d6610
+    );
+}
+
+
+.app-input-number.ant-input-number-focused,
+.app-input-number.ant-input-number:focus-within,
+.app-input-number.ant-input-number-group-wrapper-focused
+  .ant-input-number,
+.app-input-number.ant-input-number-group-wrapper:focus-within
+  .ant-input-number {
+  border-color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+
+  box-shadow:
+    0 0 0 3px
+    rgba(
+      123,
+      75,
+      8,
+      0.08
+    );
+}
+
+
+/* ========================================
+   Error
+======================================== */
+
+.app-input-number.ant-input-number-status-error,
+.app-input-number.ant-input-number-group-wrapper-status-error
+  .ant-input-number {
+  border-color:
+    var(
+      --color-error,
+      #dc2626
+    );
+}
+
+
+.app-input-number.ant-input-number-status-error.ant-input-number-focused,
+.app-input-number.ant-input-number-group-wrapper-status-error:focus-within
+  .ant-input-number {
+  box-shadow:
+    0 0 0 3px
+    rgba(
+      220,
+      38,
+      38,
+      0.1
+    );
+}
+
+
+/* ========================================
+   Disabled
+======================================== */
+
+.app-input-number.ant-input-number-disabled,
+.app-input-number.ant-input-number-group-wrapper-disabled
+  .ant-input-number {
+  border-color:
+    var(
+      --border-default,
+      #e5e7eb
+    );
+
+  background:
+    var(
+      --bg-muted,
+      #f8fafc
+    );
+
+  color:
+    var(
+      --text-muted,
+      #6b7280
+    );
+
+  cursor: not-allowed;
+
+  box-shadow: none;
+}
+
+
+/* ========================================
+   Addon
+======================================== */
+
+.app-input-number.ant-input-number-group-wrapper
+  .ant-input-number-group-addon {
+  border-color:
+    var(
+      --border-default,
+      #e5e7eb
+    );
+
+  background:
+    var(
+      --bg-muted,
+      #f8fafc
+    );
+
+  color:
+    var(
+      --text-secondary,
+      #4b5563
+    );
+
+  font-size:
+    var(
+      --font-size-meta
+    );
+
+  font-weight:
+    var(
+      --font-weight-semibold
+    );
+}

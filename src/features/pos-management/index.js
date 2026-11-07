@@ -1,0 +1,3 @@
+export {
+  PosManagementPage,
+} from "./pages";

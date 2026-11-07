@@ -1,0 +1,184 @@
+.managed-user-form {
+  width: 100%;
+}
+
+
+/* ========================================
+   FORM
+======================================== */
+
+.managed-user-form
+  .ant-form-item {
+  margin-bottom: 18px;
+}
+
+
+.managed-user-form
+  .ant-form-item-label {
+  padding-bottom: 6px;
+}
+
+
+.managed-user-form
+  .ant-form-item-label
+  > label {
+  color:
+    var(
+      --text-secondary,
+      #675d55
+    );
+
+  font-size:
+    var(--font-size-caption);
+  font-weight: var(--font-weight-semibold);
+}
+
+
+.managed-user-form__grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(
+        0,
+        1fr
+      )
+    );
+
+  gap: 14px;
+}
+
+
+/* ========================================
+   INPUT
+======================================== */
+
+.managed-user-form__input.ant-input,
+.managed-user-form__input.ant-input-affix-wrapper,
+.managed-user-form__date.ant-picker,
+.managed-user-form__textarea.ant-input {
+  border:
+    1px solid
+    #ded6cf;
+
+  border-radius: 9px;
+
+  box-shadow: none;
+}
+
+
+.managed-user-form__input.ant-input,
+.managed-user-form__input.ant-input-affix-wrapper,
+.managed-user-form__date.ant-picker {
+  min-height: 42px;
+}
+
+
+.managed-user-form__input.ant-input:hover,
+.managed-user-form__input.ant-input:focus,
+.managed-user-form__input.ant-input-affix-wrapper:hover,
+.managed-user-form__input.ant-input-affix-wrapper-focused,
+.managed-user-form__date.ant-picker:hover,
+.managed-user-form__date.ant-picker-focused,
+.managed-user-form__textarea.ant-input:hover,
+.managed-user-form__textarea.ant-input:focus {
+  border-color:
+    var(
+      --brand-primary,
+      #7b4b08
+    ) !important;
+
+  box-shadow:
+    0 0 0 2px
+    rgba(
+      123,
+      75,
+      8,
+      0.07
+    ) !important;
+}
+
+
+.managed-user-form__date.ant-picker {
+  width: 100%;
+}
+
+
+/* ========================================
+   PHONE
+======================================== */
+
+.managed-user-form__phone-container.react-tel-input {
+  width: 100%;
+}
+
+
+.managed-user-form__phone-container.react-tel-input
+  .managed-user-form__phone-input.form-control {
+  width: 100%;
+  height: 42px;
+
+  border:
+    1px solid
+    #ded6cf;
+
+  border-radius: 9px;
+
+  color:
+    #4b413a;
+
+  font-size:
+    var(--font-size-body-sm);
+
+  box-shadow: none;
+}
+
+
+.managed-user-form__phone-container.react-tel-input
+  .managed-user-form__phone-input.form-control:focus {
+  border-color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+
+  box-shadow:
+    0 0 0 2px
+    rgba(
+      123,
+      75,
+      8,
+      0.07
+    );
+}
+
+
+.managed-user-form__phone-container.react-tel-input
+  .managed-user-form__phone-button.flag-dropdown {
+  border:
+    1px solid
+    #ded6cf;
+
+  border-right: 0;
+
+  border-radius:
+    9px 0 0 9px;
+
+  background:
+    #faf7f3;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 620px) {
+  .managed-user-form__grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 0;
+  }
+}

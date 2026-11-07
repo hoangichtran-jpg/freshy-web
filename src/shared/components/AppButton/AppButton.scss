@@ -1,0 +1,549 @@
+.app-button.ant-btn {
+  --app-button-border:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+
+  --app-button-background:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+
+  --app-button-color:
+    var(
+      --text-on-primary,
+      #fff
+    );
+
+  --app-button-hover-border:
+    var(
+      --brand-primary-hover,
+      #8b560a
+    );
+
+  --app-button-hover-background:
+    var(
+      --brand-primary-hover,
+      #8b560a
+    );
+
+  --app-button-hover-color:
+    var(
+      --text-on-primary,
+      #fff
+    );
+
+  --app-button-active-border:
+    var(
+      --brand-primary-active,
+      #6b4106
+    );
+
+  --app-button-active-background:
+    var(
+      --brand-primary-active,
+      #6b4106
+    );
+
+  --app-button-active-color:
+    var(
+      --text-on-primary,
+      #fff
+    );
+
+  --app-button-focus-ring:
+    rgba(
+      123,
+      75,
+      8,
+      0.14
+    );
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  margin: 0;
+
+  border:
+    1px solid
+    var(
+      --app-button-border
+    ) !important;
+
+  border-radius:
+    var(
+      --radius-md,
+      8px
+    );
+
+  background:
+    var(
+      --app-button-background
+    ) !important;
+
+  color:
+    var(
+      --app-button-color
+    ) !important;
+
+  font-family:
+    inherit;
+
+  font-weight:
+    var(
+      --font-weight-semibold
+    );
+
+  box-shadow:
+    none !important;
+
+  transition:
+    border-color
+      0.15s ease,
+    background-color
+      0.15s ease,
+    color
+      0.15s ease,
+    box-shadow
+      0.15s ease,
+    transform
+      0.15s ease;
+}
+
+
+/* ========================================
+   Sizes
+======================================== */
+
+.app-button--sm.ant-btn {
+  height: 36px;
+
+  padding:
+    0 12px;
+
+  font-size:
+    var(
+      --font-size-body-sm
+    );
+
+  line-height:
+    var(
+      --line-height-body-sm
+    );
+}
+
+
+.app-button--md.ant-btn {
+  height: 44px;
+
+  padding:
+    0 18px;
+
+  font-size:
+    var(
+      --font-size-body
+    );
+
+  line-height:
+    var(
+      --line-height-body
+    );
+}
+
+
+.app-button--lg.ant-btn {
+  height: 48px;
+
+  padding:
+    0 20px;
+
+  font-size:
+    var(
+      --font-size-body
+    );
+
+  line-height:
+    var(
+      --line-height-body
+    );
+}
+
+
+/* ========================================
+   Primary
+======================================== */
+
+.app-button--primary.ant-btn {
+  --app-button-border:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+
+  --app-button-background:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+
+  --app-button-color:
+    var(
+      --text-on-primary,
+      #fff
+    );
+
+  --app-button-hover-border:
+    var(
+      --brand-primary-hover,
+      #8b560a
+    );
+
+  --app-button-hover-background:
+    var(
+      --brand-primary-hover,
+      #8b560a
+    );
+
+  --app-button-hover-color:
+    var(
+      --text-on-primary,
+      #fff
+    );
+
+  --app-button-active-border:
+    var(
+      --brand-primary-active,
+      #6b4106
+    );
+
+  --app-button-active-background:
+    var(
+      --brand-primary-active,
+      #6b4106
+    );
+
+  --app-button-active-color:
+    var(
+      --text-on-primary,
+      #fff
+    );
+}
+
+
+/* ========================================
+   Secondary
+======================================== */
+
+.app-button--secondary.ant-btn {
+  --app-button-border:
+    var(
+      --brand-primary-500,
+      #9d6610
+    );
+
+  --app-button-background:
+    var(
+      --bg-surface,
+      #fff
+    );
+
+  --app-button-color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+
+  --app-button-hover-border:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+
+  --app-button-hover-background:
+    var(
+      --state-brand-hover,
+      #fbf8f0
+    );
+
+  --app-button-hover-color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+
+  --app-button-active-border:
+    var(
+      --brand-primary-active,
+      #6b4106
+    );
+
+  --app-button-active-background:
+    var(
+      --state-brand-selected,
+      #f6f1e4
+    );
+
+  --app-button-active-color:
+    var(
+      --brand-primary-active,
+      #6b4106
+    );
+}
+
+
+/* ========================================
+   Danger
+======================================== */
+
+.app-button--danger.ant-btn {
+  --app-button-border:
+    var(
+      --color-error,
+      #dc2626
+    );
+
+  --app-button-background:
+    var(
+      --color-error,
+      #dc2626
+    );
+
+  --app-button-color:
+    #fff;
+
+  --app-button-hover-border:
+    var(
+      --color-error-hover,
+      #b91c1c
+    );
+
+  --app-button-hover-background:
+    var(
+      --color-error-hover,
+      #b91c1c
+    );
+
+  --app-button-hover-color:
+    #fff;
+
+  --app-button-active-border:
+    #991b1b;
+
+  --app-button-active-background:
+    #991b1b;
+
+  --app-button-active-color:
+    #fff;
+
+  --app-button-focus-ring:
+    rgba(
+      220,
+      38,
+      38,
+      0.14
+    );
+}
+
+
+/* ========================================
+   Ghost
+======================================== */
+
+.app-button--ghost.ant-btn {
+  --app-button-border:
+    var(
+      --border-default,
+      #e5e7eb
+    );
+
+  --app-button-background:
+    transparent;
+
+  --app-button-color:
+    var(
+      --text-secondary,
+      #4b5563
+    );
+
+  --app-button-hover-border:
+    var(
+      --border-strong,
+      #d1d5db
+    );
+
+  --app-button-hover-background:
+    var(
+      --state-hover,
+      #f8fafc
+    );
+
+  --app-button-hover-color:
+    var(
+      --text-primary,
+      #1f2937
+    );
+
+  --app-button-active-border:
+    var(
+      --border-strong,
+      #d1d5db
+    );
+
+  --app-button-active-background:
+    var(
+      --bg-muted,
+      #f8fafc
+    );
+
+  --app-button-active-color:
+    var(
+      --text-primary,
+      #1f2937
+    );
+}
+
+
+/* ========================================
+   Icon
+======================================== */
+
+.app-button.ant-btn
+  .anticon {
+  color: inherit !important;
+}
+
+
+/* ========================================
+   Hover
+======================================== */
+
+.app-button.ant-btn:not(
+    :disabled
+  ):not(
+    [disabled]
+  ):hover {
+  border-color:
+    var(
+      --app-button-hover-border
+    ) !important;
+
+  background:
+    var(
+      --app-button-hover-background
+    ) !important;
+
+  color:
+    var(
+      --app-button-hover-color
+    ) !important;
+}
+
+
+/* ========================================
+   Focus
+======================================== */
+
+.app-button.ant-btn:focus,
+.app-button.ant-btn:focus-visible {
+  border-color:
+    var(
+      --app-button-hover-border
+    ) !important;
+
+  background:
+    var(
+      --app-button-background
+    ) !important;
+
+  color:
+    var(
+      --app-button-color
+    ) !important;
+
+  outline: none !important;
+
+  box-shadow:
+    0 0 0 3px
+    var(
+      --app-button-focus-ring
+    ) !important;
+}
+
+
+/* ========================================
+   Active
+======================================== */
+
+.app-button.ant-btn:not(
+    :disabled
+  ):not(
+    [disabled]
+  ):active {
+  border-color:
+    var(
+      --app-button-active-border
+    ) !important;
+
+  background:
+    var(
+      --app-button-active-background
+    ) !important;
+
+  color:
+    var(
+      --app-button-active-color
+    ) !important;
+
+  box-shadow:
+    none !important;
+
+  transform:
+    translateY(
+      1px
+    );
+}
+
+
+/* ========================================
+   Disabled
+======================================== */
+
+.app-button.ant-btn:disabled,
+.app-button.ant-btn[disabled],
+.app-button.ant-btn:disabled:hover,
+.app-button.ant-btn[disabled]:hover,
+.app-button.ant-btn:disabled:focus,
+.app-button.ant-btn[disabled]:focus {
+  border-color:
+    var(
+      --border-default,
+      #e5e7eb
+    ) !important;
+
+  background:
+    var(
+      --bg-muted,
+      #f8fafc
+    ) !important;
+
+  color:
+    var(
+      --text-placeholder,
+      #9ca3af
+    ) !important;
+
+  cursor:
+    not-allowed;
+
+  box-shadow:
+    none !important;
+
+  transform:
+    none;
+}

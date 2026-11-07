@@ -1,0 +1,426 @@
+/* ========================================
+   PAGE
+
+   Page itself must NOT scroll.
+======================================== */
+
+.marketing-page {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+
+  padding:
+    24px
+    24px
+    20px;
+
+  overflow: hidden;
+
+  background:
+    var(
+      --bg-app,
+      #f6f3ef
+    );
+}
+
+
+/* ========================================
+   PAGE HEADER
+
+   Fixed inside page.
+======================================== */
+
+.marketing-page
+  > .management-page-header {
+  flex: 0 0 auto;
+
+  width: 100%;
+  min-width: 0;
+}
+
+
+/* ========================================
+   HEADER ACTIONS
+======================================== */
+
+.marketing-page__header-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+
+/* ========================================
+   REFRESH BUTTON
+======================================== */
+
+.marketing-page__refresh.ant-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  height: 44px;
+
+  padding:
+    0
+    14px;
+
+  border:
+    1px solid
+    #ded4c9;
+
+  border-radius:
+    10px;
+
+  background:
+    #ffffff;
+
+  color:
+    #7b4b08;
+
+  font-size:
+    var(--font-size-caption);
+  font-weight: var(--font-weight-semibold);
+
+  box-shadow: none;
+
+  transition:
+    border-color
+      140ms ease,
+    background-color
+      140ms ease,
+    color
+      140ms ease;
+}
+
+
+.marketing-page__refresh.ant-btn:hover,
+.marketing-page__refresh.ant-btn:focus {
+  border-color:
+    #bca68d !important;
+
+  background:
+    #faf7f3 !important;
+
+  color:
+    #7b4b08 !important;
+}
+
+
+/* ========================================
+   STATS
+
+   Không cho stats co lại khi table dài.
+======================================== */
+
+.marketing-page
+  > .banner-stats {
+  flex: 0 0 auto;
+}
+
+
+/* ========================================
+   BANNER LIST CONTAINER
+
+   Chiếm toàn bộ khoảng trống còn lại.
+   Không scroll ở Card.
+======================================== */
+
+.banner-table-card.ant-card {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+
+  min-width: 0;
+  min-height: 0;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    #e7dfd8;
+
+  border-radius:
+    12px;
+
+  background:
+    #ffffff;
+
+  box-shadow: none;
+}
+
+
+/* ========================================
+   CARD BODY
+
+   Toolbar đứng yên.
+   Table nhận phần chiều cao còn lại.
+======================================== */
+
+.banner-table-card
+  > .ant-card-body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+
+  min-height: 0;
+
+  padding: 18px;
+
+  overflow: hidden;
+}
+
+
+/* ========================================
+   TOOLBAR
+
+   Không scroll cùng table.
+======================================== */
+
+.banner-table-card
+  .banner-toolbar {
+  flex: 0 0 auto;
+}
+
+
+/* ========================================
+   TABLE AREA
+
+   Quan trọng:
+   cho table nhận remaining height.
+======================================== */
+
+.banner-table-card
+  .banner-table {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+
+  min-height: 0;
+}
+
+
+/* ========================================
+   ANT TABLE CONTAINER
+======================================== */
+
+.banner-table-card
+  .banner-table
+  .ant-spin-nested-loading,
+.banner-table-card
+  .banner-table
+  .ant-spin-container,
+.banner-table-card
+  .banner-table
+  .ant-table,
+.banner-table-card
+  .banner-table
+  .ant-table-container {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+
+  min-height: 0;
+}
+
+
+/* ========================================
+   TABLE CONTENT
+======================================== */
+
+.banner-table-card
+  .banner-table
+  .ant-table-content {
+  min-height: 0;
+}
+
+
+/* ========================================
+   TABLE HEADER
+
+   Header đứng yên.
+======================================== */
+
+.banner-table-card
+  .banner-table
+  .ant-table-header {
+  flex: 0 0 auto;
+
+  overflow: hidden !important;
+}
+
+
+/* ========================================
+   TABLE BODY
+
+   CHỈ VÙNG NÀY ĐƯỢC SCROLL.
+======================================== */
+
+.banner-table-card
+  .banner-table
+  .ant-table-body {
+  flex: 1 1 auto;
+
+  min-height: 0;
+
+  overflow-y: auto !important;
+
+  overscroll-behavior: contain;
+
+  scrollbar-gutter: stable;
+}
+
+
+/* ========================================
+   PAGINATION
+
+   Pagination đứng yên dưới table.
+======================================== */
+
+.banner-table-card
+  .banner-table
+  .ant-pagination {
+  flex: 0 0 auto;
+
+  margin:
+    14px
+    0
+    0;
+}
+
+
+/* ========================================
+   SCROLLBAR
+
+   Nhẹ, không quá nổi.
+======================================== */
+
+.banner-table-card
+  .banner-table
+  .ant-table-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+
+.banner-table-card
+  .banner-table
+  .ant-table-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+.banner-table-card
+  .banner-table
+  .ant-table-body::-webkit-scrollbar-thumb {
+  border:
+    2px solid
+    transparent;
+
+  border-radius:
+    999px;
+
+  background:
+    #d7cec6;
+
+  background-clip:
+    padding-box;
+}
+
+
+.banner-table-card
+  .banner-table
+  .ant-table-body::-webkit-scrollbar-thumb:hover {
+  background:
+    #c2b5aa;
+
+  background-clip:
+    padding-box;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (
+  max-width: 1024px
+) {
+  .marketing-page {
+    padding: 18px;
+  }
+}
+
+
+@media (
+  max-width: 768px
+) {
+  /*
+   * Mobile/tablet thấp:
+   * có thể cho page scroll lại để tránh
+   * layout bị bó quá mạnh.
+   */
+  .marketing-page {
+    height: auto;
+    min-height: 100%;
+
+    gap: 14px;
+
+    padding: 14px;
+
+    overflow: visible;
+  }
+
+
+  .marketing-page__header-actions {
+    width: 100%;
+
+    flex-wrap: wrap;
+  }
+
+
+  .banner-table-card.ant-card {
+    flex: none;
+
+    min-height: 520px;
+  }
+
+
+  .banner-table-card
+    .banner-table
+    .ant-table-body {
+    max-height: 480px;
+  }
+}
+
+
+@media (
+  max-width: 520px
+) {
+  .marketing-page__header-actions {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+
+  .marketing-page__refresh.ant-btn {
+    width: 100%;
+  }
+
+
+  .banner-table-card
+    > .ant-card-body {
+    padding: 14px;
+  }
+}

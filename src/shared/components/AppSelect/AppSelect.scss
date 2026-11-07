@@ -1,0 +1,469 @@
+/* ========================================
+   Shared select foundation
+======================================== */
+
+.app-select.ant-select {
+  --app-select-height: 42px;
+  --app-select-padding-x: 12px;
+  --app-select-font-size: var(--font-size-body-sm);
+  --app-select-radius: var(--radius-md);
+
+  width: 100%;
+  min-width: 0;
+
+  color:
+    var(
+      --text-primary,
+      #1f2937
+    );
+
+  font-family: inherit;
+}
+
+
+/* ========================================
+   Sizes
+======================================== */
+
+.app-select--sm.ant-select {
+  --app-select-height: 36px;
+  --app-select-padding-x: 11px;
+  --app-select-font-size: var(--font-size-meta);
+  --app-select-radius: var(--radius-md);
+}
+
+
+.app-select--md.ant-select {
+  --app-select-height: 42px;
+  --app-select-padding-x: 12px;
+  --app-select-font-size: var(--font-size-body-sm);
+  --app-select-radius: var(--radius-md);
+}
+
+
+.app-select--lg.ant-select {
+  --app-select-height: 44px;
+  --app-select-padding-x: 14px;
+  --app-select-font-size: var(--font-size-body);
+  --app-select-radius: var(--radius-lg);
+}
+
+
+/* Align Select root and selector heights */
+.app-select.ant-select-single {
+  height: var(--app-select-height);
+  min-height: var(--app-select-height);
+}
+
+/* ========================================
+   Single select
+======================================== */
+
+.app-select.ant-select-single
+  .ant-select-selector {
+  box-sizing: border-box;
+
+  display: flex !important;
+
+  align-items: center !important;
+
+  width: 100%;
+  height:
+    var(
+      --app-select-height
+    ) !important;
+
+  padding:
+    0
+    calc(
+      var(--app-select-padding-x) + 24px
+    )
+    0
+    var(--app-select-padding-x) !important;
+
+  border:
+    1px solid
+    var(
+      --border-default,
+      #e5e7eb
+    ) !important;
+
+  border-radius:
+    var(
+      --app-select-radius
+    ) !important;
+
+  background:
+    var(
+      --bg-surface,
+      #fff
+    ) !important;
+
+  box-shadow: none !important;
+
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    background-color 0.15s ease;
+}
+
+
+.app-select.ant-select-single
+  .ant-select-selection-wrap {
+  display: flex;
+
+  align-items: center;
+
+  height: 100%;
+}
+
+
+.app-select.ant-select-single
+  .ant-select-selection-item,
+.app-select.ant-select-single
+  .ant-select-selection-placeholder {
+  display: block;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  color:
+    var(
+      --text-primary,
+      #1f2937
+    );
+
+  font-size:
+    var(
+      --app-select-font-size
+    );
+
+  font-weight:
+    var(
+      --font-weight-medium
+    );
+
+  line-height: normal !important;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+
+.app-select.ant-select-single
+  .ant-select-selection-placeholder {
+  color:
+    var(
+      --text-placeholder,
+      #9ca3af
+    );
+
+  font-weight:
+    var(
+      --font-weight-regular
+    );
+}
+
+
+/* ========================================
+   Multiple select
+======================================== */
+
+.app-select.ant-select-multiple
+  .ant-select-selector {
+  min-height:
+    var(
+      --app-select-height
+    ) !important;
+
+  padding:
+    3px
+    var(--app-select-padding-x) !important;
+
+  border:
+    1px solid
+    var(
+      --border-default,
+      #e5e7eb
+    ) !important;
+
+  border-radius:
+    var(
+      --app-select-radius
+    ) !important;
+
+  background:
+    var(
+      --bg-surface,
+      #fff
+    ) !important;
+
+  box-shadow: none !important;
+
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    background-color 0.15s ease;
+}
+
+
+.app-select.ant-select-multiple
+  .ant-select-selection-item {
+  border-color:
+    var(
+      --border-default,
+      #e5e7eb
+    );
+
+  border-radius:
+    var(
+      --radius-sm,
+      6px
+    );
+
+  background:
+    var(
+      --state-brand-selected,
+      #f6f1e4
+    );
+
+  color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+
+  font-size:
+    var(
+      --font-size-body-sm
+    );
+
+  font-weight:
+    var(
+      --font-weight-medium
+    );
+}
+
+
+.app-select.ant-select-multiple
+  .ant-select-selection-search-input {
+  font-family: inherit;
+
+  font-size:
+    var(
+      --app-select-font-size
+    );
+}
+
+
+.app-select.ant-select-multiple
+  .ant-select-selection-placeholder {
+  color:
+    var(
+      --text-placeholder,
+      #9ca3af
+    );
+
+  font-size:
+    var(
+      --app-select-font-size
+    );
+}
+
+
+/* ========================================
+   Arrow / clear
+======================================== */
+
+.app-select
+  .ant-select-arrow,
+.app-select
+  .ant-select-clear {
+  color:
+    var(
+      --text-muted,
+      #6b7280
+    );
+
+  transition:
+    color 0.15s ease;
+}
+
+
+/* ========================================
+   Hover / focus
+======================================== */
+
+.app-select:not(
+    .ant-select-disabled
+  ):hover
+  .ant-select-selector {
+  border-color:
+    var(
+      --brand-primary-500,
+      #9d6610
+    ) !important;
+}
+
+
+.app-select:not(
+    .ant-select-disabled
+  ):hover
+  .ant-select-arrow {
+  color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+}
+
+
+.app-select.ant-select-focused
+  .ant-select-selector {
+  border-color:
+    var(
+      --brand-primary,
+      #7b4b08
+    ) !important;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(
+      123,
+      75,
+      8,
+      0.08
+    ) !important;
+}
+
+
+.app-select.ant-select-focused
+  .ant-select-arrow {
+  color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+}
+
+
+/* ========================================
+   Error
+======================================== */
+
+.app-select.ant-select-status-error
+  .ant-select-selector {
+  border-color:
+    var(
+      --color-error,
+      #dc2626
+    ) !important;
+}
+
+
+.app-select.ant-select-status-error.ant-select-focused
+  .ant-select-selector {
+  box-shadow:
+    0 0 0 3px
+    rgba(
+      220,
+      38,
+      38,
+      0.1
+    ) !important;
+}
+
+
+/* ========================================
+   Disabled
+======================================== */
+
+.app-select.ant-select-disabled
+  .ant-select-selector {
+  border-color:
+    var(
+      --border-default,
+      #e5e7eb
+    ) !important;
+
+  background:
+    var(
+      --bg-muted,
+      #f8fafc
+    ) !important;
+
+  color:
+    var(
+      --text-muted,
+      #6b7280
+    ) !important;
+
+  cursor: not-allowed !important;
+
+  box-shadow: none !important;
+}
+
+
+/* ========================================
+   Dropdown
+======================================== */
+
+.app-select-dropdown
+  .ant-select-item {
+  margin:
+    2px 4px;
+
+  border-radius:
+    var(
+      --radius-sm,
+      6px
+    );
+
+  font-size:
+    var(
+      --font-size-body-sm
+    );
+}
+
+
+.app-select-dropdown
+  .ant-select-item-option-active:not(
+    .ant-select-item-option-disabled
+  ) {
+  background:
+    var(
+      --state-brand-hover,
+      #fbf8f0
+    ) !important;
+
+  color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+}
+
+
+.app-select-dropdown
+  .ant-select-item-option-selected:not(
+    .ant-select-item-option-disabled
+  ) {
+  background:
+    var(
+      --state-brand-selected,
+      #f6f1e4
+    ) !important;
+
+  color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+
+  font-weight:
+    var(
+      --font-weight-semibold
+    );
+}

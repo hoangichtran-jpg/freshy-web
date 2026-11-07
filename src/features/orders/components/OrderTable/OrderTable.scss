@@ -1,0 +1,1318 @@
+/* ========================================
+   Table shell
+======================================== */
+
+.order-table {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+
+  min-width: 0;
+  min-height: 0;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    var(--border-default);
+
+  border-radius:
+    var(--radius-xl);
+
+  background:
+    var(--bg-surface);
+}
+
+
+/* ========================================
+   AntD height chain
+======================================== */
+
+.order-table
+  .ant-spin-nested-loading {
+  flex:
+    1 1 auto;
+
+  min-height: 0;
+}
+
+
+.order-table
+  .ant-spin-container {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+
+  min-height: 0;
+}
+
+
+/*
+ * Table chiếm phần còn lại
+ * phía trên pagination.
+ */
+.order-table
+  .ant-table {
+  display: flex;
+  flex-direction: column;
+
+  flex:
+    1 1 auto;
+
+  min-height: 0;
+
+  overflow: hidden;
+
+  background:
+    transparent;
+}
+
+
+.order-table
+  .ant-table-container {
+  display: flex;
+  flex-direction: column;
+
+  flex:
+    1 1 auto;
+
+  min-height: 0;
+
+  overflow: hidden;
+}
+
+
+/* ========================================
+   Fixed table header
+======================================== */
+
+.order-table
+  .ant-table-header {
+  flex:
+    0 0 auto;
+
+  overflow:
+    hidden !important;
+}
+
+
+.order-table
+  .ant-table-thead
+  > tr
+  > th {
+  height: 52px;
+
+  padding:
+    0 16px;
+
+  background:
+    #f8f9fb;
+
+  color:
+    var(--text-secondary);
+
+  font-size:
+    var(--font-size-label);
+
+  font-weight:
+    var(--font-weight-label);
+
+  line-height:
+    var(--line-height-label);
+
+  border-bottom:
+    1px solid
+    var(--border-default);
+}
+
+
+.order-table
+  .ant-table-thead
+  > tr
+  > th::before {
+  display: none;
+}
+
+
+/* ========================================
+   Filter header
+======================================== */
+
+/*
+ * Giữ "Đơn vị" trên một dòng.
+ */
+.order-table__unit-column-title {
+  white-space:
+    nowrap;
+}
+
+
+/*
+ * AntD mặc định cho filter trigger
+ * khá rộng.
+ *
+ * Thu nhỏ để icon không chiếm
+ * quá nhiều diện tích header.
+ */
+.order-table
+  .ant-table-filter-column {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+}
+
+
+.order-table
+  .ant-table-filter-column
+  .ant-table-column-title {
+  min-width: 0;
+
+  flex:
+    1 1 auto;
+}
+
+
+.order-table
+  .ant-table-filter-trigger {
+  display:
+    inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex:
+    0 0 28px;
+
+  width: 28px;
+  height: 28px;
+
+  margin:
+    0 0 0 4px !important;
+
+  padding: 0;
+
+  border-radius:
+    var(--radius-md);
+
+  color:
+    var(--text-placeholder);
+
+  transition:
+    color 0.15s ease,
+    background 0.15s ease;
+}
+
+
+.order-table
+  .ant-table-filter-trigger:hover {
+  background:
+    var(--state-brand-hover);
+
+  color:
+    var(--brand-primary);
+}
+
+
+.order-table
+  .ant-table-filter-trigger.active {
+  background:
+    var(
+      --state-brand-selected
+    );
+
+  color:
+    var(--brand-primary);
+}
+
+
+/*
+ * Icon size, không phải text typography.
+ */
+.order-table__filter-icon {
+  display:
+    block;
+
+  color:
+    var(--text-placeholder);
+
+  font-size: 13px;
+
+  transition:
+    color 0.15s ease;
+}
+
+
+.order-table__filter-icon--active {
+  color:
+    var(--brand-primary);
+}
+
+
+/* ========================================
+   ONLY THIS AREA SCROLLS
+======================================== */
+
+.order-table
+  .ant-table-body {
+  flex:
+    1 1 auto;
+
+  min-height: 0;
+
+  max-height:
+    none !important;
+
+  overflow-x:
+    auto !important;
+
+  overflow-y:
+    auto !important;
+
+  overscroll-behavior:
+    contain;
+
+  scrollbar-width:
+    thin;
+
+  scrollbar-color:
+    var(--border-strong)
+    transparent;
+}
+
+
+.order-table
+  .ant-table-body::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+
+.order-table
+  .ant-table-body::-webkit-scrollbar-track {
+  background:
+    transparent;
+}
+
+
+.order-table
+  .ant-table-body::-webkit-scrollbar-thumb {
+  border-radius:
+    var(--radius-pill);
+
+  background:
+    var(--border-strong);
+}
+
+
+/* ========================================
+   Body cells
+======================================== */
+
+.order-table
+  .ant-table-tbody
+  > tr
+  > td {
+  padding:
+    14px 16px;
+
+  color:
+    var(--text-secondary);
+
+  font-size:
+    var(--font-size-body);
+
+  font-weight:
+    var(--font-weight-body);
+
+  line-height:
+    var(--line-height-body);
+
+  vertical-align:
+    middle;
+
+  border-bottom:
+    1px solid
+    var(--border-soft);
+
+  transition:
+    background
+    0.15s ease;
+}
+
+
+.order-table
+  .ant-table-tbody
+  > tr:last-child
+  > td {
+  border-bottom:
+    none;
+}
+
+
+/* ========================================
+   Row interaction
+======================================== */
+
+.order-table__row {
+  cursor: pointer;
+}
+
+
+.order-table__row
+  > td {
+  transition:
+    background
+    0.15s ease;
+}
+
+
+.order-table__row:hover
+  > td {
+  background:
+    var(
+      --state-brand-hover
+    ) !important;
+}
+
+
+.order-table__row:active
+  > td {
+  background:
+    var(
+      --state-brand-selected
+    ) !important;
+}
+
+
+/* ========================================
+   Sorter
+======================================== */
+
+.order-table
+  .ant-table-column-sorters {
+  align-items: center;
+}
+
+
+.order-table
+  .ant-table-column-sorter {
+  color:
+    var(--text-placeholder);
+}
+
+
+/* ========================================
+   Detail action
+======================================== */
+
+.order-table__detail.ant-btn {
+  height: 32px;
+
+  padding:
+    0 9px;
+
+  border-radius:
+    var(--radius-sm);
+
+  color:
+    var(--color-info);
+
+  font-size:
+    var(--font-size-body-sm);
+
+  font-weight:
+    var(--font-weight-medium);
+
+  line-height:
+    var(--line-height-body-sm);
+}
+
+
+.order-table__detail.ant-btn:hover {
+  color:
+    var(--color-info-hover);
+
+  background:
+    var(--color-info-soft);
+}
+
+
+/* ========================================
+   Pagination - fixed
+======================================== */
+
+.order-table
+  .ant-table-pagination {
+  flex:
+    0 0 auto;
+
+  margin:
+    12px 16px !important;
+}
+
+
+.order-table
+  .ant-pagination-item,
+.order-table
+  .ant-pagination-prev,
+.order-table
+  .ant-pagination-next {
+  min-width: 32px;
+  height: 32px;
+
+  border-radius:
+    var(--radius-sm);
+
+  /*
+   * Control alignment,
+   * không phải typography scale.
+   */
+  line-height: 30px;
+}
+
+
+.order-table
+  .ant-pagination-item-active {
+  border-color:
+    var(--color-info);
+}
+
+
+.order-table
+  .ant-pagination-item-active
+  a {
+  color:
+    var(--color-info);
+}
+
+
+/* ========================================
+   Loading
+======================================== */
+
+.order-table
+  .ant-spin-text {
+  margin-top: 8px;
+
+  color:
+    var(--text-muted);
+
+  font-size:
+    var(--font-size-body-sm);
+
+  font-weight:
+    var(--font-weight-body-sm);
+
+  line-height:
+    var(--line-height-body-sm);
+}
+
+
+/* ========================================
+   Empty table
+======================================== */
+
+.order-table__empty {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 240px;
+
+  padding: 32px;
+}
+
+
+.order-table__empty
+  .ant-empty {
+  margin: 0;
+}
+
+
+.order-table__empty-content {
+  margin-top: 8px;
+
+  text-align: center;
+}
+
+
+.order-table__empty-title {
+  color:
+    var(--text-secondary);
+
+  font-size:
+    var(--font-size-heading);
+
+  font-weight:
+    var(--font-weight-heading);
+
+  line-height:
+    var(--line-height-heading);
+}
+
+
+.order-table__empty-description {
+  margin-top: 4px;
+
+  color:
+    var(--text-placeholder);
+
+  font-size:
+    var(--font-size-body-sm);
+
+  font-weight:
+    var(--font-weight-body-sm);
+
+  line-height:
+    var(--line-height-body-sm);
+}
+
+
+/* ========================================
+   Cell hierarchy
+======================================== */
+
+.order-table__unit {
+  color:
+    var(--text-primary);
+
+  font-weight:
+    var(--font-weight-semibold);
+}
+
+
+/* ========================================
+   Address column
+======================================== */
+
+.order-table
+  .order-table__address-cell {
+  width: 260px;
+  max-width: 260px;
+}
+
+
+.order-table__address {
+  display: block;
+
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
+  overflow: hidden;
+
+  color:
+    var(--text-secondary);
+
+  line-height:
+    var(--line-height-body);
+
+  text-overflow:
+    ellipsis;
+
+  white-space: nowrap;
+}
+
+
+.order-table__phone,
+.order-table__date {
+  color:
+    var(--text-secondary);
+
+  font-variant-numeric:
+    tabular-nums;
+
+  white-space:
+    nowrap;
+}
+
+
+.order-table__phone {
+  font-weight:
+    var(--font-weight-medium);
+}
+
+
+.order-table__date {
+  color:
+    var(--text-muted);
+
+  font-size:
+    var(--font-size-body-sm);
+
+  font-weight:
+    var(--font-weight-body-sm);
+
+  line-height:
+    var(--line-height-body-sm);
+}
+
+
+/* ========================================
+   Quantity
+======================================== */
+
+.order-table__quantity {
+  display:
+    inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 32px;
+  height: 28px;
+
+  padding:
+    0 9px;
+
+  border-radius:
+    var(--radius-sm);
+
+  background:
+    var(--bg-muted);
+
+  color:
+    var(--text-secondary);
+
+  font-size:
+    var(--font-size-body-sm);
+
+  font-weight:
+    var(--font-weight-bold);
+
+  line-height:
+    var(--line-height-body-sm);
+
+  font-variant-numeric:
+    tabular-nums;
+}
+
+
+/* ========================================
+   Unit filter - overlay
+======================================== */
+
+/*
+ * Dropdown nằm ngoài DOM của table
+ * vì AntD render bằng portal.
+ *
+ * Vì vậy phải target bằng class
+ * truyền từ filterDropdownProps.
+ */
+.order-table__unit-filter-overlay {
+  padding:
+    0 !important;
+
+  overflow:
+    hidden;
+
+  border-radius:
+    14px !important;
+}
+
+
+.order-table__unit-filter-overlay
+  .ant-table-filter-dropdown {
+  padding: 0;
+
+  overflow: hidden;
+
+  border-radius:
+    14px;
+
+  background:
+    var(--bg-surface);
+}
+
+
+/* ========================================
+   Unit filter shell
+======================================== */
+
+.order-table__unit-filter {
+  width: 340px;
+
+  max-width:
+    calc(
+      100vw - 32px
+    );
+
+  overflow: hidden;
+
+  border-radius:
+    14px;
+
+  background:
+    var(--bg-surface);
+}
+
+
+/* ========================================
+   Filter search
+======================================== */
+
+.order-table__unit-filter-search {
+  padding:
+    12px 12px
+    8px;
+}
+
+
+
+/* ========================================
+   Filter meta
+======================================== */
+
+.order-table__unit-filter-meta {
+  display: flex;
+
+  align-items: center;
+  justify-content:
+    space-between;
+
+  gap: 8px;
+
+  min-height: 34px;
+
+  padding:
+    0 12px 8px;
+}
+
+
+.order-table__unit-filter-result {
+  color:
+    var(--text-muted);
+
+  font-size:
+    var(--font-size-caption);
+
+  font-weight:
+    var(--font-weight-medium);
+
+  line-height:
+    var(--line-height-caption);
+
+  white-space:
+    nowrap;
+}
+
+
+.order-table__unit-filter-select-all.ant-btn {
+  height: 28px;
+
+  padding:
+    0 4px;
+
+  color:
+    var(--brand-primary);
+
+  font-size:
+    var(--font-size-caption);
+
+  font-weight:
+    var(--font-weight-semibold);
+
+  line-height:
+    var(--line-height-caption);
+}
+
+
+.order-table__unit-filter-select-all.ant-btn:hover,
+.order-table__unit-filter-select-all.ant-btn:focus {
+  color:
+    var(
+      --brand-primary-hover
+    );
+}
+
+
+/* ========================================
+   Filter list
+======================================== */
+
+.order-table__unit-filter-list {
+  height: 236px;
+
+  min-height:
+    236px;
+
+  max-height:
+    236px;
+
+  overflow-x:
+    hidden;
+
+  overflow-y:
+    auto;
+
+  border-top:
+    1px solid
+    var(--border-soft);
+
+  scrollbar-width:
+    thin;
+
+  scrollbar-color:
+    var(--border-strong)
+    transparent;
+}
+
+
+.order-table__unit-filter-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+
+.order-table__unit-filter-list::-webkit-scrollbar-track {
+  background:
+    transparent;
+}
+
+
+.order-table__unit-filter-list::-webkit-scrollbar-thumb {
+  border-radius:
+    var(--radius-pill);
+
+  background:
+    var(--border-strong);
+}
+
+
+/* ========================================
+   Filter item
+======================================== */
+
+.order-table__unit-filter-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  width: 100%;
+
+  min-height: 42px;
+
+  padding:
+    8px 12px;
+
+  cursor: pointer;
+
+  border-bottom:
+    1px solid
+    transparent;
+
+  transition:
+    background 0.15s ease;
+}
+
+
+.order-table__unit-filter-item:hover {
+  background:
+    var(
+      --state-brand-hover
+    );
+}
+
+
+.order-table__unit-filter-item--selected {
+  background:
+    var(
+      --state-brand-selected
+    );
+}
+
+
+.order-table__unit-filter-item--selected:hover {
+  background:
+    var(--brand-cream-200);
+}
+
+
+.order-table__unit-filter-label {
+  flex:
+    1 1 auto;
+
+  min-width: 0;
+
+  overflow: hidden;
+
+  color:
+    var(--text-secondary);
+
+  font-size:
+    var(--font-size-body);
+
+  font-weight:
+    var(--font-weight-medium);
+
+  line-height:
+    var(--line-height-body);
+
+  text-overflow:
+    ellipsis;
+
+  white-space:
+    nowrap;
+}
+
+
+/* ========================================
+   Filter checkbox
+======================================== */
+
+.order-table__unit-filter
+  .ant-checkbox-wrapper {
+  flex:
+    0 0 auto;
+}
+
+
+.order-table__unit-filter
+  .ant-checkbox-inner {
+  width: 17px;
+  height: 17px;
+
+  border-radius: 5px;
+}
+
+
+.order-table__unit-filter
+  .ant-checkbox:hover
+  .ant-checkbox-inner {
+  border-color:
+    var(--brand-primary);
+}
+
+
+.order-table__unit-filter
+  .ant-checkbox-checked
+  .ant-checkbox-inner {
+  border-color:
+    var(--brand-primary);
+
+  background:
+    var(--brand-primary);
+}
+
+
+.order-table__unit-filter
+  .ant-checkbox-checked::after {
+  border-color:
+    var(--brand-primary);
+}
+
+
+/* ========================================
+   Filter empty state
+======================================== */
+
+.order-table__unit-filter-empty {
+  display: flex;
+
+  flex-direction:
+    column;
+
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+
+  padding:
+    24px;
+
+  text-align: center;
+}
+
+
+/*
+ * Icon size, không phải text typography.
+ */
+.order-table__unit-filter-empty-icon {
+  display:
+    inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  margin-bottom:
+    10px;
+
+  border-radius:
+    50%;
+
+  background:
+    var(--bg-muted);
+
+  color:
+    var(--text-placeholder);
+
+  font-size: 18px;
+}
+
+
+.order-table__unit-filter-empty-title {
+  color:
+    var(--text-secondary);
+
+  font-size:
+    var(--font-size-label);
+
+  font-weight:
+    var(--font-weight-label);
+
+  line-height:
+    var(--line-height-label);
+}
+
+
+.order-table__unit-filter-empty-description {
+  margin-top: 4px;
+
+  color:
+    var(--text-placeholder);
+
+  font-size:
+    var(--font-size-caption);
+
+  font-weight:
+    var(--font-weight-caption);
+
+  line-height:
+    var(--line-height-caption);
+}
+
+
+/* ========================================
+   Filter footer
+======================================== */
+
+.order-table__unit-filter-footer {
+  display: flex;
+
+  align-items: center;
+  justify-content:
+    space-between;
+
+  gap: 12px;
+
+  min-height: 58px;
+
+  padding:
+    10px 12px;
+
+  border-top:
+    1px solid
+    var(--border-soft);
+
+  background:
+    var(--bg-surface);
+}
+
+
+.order-table__unit-filter-selected {
+  flex:
+    1 1 auto;
+
+  min-width: 0;
+
+  color:
+    var(--text-muted);
+
+  font-size:
+    var(--font-size-caption);
+
+  font-weight:
+    var(--font-weight-caption);
+
+  line-height:
+    var(--line-height-caption);
+
+  white-space:
+    nowrap;
+}
+
+
+.order-table__unit-filter-selected
+  strong {
+  color:
+    var(--brand-primary);
+
+  font-weight:
+    var(--font-weight-bold);
+}
+
+
+/* ========================================
+   Filter actions
+======================================== */
+
+.order-table__unit-filter-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  flex:
+    0 0 auto;
+}
+
+
+.order-table__unit-filter-actions
+  .ant-btn {
+  height: 34px;
+
+  padding:
+    0 12px;
+
+  border-radius:
+    var(--radius-md);
+
+  font-size:
+    var(--font-size-caption);
+
+  font-weight:
+    var(--font-weight-semibold);
+
+  line-height:
+    var(--line-height-caption);
+}
+
+
+/* Reset */
+
+.order-table__unit-filter-actions
+  .ant-btn-text {
+  color:
+    var(--text-muted);
+}
+
+
+.order-table__unit-filter-actions
+  .ant-btn-text:not(
+    :disabled
+  ):hover {
+  background:
+    var(--bg-muted);
+
+  color:
+    var(--text-primary);
+}
+
+
+/* Apply */
+
+.order-table__unit-filter-actions
+  .ant-btn-primary {
+  min-width: 76px;
+
+  border-color:
+    var(--brand-primary);
+
+  background:
+    var(--brand-primary);
+
+  color:
+    var(--text-on-primary);
+
+  box-shadow:
+    none;
+}
+
+
+.order-table__unit-filter-actions
+  .ant-btn-primary:hover,
+.order-table__unit-filter-actions
+  .ant-btn-primary:focus {
+  border-color:
+    var(
+      --brand-primary-hover
+    ) !important;
+
+  background:
+    var(
+      --brand-primary-hover
+    ) !important;
+
+  color:
+    var(
+      --text-on-primary
+    ) !important;
+}
+
+
+/* ========================================
+   Responsive
+======================================== */
+
+@media (
+  max-width: 1024px
+) {
+  .order-table
+    .ant-table-thead
+    > tr
+    > th,
+  .order-table
+    .ant-table-tbody
+    > tr
+    > td {
+    padding-left:
+      12px;
+
+    padding-right:
+      12px;
+  }
+}
+
+
+@media (
+  max-width: 480px
+) {
+  .order-table__unit-filter {
+    width:
+      calc(
+        100vw - 32px
+      );
+  }
+
+
+  .order-table__unit-filter-list {
+    height: 210px;
+
+    min-height:
+      210px;
+
+    max-height:
+      210px;
+  }
+
+
+  .order-table__unit-filter-footer {
+    align-items:
+      flex-start;
+
+    flex-direction:
+      column;
+  }
+
+
+  .order-table__unit-filter-actions {
+    width: 100%;
+  }
+
+
+  .order-table__unit-filter-actions
+    .ant-btn {
+    flex: 1;
+  }
+}

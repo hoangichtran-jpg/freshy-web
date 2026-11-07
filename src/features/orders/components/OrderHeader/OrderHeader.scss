@@ -1,0 +1,67 @@
+/* ========================================
+   Search layout
+======================================== */
+
+.order-header__search.search-input {
+  width: 300px;
+}
+
+
+/* ========================================
+   Tablet
+======================================== */
+
+@media (
+  max-width: 1024px
+) {
+  .order-header.management-page-header {
+    align-items: stretch;
+
+    flex-direction: column;
+
+    gap: 16px;
+  }
+
+
+  .order-header
+    .management-page-header__actions {
+    width: 100%;
+  }
+
+
+  .order-header__search.search-input {
+    flex: 1 1 auto;
+
+    width: auto;
+  }
+}
+
+
+/* ========================================
+   Mobile
+======================================== */
+
+@media (
+  max-width: 650px
+) {
+  .order-header
+    .management-page-header__actions {
+    align-items: stretch;
+
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+
+  .order-header__search.search-input {
+    flex: none;
+
+    width: 100%;
+  }
+
+
+  .order-header__kitchen.app-select.ant-select {
+    width: 100% !important;
+  }
+}

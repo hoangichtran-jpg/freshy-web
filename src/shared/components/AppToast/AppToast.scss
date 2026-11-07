@@ -1,0 +1,476 @@
+/* ========================================
+   AntD outer shell
+======================================== */
+
+/*
+ * Outer notification của AntD chỉ làm
+ * nhiệm vụ positioning.
+ *
+ * KHÔNG dùng nó làm card.
+ */
+.freshy-toast.ant-notification-notice,
+.freshy-toast
+  .ant-notification-notice {
+  box-sizing: border-box;
+
+  width: 360px !important;
+  min-height: 0 !important;
+
+  margin-bottom: 10px !important;
+
+  padding: 0 !important;
+
+  overflow: visible !important;
+
+  border: 0 !important;
+
+  border-radius: 0 !important;
+
+  background:
+    transparent !important;
+
+  box-shadow:
+    none !important;
+}
+
+
+/* ========================================
+   AntD content = actual toast card
+======================================== */
+
+.freshy-toast
+  .ant-notification-notice-content {
+  box-sizing: border-box;
+
+  width: 100%;
+
+  margin: 0 !important;
+
+  padding: 0 !important;
+
+  overflow: hidden;
+
+  border:
+    2px solid
+    transparent;
+
+  border-radius:
+    16px;
+
+  background:
+    #fff;
+
+  box-shadow:
+    0 10px 28px
+    rgba(
+      49,
+      36,
+      25,
+      0.14
+    );
+}
+
+
+.freshy-toast
+  .ant-notification-notice-message {
+  margin: 0 !important;
+
+  padding: 0 !important;
+
+  color: inherit;
+
+  font-size: inherit;
+
+  line-height: inherit;
+}
+
+
+.freshy-toast
+  .ant-notification-notice-description {
+  display: none !important;
+}
+
+
+/* ========================================
+   Card variants
+======================================== */
+
+.freshy-toast--success
+  .ant-notification-notice-content {
+  border-color:
+    #6aa866;
+
+  background:
+    #f3faf2;
+}
+
+
+.freshy-toast--info
+  .ant-notification-notice-content {
+  border-color:
+    #a87a3d;
+
+  background:
+    #fbf6ee;
+}
+
+
+.freshy-toast--warning
+  .ant-notification-notice-content {
+  border-color:
+    #d5a13c;
+
+  background:
+    #fff9ec;
+}
+
+
+.freshy-toast--error
+  .ant-notification-notice-content {
+  border-color:
+    #d8665c;
+
+  background:
+    #fff3f1;
+}
+
+
+/* ========================================
+   Content layout
+======================================== */
+
+.freshy-toast__content {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  width: 100%;
+
+  padding:
+    12px 44px
+    12px 13px;
+}
+
+
+/*
+ * Không có description:
+ *
+ * Toast thật sự compact.
+ */
+.freshy-toast--compact
+  .freshy-toast__content {
+  min-height: 66px;
+}
+
+
+/*
+ * Có mô tả lỗi / warning:
+ *
+ * Chỉ cao thêm vừa đủ.
+ */
+.freshy-toast--with-description
+  .freshy-toast__content {
+  align-items:
+    center;
+
+  min-height:
+    78px;
+
+  padding-top:
+    13px;
+
+  padding-bottom:
+    13px;
+}
+
+
+/* ========================================
+   Status icon
+======================================== */
+
+.freshy-toast__icon {
+  display: flex;
+
+  flex:
+    0 0 40px;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius:
+    50%;
+
+  color:
+    #fff;
+
+  /*
+   * Icon sizing,
+   * không phải typography text.
+   */
+  font-size:
+    19px;
+
+  line-height:
+    1;
+}
+
+
+.freshy-toast__icon
+  .anticon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+
+.freshy-toast__icon--success {
+  background:
+    #6aa866;
+}
+
+
+.freshy-toast__icon--info {
+  background:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+}
+
+
+.freshy-toast__icon--warning {
+  background:
+    #d5a13c;
+}
+
+
+.freshy-toast__icon--error {
+  background:
+    #d8665c;
+}
+
+
+/* ========================================
+   Text
+======================================== */
+
+.freshy-toast__body {
+  flex:
+    1 1 auto;
+
+  min-width:
+    0;
+}
+
+
+.freshy-toast__title {
+  overflow:
+    hidden;
+
+  color:
+    var(
+      --text-primary,
+      #392f29
+    );
+
+  font-size:
+    var(
+      --font-size-body
+    );
+
+  font-weight:
+    var(
+      --font-weight-bold
+    );
+
+  line-height:
+    var(
+      --line-height-body
+    );
+
+  text-overflow:
+    ellipsis;
+}
+
+
+.freshy-toast__description {
+  margin-top:
+    3px;
+
+  color:
+    #756b63;
+
+  font-size:
+    var(
+      --font-size-caption
+    );
+
+  font-weight:
+    var(
+      --font-weight-caption
+    );
+
+  line-height:
+    var(
+      --line-height-caption
+    );
+
+  word-break:
+    break-word;
+}
+
+
+/* ========================================
+   Close button
+======================================== */
+
+/*
+ * Close nằm trên outer shell
+ * của AntD nên position absolute
+ * relative đúng notification.
+ */
+.freshy-toast
+  .ant-notification-notice-close {
+  top: 50%;
+  right: 10px;
+
+  display: flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  width: 26px;
+  height: 26px;
+
+  margin: 0;
+
+  padding: 0;
+
+  border-radius:
+    7px;
+
+  color:
+    #817970;
+
+  /*
+   * Icon sizing.
+   */
+  font-size:
+    var(--font-size-meta);
+
+  transform:
+    translateY(
+      -50%
+    );
+
+  transition:
+    background
+      0.15s ease,
+    color
+      0.15s ease;
+}
+
+
+.freshy-toast
+  .ant-notification-notice-close:hover {
+  background:
+    rgba(
+      58,
+      46,
+      37,
+      0.07
+    );
+
+  color:
+    #4f453e;
+}
+
+
+/* ========================================
+   AntD animation safety
+======================================== */
+
+.ant-notification-notice-wrapper {
+  padding: 0 !important;
+
+  border: 0 !important;
+
+  border-radius: 0 !important;
+
+  background:
+    transparent !important;
+
+  box-shadow:
+    none !important;
+}
+
+
+/* ========================================
+   Mobile
+======================================== */
+
+@media (
+  max-width: 576px
+) {
+  .freshy-toast.ant-notification-notice,
+  .freshy-toast
+    .ant-notification-notice {
+    width:
+      calc(
+        100vw - 24px
+      ) !important;
+  }
+
+
+  .freshy-toast
+    .ant-notification-notice-content {
+    border-radius:
+      14px;
+  }
+
+
+  .freshy-toast__content {
+    gap: 10px;
+
+    padding:
+      11px 40px
+      11px 11px;
+  }
+
+
+  .freshy-toast--compact
+    .freshy-toast__content {
+    min-height:
+      60px;
+  }
+
+
+  .freshy-toast__icon {
+    flex-basis:
+      36px;
+
+    width:
+      36px;
+
+    height:
+      36px;
+
+    /*
+     * Icon sizing.
+     */
+    font-size:
+      17px;
+  }
+}

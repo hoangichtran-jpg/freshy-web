@@ -1,0 +1,118 @@
+.address-form {
+  width: 100%;
+}
+
+
+.address-form
+  .ant-form-item {
+  margin-bottom: 20px;
+}
+
+
+.address-form
+  .ant-form-item:last-child {
+  margin-bottom: 0;
+}
+
+
+.address-form
+  .ant-form-item-label {
+  padding-bottom: 7px;
+}
+
+
+.address-form
+  .ant-form-item-label
+  > label {
+  height: auto;
+
+  color:
+    var(
+      --text-primary,
+      #40352d
+    );
+
+  font-size:
+    var(--font-size-caption);
+  font-weight: var(--font-weight-semibold);
+}
+
+
+.address-form__input.ant-input {
+  height: 44px;
+
+  padding:
+    0 13px;
+
+  border:
+    1px solid #ded6cf;
+
+  border-radius: 10px;
+
+  background: #fff;
+
+  color: #40352d;
+
+  font-size:
+    var(--font-size-body-sm);
+
+  box-shadow: none;
+}
+
+
+.address-form__textarea.ant-input {
+  min-height: 92px;
+
+  padding:
+    11px 13px;
+
+  resize: vertical;
+
+  border:
+    1px solid #ded6cf;
+
+  border-radius: 10px;
+
+  background: #fff;
+
+  color: #40352d;
+
+  font-size:
+    var(--font-size-body-sm);
+
+  line-height: 1.55;
+
+  box-shadow: none;
+}
+
+
+.address-form__input.ant-input:hover,
+.address-form__textarea.ant-input:hover {
+  border-color:
+    #bca68d;
+}
+
+
+.address-form__input.ant-input:focus,
+.address-form__textarea.ant-input:focus {
+  border-color:
+    #7b4b08;
+
+  box-shadow:
+    0 0 0 2px
+    rgba(
+      123,
+      75,
+      8,
+      0.08
+    );
+}
+
+
+.address-form
+  .ant-form-item-explain-error {
+  margin-top: 4px;
+
+  font-size:
+    var(--font-size-meta);
+}

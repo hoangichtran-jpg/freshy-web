@@ -1,0 +1,296 @@
+.topping-management-table__index {
+  color:
+    var(
+      --text-placeholder,
+      #9a9087
+    );
+
+  font-size:
+    var(--font-size-caption);
+
+  font-variant-numeric:
+    tabular-nums;
+}
+
+
+.topping-management-table__name {
+  display: block;
+
+  overflow: hidden;
+
+  color:
+    var(
+      --text-primary,
+      #40352d
+    );
+
+  font-size:
+    var(--font-size-body-sm);
+  font-weight: var(--font-weight-semibold);
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.topping-management-table__toppings {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  min-width: 0;
+
+  overflow: hidden;
+
+  white-space: nowrap;
+}
+
+
+.topping-management-table__topping {
+  display: inline-flex;
+
+  align-items: center;
+
+  max-width: 150px;
+  height: 28px;
+
+  padding:
+    0 10px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    #e5dcd3;
+
+  border-radius:
+    999px;
+
+  background:
+    #fcfaf8;
+
+  color:
+    #6c6158;
+
+  font-size:
+    var(--font-size-meta);
+  font-weight: var(--font-weight-medium);
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.topping-management-table__more {
+  flex: 0 0 auto;
+
+  height: 28px;
+
+  padding:
+    0 10px;
+
+  border: 0;
+
+  border-radius:
+    999px;
+
+  background:
+    #f4eadc;
+
+  color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+
+  cursor: pointer;
+
+  font-size:
+    var(--font-size-meta);
+  font-weight: var(--font-weight-bold);
+
+  transition:
+    background
+    0.15s ease;
+}
+
+
+.topping-management-table__more:hover {
+  background:
+    #ecddca;
+}
+
+
+.topping-management-table__empty-value {
+  color:
+    var(
+      --text-placeholder,
+      #a1978f
+    );
+
+  font-size:
+    var(--font-size-caption);
+}
+
+
+.topping-management-table__limit {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+
+.topping-management-table__limit
+  strong {
+  color:
+    #574c44;
+
+  font-size:
+    var(--font-size-caption);
+  font-weight: var(--font-weight-semibold);
+}
+
+
+.topping-management-table__limit
+  span {
+  color:
+    var(
+      --text-placeholder,
+      #9b9189
+    );
+
+  font-size:
+    var(--font-size-meta);
+}
+
+
+/* ========================================
+   COUNT
+   Chỉ hiển thị số, không badge/pill
+======================================== */
+
+.topping-management-table__count {
+  color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+
+  font-size:
+    var(--font-size-caption);
+  font-weight: var(--font-weight-bold);
+
+  font-variant-numeric:
+    tabular-nums;
+}
+
+
+/* ========================================
+   ACTION
+======================================== */
+
+.topping-management-table__action.ant-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+
+  padding: 0;
+
+  border-radius: 8px;
+
+  color:
+    #82766d;
+
+  font-size: 17px;
+}
+
+
+.topping-management-table__action.ant-btn
+  .anticon {
+  transform:
+    rotate(90deg);
+}
+
+
+.topping-management-table__action.ant-btn:hover {
+  background:
+    #f3ebe2 !important;
+
+  color:
+    var(
+      --brand-primary,
+      #7b4b08
+    ) !important;
+}
+
+
+/* ========================================
+   POPOVER
+======================================== */
+
+.topping-management-table__popover {
+  width: 280px;
+  max-height: 320px;
+
+  overflow-y: auto;
+}
+
+
+.topping-management-table__popover-item {
+  padding:
+    7px 3px;
+
+  border-bottom:
+    1px solid
+    #eee8e2;
+}
+
+
+.topping-management-table__popover-item:last-child {
+  border-bottom: 0;
+}
+
+
+.topping-management-table__popover-item
+  > div {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 16px;
+}
+
+
+.topping-management-table__popover-item
+  strong {
+  color:
+    #554a42;
+
+  font-size:
+    var(--font-size-meta);
+  font-weight: var(--font-weight-semibold);
+}
+
+
+.topping-management-table__popover-item
+  span {
+  color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+
+  font-size:
+    var(--font-size-overline);
+  font-weight: var(--font-weight-semibold);
+
+  white-space: nowrap;
+}

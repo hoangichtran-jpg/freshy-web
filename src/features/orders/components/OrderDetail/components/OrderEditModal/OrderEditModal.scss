@@ -1,0 +1,1240 @@
+/* ========================================
+   Modal shell
+======================================== */
+
+.order-edit-modal {
+  max-width:
+    calc(
+      100vw - 24px
+    );
+
+  padding-bottom: 0;
+}
+
+
+.order-edit-modal
+.ant-modal-content {
+  overflow: hidden;
+
+  padding: 0;
+
+  border:
+    1px solid
+    rgba(
+      70,
+      57,
+      46,
+      0.09
+    );
+
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 28px 80px
+    rgba(
+      38,
+      30,
+      24,
+      0.2
+    );
+}
+
+
+.order-edit-modal
+.ant-modal-body {
+  padding: 0;
+}
+
+
+/* ========================================
+   Close
+======================================== */
+
+.order-edit-modal
+.ant-modal-close {
+  top: 17px;
+  right: 17px;
+
+  display: flex;
+
+  width: 34px;
+  height: 34px;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  color: #858c94;
+
+  transition:
+    color 150ms ease,
+    background 150ms ease;
+}
+
+
+.order-edit-modal
+.ant-modal-close:hover {
+  background: #f5f4f2;
+
+  color: #303840;
+}
+
+
+.order-edit-modal
+.ant-modal-close:focus-visible {
+  outline:
+    3px solid
+    rgba(
+      131,
+      81,
+      11,
+      0.15
+    );
+
+  outline-offset: 2px;
+}
+
+
+.order-edit-modal
+.ant-modal-close-x {
+  width: 34px;
+  height: 34px;
+
+  line-height: 34px;
+}
+
+
+/* ========================================
+   Root
+======================================== */
+
+.order-edit {
+  display: flex;
+
+  width: 100%;
+
+  max-height:
+    calc(
+      100vh - 40px
+    );
+
+  flex-direction: column;
+
+  overflow: hidden;
+}
+
+
+/* ========================================
+   Header
+======================================== */
+
+.order-edit__header {
+  display: flex;
+
+  flex: 0 0 auto;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding:
+    25px
+    64px
+    21px
+    28px;
+
+  border-bottom:
+    1px solid
+    #f0ede9;
+
+  background: #ffffff;
+}
+
+
+.order-edit__heading {
+  min-width: 0;
+}
+
+
+.order-edit__eyebrow {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #936016;
+
+  font-size:
+    var(--font-size-overline);
+
+  font-weight:
+    var(--font-weight-overline);
+
+  line-height:
+    var(--line-height-overline);
+
+  text-transform: uppercase;
+
+  letter-spacing:
+    0.09em;
+}
+
+
+.order-edit__heading
+h2 {
+  margin: 0;
+
+  color: #222a33;
+
+  font-size:
+    var(--font-size-section-title);
+
+  font-weight:
+    var(--font-weight-section-title);
+
+  line-height:
+    var(--line-height-section-title);
+
+  letter-spacing:
+    -0.025em;
+}
+
+
+.order-edit__heading
+p {
+  max-width: 430px;
+
+  margin:
+    5px
+    0
+    0;
+
+  color: #8b949d;
+
+  font-size:
+    var(--font-size-caption);
+
+  font-weight:
+    var(--font-weight-caption);
+
+  line-height:
+    var(--line-height-caption);
+}
+
+
+.order-edit__order-id {
+  flex: 0 0 auto;
+
+  margin-top: 22px;
+
+  padding:
+    5px
+    9px;
+
+  border-radius: 7px;
+
+  background: #f7f4ef;
+
+  color: #766d64;
+
+  font-size:
+    var(--font-size-overline);
+
+  font-weight:
+    var(--font-weight-overline);
+
+  line-height:
+    var(--line-height-overline);
+}
+
+
+/* ========================================
+   Form
+======================================== */
+
+.order-edit__form {
+  display: flex;
+
+  flex: 1 1 auto;
+
+  flex-direction: column;
+
+  min-height: 0;
+
+  overflow: hidden;
+}
+
+
+/* ========================================
+   Body
+======================================== */
+
+.order-edit__body {
+  flex: 1 1 auto;
+
+  min-height: 0;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  padding:
+    22px
+    28px
+    26px;
+
+  overscroll-behavior: contain;
+}
+
+
+/* ========================================
+   Sections
+======================================== */
+
+.order-edit__section {
+  width: 100%;
+}
+
+
+.order-edit__section
++
+.order-edit__section {
+  margin-top: 24px;
+
+  padding-top: 22px;
+
+  border-top:
+    1px solid
+    #f0ede9;
+}
+
+
+.order-edit__section-heading {
+  margin-bottom: 16px;
+}
+
+
+.order-edit__section-heading
+h3 {
+  margin: 0;
+
+  color: #353d46;
+
+  font-size:
+    var(--font-size-label);
+
+  font-weight:
+    var(--font-weight-label);
+
+  line-height:
+    var(--line-height-label);
+}
+
+
+.order-edit__section-heading
+p {
+  margin:
+    3px
+    0
+    0;
+
+  color: #969ea6;
+
+  font-size:
+    var(--font-size-meta);
+
+  font-weight:
+    var(--font-weight-regular);
+
+  line-height:
+    var(--line-height-meta);
+}
+
+
+/* ========================================
+   Grid
+======================================== */
+
+.order-edit__grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(
+        0,
+        1fr
+      )
+    );
+
+  column-gap: 16px;
+  row-gap: 15px;
+}
+
+
+/* ========================================
+   Form labels
+======================================== */
+
+.order-edit-modal
+.ant-form-item {
+  margin-bottom: 0;
+}
+
+
+.order-edit-modal
+.ant-form-item-label {
+  padding-bottom: 6px;
+}
+
+
+.order-edit-modal
+.ant-form-item-label
+> label {
+  height: auto;
+
+  color: #4e5760;
+
+  font-size:
+    var(--font-size-label);
+
+  font-weight:
+    var(--font-weight-label);
+
+  line-height:
+    var(--line-height-label);
+}
+
+
+.order-edit-modal
+.ant-form-item-required::before {
+  margin-right:
+    4px !important;
+
+  color:
+    #c74e46 !important;
+}
+
+
+/* ========================================
+   Standard input
+======================================== */
+
+.order-edit-modal
+.ant-input {
+  min-height: 44px;
+
+  padding:
+    0
+    13px;
+
+  border:
+    1px solid
+    #ddd8d2;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  color: #303841;
+
+  font-size:
+    var(--font-size-body-sm);
+
+  font-weight:
+    var(--font-weight-body-sm);
+
+  line-height:
+    var(--line-height-body-sm);
+
+  box-shadow: none;
+
+  transition:
+    border-color 150ms ease,
+    box-shadow 150ms ease,
+    background 150ms ease;
+}
+
+
+.order-edit-modal
+.ant-input:hover {
+  border-color: #bfae9b;
+}
+
+
+.order-edit-modal
+.ant-input:focus,
+.order-edit-modal
+.ant-input-focused {
+  border-color: #875008;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(
+      135,
+      80,
+      8,
+      0.08
+    );
+}
+
+
+.order-edit-modal
+.ant-input::placeholder {
+  color: #b4babf;
+}
+
+
+/* ========================================
+   Money field
+======================================== */
+
+.order-edit__money-field {
+  position: relative;
+
+  display: flex;
+
+  width: 100%;
+  height: 44px;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    #ddd8d2;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  transition:
+    border-color 150ms ease,
+    box-shadow 150ms ease,
+    background 150ms ease;
+}
+
+
+.order-edit__money-field:hover {
+  border-color: #bfae9b;
+}
+
+
+.order-edit__money-field:focus-within {
+  border-color: #875008;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(
+      135,
+      80,
+      8,
+      0.08
+    );
+}
+
+
+.order-edit__money-input.ant-input-number {
+  width: 100%;
+  height: 42px;
+
+  border: 0 !important;
+
+  border-radius: 0;
+
+  background: transparent;
+
+  box-shadow:
+    none !important;
+}
+
+
+.order-edit__money-input
+.ant-input-number-input-wrap {
+  height: 42px;
+}
+
+
+.order-edit__money-input
+.ant-input-number-input {
+  height: 42px;
+
+  padding:
+    0
+    46px
+    0
+    13px;
+
+  color: #303841;
+
+  font-size:
+    var(--font-size-body-sm);
+
+  font-weight:
+    var(--font-weight-semibold);
+
+  /*
+   * 42px ở đây phục vụ vertical alignment
+   * của InputNumber, không phải typography scale.
+   */
+  line-height: 42px;
+
+  font-variant-numeric:
+    tabular-nums;
+}
+
+
+.order-edit__money-input.ant-input-number:hover,
+.order-edit__money-input.ant-input-number-focused {
+  border: 0 !important;
+
+  box-shadow:
+    none !important;
+}
+
+
+.order-edit__currency {
+  position: absolute;
+
+  top: 50%;
+  right: 14px;
+
+  transform:
+    translateY(-50%);
+
+  color: #8e857d;
+
+  font-size:
+    var(--font-size-caption);
+
+  font-weight:
+    var(--font-weight-semibold);
+
+  line-height:
+    var(--line-height-caption);
+
+  pointer-events: none;
+}
+
+
+/* ========================================
+   Money validation
+======================================== */
+
+.order-edit-modal
+.ant-form-item-has-error
+.order-edit__money-field {
+  border-color: #c85d55;
+}
+
+
+.order-edit-modal
+.ant-form-item-has-error
+.order-edit__money-field:focus-within {
+  border-color: #b94e47;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(
+      185,
+      78,
+      71,
+      0.08
+    );
+}
+
+
+/* ========================================
+   Money disabled
+======================================== */
+
+.order-edit-modal
+.ant-form-item
+.order-edit__money-input.ant-input-number-disabled {
+  background: transparent;
+}
+
+
+.order-edit-modal
+.ant-form-item
+.order-edit__money-input.ant-input-number-disabled
+.ant-input-number-input {
+  color: #99918a;
+}
+
+
+/* ========================================
+   Exact time picker
+======================================== */
+
+/*
+ * Shared picker giữ popup chung.
+ * Order Edit chỉ skin trigger
+ * để đồng bộ với field còn lại.
+ */
+
+.order-edit__time-picker.exact-time-picker
+.ant-input-affix-wrapper {
+  min-height: 44px;
+
+  padding:
+    0
+    13px;
+
+  border-color: #ddd8d2;
+
+  border-radius: 10px;
+}
+
+
+.order-edit__time-picker.exact-time-picker
+.ant-input-affix-wrapper:hover {
+  border-color: #bfae9b;
+}
+
+
+.order-edit__time-picker.exact-time-picker
+.ant-input-affix-wrapper-focused,
+.order-edit__time-picker.exact-time-picker
+.ant-input-affix-wrapper:focus-within {
+  border-color: #875008;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(
+      135,
+      80,
+      8,
+      0.08
+    );
+}
+
+
+.order-edit__time-picker.exact-time-picker
+.ant-input {
+  min-height: 0;
+
+  padding: 0;
+
+  border: 0;
+
+  color: #303841;
+
+  font-size:
+    var(--font-size-body-sm);
+
+  font-weight:
+    var(--font-weight-semibold);
+
+  line-height:
+    var(--line-height-body-sm);
+
+  box-shadow: none;
+}
+
+
+/*
+ * Icon size, không phải text typography.
+ */
+.order-edit__time-picker
+.exact-time-picker__clock-icon {
+  color: #98918a;
+
+  font-size: 15px;
+}
+
+
+/* ========================================
+   Time validation
+======================================== */
+
+.order-edit-modal
+.ant-form-item-has-error
+.order-edit__time-picker.exact-time-picker
+.ant-input-affix-wrapper {
+  border-color: #c85d55;
+}
+
+
+.order-edit-modal
+.ant-form-item-has-error
+.order-edit__time-picker.exact-time-picker
+.ant-input-affix-wrapper:focus-within {
+  border-color: #b94e47;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(
+      185,
+      78,
+      71,
+      0.08
+    );
+}
+
+
+/* ========================================
+   Notes
+======================================== */
+
+.order-edit__notes {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(
+        0,
+        1fr
+      )
+    );
+
+  gap: 16px;
+}
+
+
+.order-edit-modal
+textarea.ant-input {
+  min-height: 96px;
+
+  padding:
+    10px
+    12px;
+
+  resize: vertical;
+
+  line-height:
+    var(--line-height-body-sm);
+}
+
+
+/* ========================================
+   Special note
+======================================== */
+
+.order-edit__special-label {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+}
+
+
+.order-edit__special-label
+> span {
+  display: inline-flex;
+
+  min-height: 20px;
+
+  align-items: center;
+
+  padding:
+    2px
+    6px;
+
+  border-radius: 6px;
+
+  background: #fff4dc;
+
+  color: #94640f;
+
+  font-size:
+    var(--font-size-overline);
+
+  font-weight:
+    var(--font-weight-overline);
+
+  line-height:
+    var(--line-height-overline);
+}
+
+
+.order-edit__special-field
+textarea.ant-input {
+  border-color: #e6d7bd;
+
+  background: #fffdf8;
+}
+
+
+.order-edit__special-field
+textarea.ant-input:hover {
+  border-color: #cfb789;
+}
+
+
+.order-edit__special-field
+textarea.ant-input:focus {
+  border-color: #9a713a;
+
+  background: #ffffff;
+}
+
+
+/* ========================================
+   Errors
+======================================== */
+
+.order-edit-modal
+.ant-form-item-explain-error {
+  margin-top: 4px;
+
+  color: #bd4a43;
+
+  font-size:
+    var(--font-size-meta);
+
+  font-weight:
+    var(--font-weight-regular);
+
+  line-height:
+    var(--line-height-meta);
+}
+
+
+/* ========================================
+   Footer
+======================================== */
+
+.order-edit__footer {
+  display: flex;
+
+  flex: 0 0 auto;
+
+  min-height: 66px;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 18px;
+
+  padding:
+    12px
+    28px;
+
+  border-top:
+    1px solid
+    #eeeae5;
+
+  background: #fcfbfa;
+}
+
+
+.order-edit__footer
+p {
+  margin: 0;
+
+  color: #989fa6;
+
+  font-size:
+    var(--font-size-meta);
+
+  font-weight:
+    var(--font-weight-regular);
+
+  line-height:
+    var(--line-height-meta);
+}
+
+
+.order-edit__actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+
+/* ========================================
+   Cancel
+======================================== */
+
+.order-edit__cancel.ant-btn {
+  min-width: 84px;
+  height: 38px;
+
+  padding:
+    0
+    14px;
+
+  border:
+    1px solid
+    #ddd8d2;
+
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  color: #404851;
+
+  font-size:
+    var(--font-size-caption);
+
+  font-weight:
+    var(--font-weight-semibold);
+
+  line-height:
+    var(--line-height-caption);
+
+  box-shadow: none;
+}
+
+
+.order-edit__cancel.ant-btn:hover,
+.order-edit__cancel.ant-btn:focus {
+  border-color: #c7beb5;
+
+  background: #f8f7f5;
+
+  color: #252d35;
+}
+
+
+/* ========================================
+   Save
+======================================== */
+
+.order-edit__submit.ant-btn {
+  display: inline-flex;
+
+  min-width: 136px;
+  height: 38px;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  padding:
+    0
+    15px;
+
+  border:
+    1px solid
+    #83510b;
+
+  border-radius: 9px;
+
+  background: #83510b;
+
+  color: #ffffff;
+
+  font-size:
+    var(--font-size-caption);
+
+  font-weight:
+    var(--font-weight-semibold);
+
+  line-height:
+    var(--line-height-caption);
+
+  box-shadow:
+    0 1px 2px
+    rgba(
+      62,
+      39,
+      13,
+      0.13
+    );
+
+  transition:
+    background 150ms ease,
+    border-color 150ms ease,
+    box-shadow 150ms ease,
+    transform 150ms ease;
+}
+
+
+.order-edit__submit.ant-btn:hover,
+.order-edit__submit.ant-btn:focus {
+  border-color:
+    #704207 !important;
+
+  background:
+    #704207 !important;
+
+  color:
+    #ffffff !important;
+}
+
+
+.order-edit__submit.ant-btn:hover {
+  transform:
+    translateY(-1px);
+
+  box-shadow:
+    0 5px 13px
+    rgba(
+      64,
+      40,
+      12,
+      0.15
+    );
+}
+
+
+.order-edit__submit.ant-btn:active {
+  transform:
+    translateY(0);
+
+  border-color:
+    #5e3705 !important;
+
+  background:
+    #5e3705 !important;
+
+  box-shadow: none;
+}
+
+
+.order-edit__submit.ant-btn-loading,
+.order-edit__submit.ant-btn:disabled {
+  transform: none;
+
+  box-shadow: none;
+}
+
+
+/* ========================================
+   Scrollbar
+======================================== */
+
+.order-edit__body {
+  scrollbar-width: thin;
+
+  scrollbar-color:
+    #d8d3cd
+    transparent;
+}
+
+
+.order-edit__body::-webkit-scrollbar {
+  width: 6px;
+}
+
+
+.order-edit__body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+.order-edit__body::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+
+  background: #d8d3cd;
+}
+
+
+/* ========================================
+   Mobile
+======================================== */
+
+@media (
+  max-width: 640px
+) {
+  .order-edit-modal {
+    max-width:
+      calc(
+        100vw - 20px
+      );
+  }
+
+
+  .order-edit-modal
+  .ant-modal-content {
+    border-radius: 14px;
+  }
+
+
+  .order-edit {
+    max-height:
+      calc(
+        100vh - 20px
+      );
+  }
+
+
+  .order-edit__header {
+    padding:
+      21px
+      52px
+      18px
+      20px;
+  }
+
+
+  .order-edit__heading
+  h2 {
+    font-size:
+      var(--font-size-section-title);
+
+    line-height:
+      var(--line-height-section-title);
+  }
+
+
+  .order-edit__order-id {
+    display: none;
+  }
+
+
+  .order-edit__body {
+    padding:
+      20px
+      18px
+      22px;
+  }
+
+
+  .order-edit__grid,
+  .order-edit__notes {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .order-edit__section
+  +
+  .order-edit__section {
+    margin-top: 21px;
+
+    padding-top: 20px;
+  }
+
+
+  .order-edit__footer {
+    align-items: stretch;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    padding:
+      11px
+      18px;
+  }
+
+
+  .order-edit__footer
+  p {
+    display: none;
+  }
+
+
+  .order-edit__actions {
+    width: 100%;
+  }
+
+
+  .order-edit__cancel.ant-btn,
+  .order-edit__submit.ant-btn {
+    flex: 1;
+
+    min-width: 0;
+  }
+}

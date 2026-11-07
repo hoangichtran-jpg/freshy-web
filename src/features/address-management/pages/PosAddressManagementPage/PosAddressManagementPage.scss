@@ -1,0 +1,299 @@
+.pos-address-management-page {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+
+  width: 100%;
+
+  height:
+    calc(
+      100vh -
+      var(
+        --app-header-height,
+        60px
+      )
+    );
+
+  min-width: 0;
+  min-height: 0;
+
+  padding:
+    24px 24px
+    16px;
+
+  overflow: hidden;
+
+  background:
+    var(
+      --bg-app,
+      #f6f3ef
+    );
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.pos-address-management-page
+  > .management-page-header {
+  flex: 0 0 auto;
+
+  width: 100%;
+  min-width: 0;
+}
+
+
+.pos-address-management-page__header-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+
+/* ========================================
+   KITCHEN
+======================================== */
+
+.pos-address-management-page__kitchen.app-select {
+  flex: 0 0 230px;
+
+  width: 230px !important;
+}
+
+
+/* ========================================
+   SEARCH LAYOUT
+======================================== */
+
+.pos-address-management-page__search.search-input {
+  width: 300px;
+}
+
+
+/* ========================================
+   REFRESH
+======================================== */
+
+.pos-address-management-page__refresh.ant-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  height: 44px;
+
+  padding:
+    0 14px;
+
+  border:
+    1px solid
+    #ded4c9;
+
+  border-radius: 10px;
+
+  background: #fff;
+
+  color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+
+  font-size:
+    var(--font-size-caption);
+
+  font-weight:
+    var(--font-weight-semibold);
+
+  box-shadow: none;
+}
+
+
+.pos-address-management-page__refresh.ant-btn:hover,
+.pos-address-management-page__refresh.ant-btn:focus {
+  border-color:
+    #bca68d !important;
+
+  background:
+    #faf7f3 !important;
+
+  color:
+    var(
+      --brand-primary,
+      #7b4b08
+    ) !important;
+}
+
+
+/* ========================================
+   TABLE
+======================================== */
+
+.pos-address-management-page
+  > .pos-address-table {
+  flex: 1 1 auto;
+
+  width: 100%;
+
+  min-width: 0;
+  min-height: 0;
+}
+
+
+/* ========================================
+   CONFIRM
+======================================== */
+
+.pos-address-management-page__confirm {
+  color:
+    #62584f;
+
+  font-size:
+    var(--font-size-body-sm);
+
+  line-height: 1.6;
+}
+
+
+.pos-address-management-page__confirm
+  p {
+  margin:
+    0 0 8px;
+}
+
+
+.pos-address-management-page__confirm
+  p:last-child {
+  margin-bottom: 0;
+}
+
+
+.pos-address-management-page__confirm
+  strong {
+  color:
+    #40352d;
+
+  font-weight:
+    var(--font-weight-bold);
+}
+
+
+.pos-address-management-page__confirm-note {
+  color:
+    #958a81;
+
+  font-size:
+    var(--font-size-meta);
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (
+  max-width: 1180px
+) {
+  .pos-address-management-page__header-actions {
+    flex-wrap: wrap;
+
+    justify-content:
+      flex-end;
+  }
+
+
+  .pos-address-management-page__search.search-input {
+    width: 270px;
+  }
+}
+
+
+@media (
+  max-width: 1024px
+) {
+  .pos-address-management-page {
+    padding:
+      18px 18px
+      14px;
+  }
+
+
+  .pos-address-management-page__kitchen.app-select {
+    width:
+      210px !important;
+  }
+}
+
+
+@media (
+  max-width: 768px
+) {
+  .pos-address-management-page {
+    gap: 14px;
+
+    height: auto;
+
+    min-height:
+      calc(
+        100vh -
+        var(
+          --app-header-height,
+          60px
+        )
+      );
+
+    padding:
+      14px 14px
+      12px;
+
+    overflow: visible;
+  }
+
+
+  .pos-address-management-page__header-actions {
+    width: 100%;
+
+    align-items: stretch;
+  }
+
+
+  .pos-address-management-page__kitchen.app-select,
+  .pos-address-management-page__search.search-input {
+    flex:
+      1 1 220px;
+
+    width:
+      auto !important;
+  }
+
+
+  .pos-address-management-page
+    > .pos-address-table {
+    min-height:
+      480px;
+  }
+}
+
+
+@media (
+  max-width: 560px
+) {
+  .pos-address-management-page__header-actions {
+    flex-direction:
+      column;
+  }
+
+
+  .pos-address-management-page__kitchen.app-select,
+  .pos-address-management-page__search.search-input,
+  .pos-address-management-page__refresh.ant-btn {
+    width:
+      100% !important;
+  }
+}

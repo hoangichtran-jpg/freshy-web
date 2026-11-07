@@ -1,0 +1,145 @@
+.registration-requests-page {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+
+  width: 100%;
+
+  height:
+    calc(
+      100vh -
+      var(
+        --app-header-height,
+        60px
+      )
+    );
+
+  min-width: 0;
+  min-height: 0;
+
+  padding:
+    24px 24px
+    16px;
+
+  overflow: hidden;
+
+  background:
+    var(
+      --bg-app,
+      #f6f3ef
+    );
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.registration-requests-page
+  > .management-page-header {
+  flex: 0 0 auto;
+
+  width: 100%;
+  min-width: 0;
+}
+
+
+/* ========================================
+   SEARCH LAYOUT
+======================================== */
+
+.registration-requests-page__search.search-input {
+  width: 340px;
+}
+
+
+/* ========================================
+   TABLE
+======================================== */
+
+.registration-requests-page
+  > .registration-requests-table {
+  flex: 1 1 auto;
+
+  width: 100%;
+
+  min-width: 0;
+  min-height: 0;
+}
+
+
+/* ========================================
+   TABLE EMPTY STATE
+======================================== */
+
+.registration-requests-page
+  .ant-empty-description {
+  color:
+    var(
+      --text-placeholder,
+      #9a9087
+    );
+
+  font-size:
+    var(--font-size-caption);
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 1024px) {
+  .registration-requests-page {
+    padding:
+      18px 18px
+      14px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .registration-requests-page {
+    gap: 14px;
+
+    height: auto;
+
+    min-height:
+      calc(
+        100vh -
+        var(
+          --app-header-height,
+          60px
+        )
+      );
+
+    padding:
+      14px 14px
+      12px;
+
+    overflow: visible;
+  }
+
+
+  .registration-requests-page__search.search-input {
+    flex: 1 1 auto;
+
+    width: auto;
+  }
+
+
+  .registration-requests-page
+    > .registration-requests-table {
+    min-height: 480px;
+  }
+}
+
+
+@media (max-width: 520px) {
+  .registration-requests-page__search.search-input {
+    width: 100%;
+  }
+}

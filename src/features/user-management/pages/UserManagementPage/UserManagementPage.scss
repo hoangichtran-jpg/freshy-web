@@ -1,0 +1,214 @@
+.user-management-page {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+
+  width: 100%;
+
+  height:
+    calc(
+      100vh -
+      var(
+        --app-header-height,
+        60px
+      )
+    );
+
+  min-width: 0;
+  min-height: 0;
+
+  padding:
+    24px 24px
+    16px;
+
+  overflow: hidden;
+
+  background:
+    var(
+      --bg-app,
+      #f6f3ef
+    );
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.user-management-page
+  > .management-page-header {
+  flex: 0 0 auto;
+
+  width: 100%;
+  min-width: 0;
+}
+
+
+.user-management-page__header-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+
+/* ========================================
+   SEARCH LAYOUT
+======================================== */
+
+.user-management-page__search.search-input {
+  width: 310px;
+}
+
+
+/* ========================================
+   REFRESH
+======================================== */
+
+.user-management-page__refresh.ant-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  height: 44px;
+
+  padding:
+    0 14px;
+
+  border:
+    1px solid
+    #ded4c9;
+
+  border-radius: 10px;
+
+  background: #fff;
+
+  color:
+    #7b4b08;
+
+  font-size:
+    var(--font-size-caption);
+  font-weight: var(--font-weight-semibold);
+
+  box-shadow: none;
+}
+
+
+.user-management-page__refresh.ant-btn:hover,
+.user-management-page__refresh.ant-btn:focus {
+  border-color:
+    #bca68d !important;
+
+  background:
+    #faf7f3 !important;
+
+  color:
+    #7b4b08 !important;
+}
+
+
+/* ========================================
+   TABLE
+======================================== */
+
+.user-management-page
+  > .managed-users-table {
+  flex: 1 1 auto;
+
+  width: 100%;
+
+  min-width: 0;
+  min-height: 0;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 1180px) {
+  .user-management-page__header-actions {
+    flex-wrap: wrap;
+
+    justify-content:
+      flex-end;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .user-management-page {
+    padding:
+      18px 18px
+      14px;
+  }
+
+
+  .user-management-page__search.search-input {
+    width: 270px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .user-management-page {
+    gap: 14px;
+
+    height: auto;
+
+    min-height:
+      calc(
+        100vh -
+        var(
+          --app-header-height,
+          60px
+        )
+      );
+
+    padding:
+      14px 14px
+      12px;
+
+    overflow: visible;
+  }
+
+
+  .user-management-page__header-actions {
+    width: 100%;
+
+    align-items: stretch;
+  }
+
+
+  .user-management-page__search.search-input {
+    flex: 1 1 220px;
+
+    width: auto;
+  }
+
+
+  .user-management-page
+    > .managed-users-table {
+    min-height: 480px;
+  }
+}
+
+
+@media (max-width: 560px) {
+  .user-management-page__header-actions {
+    flex-direction: column;
+  }
+
+
+  .user-management-page__search.search-input,
+  .user-management-page__refresh.ant-btn,
+  .user-management-page
+    .primary-action-button {
+    width: 100%;
+  }
+}

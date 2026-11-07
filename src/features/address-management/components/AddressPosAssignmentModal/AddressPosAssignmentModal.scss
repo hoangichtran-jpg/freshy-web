@@ -1,0 +1,321 @@
+.address-pos-assignment {
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+
+/* ========================================
+   SUMMARY
+======================================== */
+
+.address-pos-assignment__summary {
+  padding:
+    14px 16px;
+
+  border:
+    1px solid #eadfd3;
+
+  border-radius:
+    12px;
+
+  background:
+    #faf7f3;
+}
+
+
+.address-pos-assignment__summary-label {
+  margin-bottom:
+    3px;
+
+  color:
+    #9a8e84;
+
+  font-size:
+    var(--font-size-overline);
+
+  font-weight: var(--font-weight-semibold);
+
+  letter-spacing:
+    0.04em;
+
+  text-transform:
+    uppercase;
+}
+
+
+.address-pos-assignment__summary-title {
+  color:
+    #40352d;
+
+  font-size:
+    var(--font-size-body-sm);
+
+  font-weight: var(--font-weight-bold);
+
+  line-height:
+    1.5;
+}
+
+
+.address-pos-assignment__summary-meta {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap:
+    6px 14px;
+
+  margin-top:
+    4px;
+
+  color:
+    #8a7f76;
+
+  font-size:
+    var(--font-size-meta);
+}
+
+
+.address-pos-assignment__summary-meta
+  strong {
+  color:
+    #6d5c4e;
+
+  font-weight: var(--font-weight-semibold);
+}
+
+
+/* ========================================
+   CURRENT ASSIGNMENTS
+======================================== */
+
+.address-pos-assignment__current {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+
+.address-pos-assignment__current-label {
+  color:
+    #70655c;
+
+  font-size:
+    var(--font-size-meta);
+
+  font-weight: var(--font-weight-semibold);
+}
+
+
+.address-pos-assignment__current-list {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 6px;
+}
+
+
+.address-pos-assignment__current-pill {
+  display: inline-flex;
+
+  align-items: center;
+
+  min-height: 28px;
+
+  padding:
+    0 10px;
+
+  border:
+    1px solid
+    #e5d8c8;
+
+  border-radius:
+    999px;
+
+  background:
+    #fffaf4;
+
+  color:
+    #7b4b08;
+
+  font-size:
+    var(--font-size-meta);
+
+  font-weight: var(--font-weight-semibold);
+}
+
+
+/* ========================================
+   ALERT
+======================================== */
+
+.address-pos-assignment__alert.ant-alert {
+  border-radius:
+    10px;
+
+  font-size:
+    var(--font-size-caption);
+}
+
+
+/* ========================================
+   FORM
+======================================== */
+
+.address-pos-assignment__form
+  .ant-form-item {
+  margin-bottom:
+    20px;
+}
+
+
+.address-pos-assignment__form
+  .ant-form-item:last-child {
+  margin-bottom:
+    0;
+}
+
+
+.address-pos-assignment__form
+  .ant-form-item-label {
+  padding-bottom:
+    7px;
+}
+
+
+.address-pos-assignment__form
+  .ant-form-item-label
+  > label {
+  height:
+    auto;
+
+  color:
+    #40352d;
+
+  font-size:
+    var(--font-size-caption);
+
+  font-weight: var(--font-weight-semibold);
+}
+
+
+/* ========================================
+   FEE
+======================================== */
+
+.address-pos-assignment__fee.ant-input-number-group-wrapper {
+  width:
+    100%;
+}
+
+
+.address-pos-assignment__fee
+  .ant-input-number {
+  width:
+    100%;
+
+  height:
+    44px;
+
+  border:
+    1px solid
+    #ded6cf;
+
+  border-radius:
+    10px 0 0 10px;
+
+  box-shadow:
+    none;
+}
+
+
+.address-pos-assignment__fee
+  .ant-input-number-input-wrap,
+.address-pos-assignment__fee
+  .ant-input-number-input {
+  height:
+    42px;
+}
+
+
+.address-pos-assignment__fee
+  .ant-input-number-input {
+  padding:
+    0 13px;
+
+  color:
+    #40352d;
+
+  font-size:
+    var(--font-size-body-sm);
+}
+
+
+.address-pos-assignment__fee
+  .ant-input-number-group-addon {
+  min-width:
+    54px;
+
+  padding:
+    0 10px;
+
+  border-color:
+    #ded6cf;
+
+  border-radius:
+    0 10px 10px 0;
+
+  background:
+    #faf7f3;
+
+  color:
+    #7d7168;
+
+  font-size:
+    var(--font-size-meta);
+
+  font-weight: var(--font-weight-semibold);
+}
+
+
+.address-pos-assignment__fee.ant-input-number-group-wrapper:hover
+  .ant-input-number {
+  border-color:
+    #bca68d;
+}
+
+
+.address-pos-assignment__fee.ant-input-number-group-wrapper-focused
+  .ant-input-number {
+  border-color:
+    #7b4b08;
+
+  box-shadow:
+    0 0 0 2px
+    rgba(
+      123,
+      75,
+      8,
+      0.08
+    );
+}
+
+
+/* ========================================
+   VALIDATION
+======================================== */
+
+.address-pos-assignment
+  .ant-form-item-extra,
+.address-pos-assignment
+  .ant-form-item-explain-error {
+  margin-top:
+    4px;
+
+  font-size:
+    var(--font-size-meta);
+}

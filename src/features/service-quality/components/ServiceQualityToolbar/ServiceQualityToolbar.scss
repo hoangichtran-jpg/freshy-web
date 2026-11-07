@@ -1,0 +1,117 @@
+/* ========================================
+   TOOLBAR
+======================================== */
+
+.service-quality-toolbar {
+  display: flex;
+
+  width: 100%;
+  min-width: 0;
+
+  flex: 0 0 auto;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 18px;
+
+  margin-bottom: 14px;
+}
+
+
+/* ========================================
+   SEARCH LAYOUT
+======================================== */
+
+.service-quality-toolbar__search {
+  width: 100%;
+  max-width: 440px;
+
+  min-width: 220px;
+}
+
+
+/* ========================================
+   COUNT
+======================================== */
+
+.service-quality-toolbar__meta {
+  display:
+    inline-flex;
+
+  flex:
+    0
+    0
+    auto;
+
+  align-items:
+    center;
+
+  gap:
+    4px;
+
+  color:
+    #94887f;
+
+  font-size:
+    var(--font-size-meta);
+
+  line-height:
+    1.4;
+
+  white-space:
+    nowrap;
+}
+
+
+.service-quality-toolbar__meta
+  strong {
+  color:
+    #62564d;
+
+  font-size:
+    var(--font-size-caption);
+
+  font-weight: var(--font-weight-bold);
+
+  font-variant-numeric:
+    tabular-nums;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (
+  max-width: 768px
+) {
+  .service-quality-toolbar {
+    align-items:
+      stretch;
+
+    flex-direction:
+      column;
+
+    gap:
+      9px;
+  }
+
+
+  .service-quality-toolbar__search {
+    width:
+      100%;
+
+    max-width:
+      none;
+
+    min-width:
+      0;
+  }
+
+
+  .service-quality-toolbar__meta {
+    min-height:
+      20px;
+  }
+}

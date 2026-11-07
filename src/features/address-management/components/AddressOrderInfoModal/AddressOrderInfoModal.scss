@@ -1,0 +1,687 @@
+/* ========================================
+   ROOT / TYPOGRAPHY TOKENS
+======================================== */
+
+.address-order-info {
+  --order-text-primary: #40352d;
+  --order-text-secondary: #6f655d;
+  --order-text-muted: #94887f;
+
+  --order-border: #e7dfd8;
+  --order-border-hover: #bca68d;
+
+  --order-surface: #ffffff;
+  --order-surface-soft: #fcfaf8;
+  --order-surface-muted: #f8f6f3;
+
+  --order-accent: #7b4b08;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+
+  color:
+    var(
+      --order-text-primary
+    );
+
+  font-size:
+    var(--font-size-body);
+}
+
+
+/* ========================================
+   ADDRESS SUMMARY
+======================================== */
+
+.address-order-info__summary {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 4px;
+
+  width: 100%;
+
+  padding:
+    15px
+    17px;
+
+  border:
+    1px solid
+    #eadfd3;
+
+  border-radius:
+    12px;
+
+  background:
+    #faf7f3;
+}
+
+
+/* ========================================
+   Address label
+======================================== */
+
+.address-order-info__summary-label {
+  display: block;
+
+  color:
+    var(
+      --order-text-muted
+    );
+
+  font-size:
+    var(--font-size-caption);
+  font-weight: var(--font-weight-semibold);
+
+  line-height: 1.4;
+}
+
+
+/* ========================================
+   Main address
+======================================== */
+
+.address-order-info__summary-address {
+  display: block;
+
+  width: 100%;
+
+  color:
+    var(
+      --order-text-primary
+    );
+
+  font-size:
+    var(--font-size-body);
+  font-weight: var(--font-weight-bold);
+
+  line-height: 1.5;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* ========================================
+   Unit / apartment / detail
+======================================== */
+
+.address-order-info__summary-unit {
+  display: block;
+
+  color:
+    var(
+      --order-text-secondary
+    );
+
+  font-size:
+    var(--font-size-body-sm);
+  font-weight: var(--font-weight-medium);
+
+  line-height: 1.45;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* ========================================
+   FORM
+======================================== */
+
+.address-order-info__form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+
+/* ========================================
+   SECTION
+======================================== */
+
+.address-order-info__section {
+  overflow: hidden;
+
+  border:
+    1px solid
+    var(
+      --order-border
+    );
+
+  border-radius:
+    12px;
+
+  background:
+    var(
+      --order-surface
+    );
+}
+
+
+/* ========================================
+   SECTION HEADER
+======================================== */
+
+.address-order-info__section-header {
+  display: flex;
+
+  min-height: 44px;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding:
+    0
+    16px;
+
+  border-bottom:
+    1px solid
+    #eee8e2;
+
+  background:
+    var(
+      --order-surface-soft
+    );
+}
+
+
+.address-order-info__section-title {
+  margin: 0;
+
+  color:
+    var(
+      --order-text-primary
+    );
+
+  font-size:
+    var(--font-size-body);
+  font-weight: var(--font-weight-bold);
+
+  line-height: 1.4;
+}
+
+
+/* ========================================
+   SECTION BODY
+======================================== */
+
+.address-order-info__section-body {
+  padding:
+    16px;
+}
+
+
+/* ========================================
+   GRID
+======================================== */
+
+.address-order-info__grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(
+        0,
+        1fr
+      )
+    );
+
+  column-gap: 14px;
+}
+
+
+/* ========================================
+   FORM ITEM
+======================================== */
+
+.address-order-info__section-body
+  .ant-form-item {
+  margin-bottom: 0;
+}
+
+
+/*
+ * Note nằm dưới hàng
+ * payment + time.
+ */
+.address-order-info__note-field.ant-form-item {
+  margin-top: 16px;
+}
+
+
+.address-order-info__field--last.ant-form-item {
+  margin-bottom: 0;
+}
+
+
+/* ========================================
+   LABEL
+======================================== */
+
+.address-order-info__form
+  .ant-form-item-label {
+  padding-bottom: 7px;
+}
+
+
+.address-order-info__form
+  .ant-form-item-label
+  > label {
+  height: auto;
+
+  color:
+    var(
+      --order-text-primary
+    );
+
+  font-size:
+    var(--font-size-body-sm);
+  font-weight: var(--font-weight-semibold);
+
+  line-height: 1.4;
+}
+
+
+/* ========================================
+   GENERIC CONTROL TYPOGRAPHY
+======================================== */
+
+/*
+ * Input bình thường
+ */
+.address-order-info__control.ant-input {
+  width: 100%;
+  height: 44px;
+
+  padding:
+    0
+    13px;
+
+  border:
+    1px solid
+    #ded6cf;
+
+  border-radius:
+    10px;
+
+  background:
+    var(
+      --order-surface
+    );
+
+  color:
+    var(
+      --order-text-primary
+    );
+
+  font-size:
+    var(--font-size-body);
+  font-weight: var(--font-weight-medium);
+
+  line-height: 1.4;
+
+  box-shadow: none;
+
+  transition:
+    border-color
+      140ms ease,
+    box-shadow
+      140ms ease;
+}
+
+
+.address-order-info__control.ant-input::placeholder {
+  color: #b2aaa3;
+
+  font-weight: var(--font-weight-regular);
+}
+
+
+.address-order-info__control.ant-input:hover {
+  border-color:
+    var(
+      --order-border-hover
+    );
+}
+
+
+.address-order-info__control.ant-input:focus {
+  border-color:
+    var(
+      --order-accent
+    );
+
+  box-shadow:
+    0 0 0 2px
+      rgba(
+        123,
+        75,
+        8,
+        0.08
+      );
+}
+
+
+/* ========================================
+   AGENCY SELECT
+======================================== */
+
+/*
+ * AgencySelect là custom button,
+ * nên override typography ở đây
+ * để đồng nhất với các field khác.
+ */
+
+.address-order-info
+  .agency-picker__trigger {
+  min-height: 44px;
+
+  font-size:
+    var(--font-size-body);
+  font-weight: var(--font-weight-medium);
+
+  color:
+    var(
+      --order-text-primary
+    );
+}
+
+
+/* ========================================
+   EXACT TIME PICKER
+======================================== */
+
+/*
+ * ExactTimePicker có CSS riêng,
+ * nhưng font input vẫn cần đồng bộ
+ * với modal.
+ */
+
+.address-order-info__time-select
+  .ant-input {
+  color:
+    var(
+      --order-text-primary
+    );
+
+  font-size:
+    var(--font-size-body);
+  font-weight: var(--font-weight-medium);
+
+  font-variant-numeric:
+    tabular-nums;
+}
+
+
+.address-order-info__time-select
+  .ant-input::placeholder {
+  color: #b2aaa3;
+
+  font-weight: var(--font-weight-regular);
+}
+
+
+/* ========================================
+   TEXTAREA
+======================================== */
+
+.address-order-info__textarea.ant-input {
+  min-height: 88px;
+
+  padding:
+    10px
+    12px;
+
+  border:
+    1px solid
+    #ded6cf;
+
+  border-radius:
+    10px;
+
+  background:
+    var(
+      --order-surface
+    );
+
+  color:
+    var(
+      --order-text-primary
+    );
+
+  font-size:
+    var(--font-size-body);
+  font-weight: var(--font-weight-medium);
+
+  line-height: 1.5;
+
+  resize: vertical;
+
+  box-shadow: none;
+
+  transition:
+    border-color
+      140ms ease,
+    box-shadow
+      140ms ease;
+}
+
+
+.address-order-info__textarea.ant-input::placeholder {
+  color: #b2aaa3;
+
+  font-weight: var(--font-weight-regular);
+}
+
+
+.address-order-info__textarea.ant-input:hover {
+  border-color:
+    var(
+      --order-border-hover
+    );
+}
+
+
+.address-order-info__textarea.ant-input:focus {
+  border-color:
+    var(
+      --order-accent
+    );
+
+  box-shadow:
+    0 0 0 2px
+      rgba(
+        123,
+        75,
+        8,
+        0.08
+      );
+}
+
+
+/* ========================================
+   TEXTAREA COUNT
+======================================== */
+
+.address-order-info
+  .ant-input-textarea-show-count::after {
+  margin-top: 4px;
+
+  color:
+    var(
+      --order-text-muted
+    );
+
+  font-size:
+    var(--font-size-meta);
+  font-weight: var(--font-weight-medium);
+}
+
+
+/* ========================================
+   DISABLED / VIEW MODE
+======================================== */
+
+.address-order-info
+  .ant-input-disabled,
+.address-order-info
+  .ant-picker-disabled,
+.address-order-info
+  .ant-select-disabled
+  .ant-select-selector {
+  border-color:
+    #ebe5df !important;
+
+  background:
+    var(
+      --order-surface-muted
+    ) !important;
+
+  color:
+    #655b53 !important;
+
+  cursor:
+    default !important;
+}
+
+
+.address-order-info
+  .ant-input-disabled {
+  -webkit-text-fill-color:
+    #655b53;
+}
+
+
+.address-order-info
+  .ant-select-disabled
+  .ant-select-selection-item {
+  color:
+    #655b53 !important;
+}
+
+
+.address-order-info
+  .ant-picker-disabled
+  input {
+  color:
+    #655b53 !important;
+
+  -webkit-text-fill-color:
+    #655b53 !important;
+}
+
+
+/*
+ * AgencySelect disabled.
+ */
+.address-order-info
+  .agency-picker__trigger--disabled {
+  border-color:
+    #ebe5df;
+
+  background:
+    var(
+      --order-surface-muted
+    );
+
+  color:
+    #655b53;
+
+  cursor: default;
+}
+
+
+/* ========================================
+   VALIDATION
+======================================== */
+
+.address-order-info
+  .ant-form-item-explain-error {
+  margin-top: 5px;
+
+  font-size:
+    var(--font-size-meta);
+  font-weight: var(--font-weight-medium);
+
+  line-height: 1.4;
+}
+
+
+/* ========================================
+   ERROR STATE
+======================================== */
+
+.address-order-info
+  .ant-form-item-has-error
+  .address-order-info__control.ant-input {
+  border-color:
+    #d95c55;
+}
+
+
+.address-order-info
+  .ant-form-item-has-error
+  .address-order-info__select
+  .ant-select-selector {
+  border-color:
+    #d95c55 !important;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (
+  max-width: 640px
+) {
+  .address-order-info {
+    gap: 14px;
+  }
+
+
+  .address-order-info__summary {
+    padding:
+      14px;
+  }
+
+
+  .address-order-info__form {
+    gap: 12px;
+  }
+
+
+  .address-order-info__section-header {
+    min-height: 42px;
+
+    padding:
+      0
+      14px;
+  }
+
+
+  .address-order-info__section-body {
+    padding:
+      14px;
+  }
+
+
+  .address-order-info__grid {
+    grid-template-columns:
+      1fr;
+
+    row-gap: 16px;
+
+    column-gap: 0;
+  }
+
+
+  .address-order-info__note-field.ant-form-item {
+    margin-top: 16px;
+  }
+}

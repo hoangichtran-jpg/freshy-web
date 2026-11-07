@@ -1,0 +1,81 @@
+.order-summary-page {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+
+  width: 100%;
+
+  height:
+    calc(
+      100vh -
+      var(
+        --app-header-height,
+        60px
+      )
+    );
+
+  min-width: 0;
+  min-height: 0;
+
+  padding: 20px;
+
+  overflow: hidden;
+
+  background:
+    var(
+      --bg-app
+    );
+}
+
+
+/* ========================================
+   Header
+======================================== */
+
+.order-summary-page
+  > .management-page-header {
+  flex: 0 0 auto;
+}
+
+
+/* ========================================
+   Main content
+======================================== */
+
+.order-summary-page__content {
+  display: flex;
+
+  flex: 1 1 auto;
+  flex-direction: column;
+
+  min-width: 0;
+  min-height: 0;
+
+  overflow: hidden;
+}
+
+
+.order-summary-page__content
+  > .order-summary-table {
+  flex: 1 1 auto;
+
+  min-height: 0;
+}
+
+
+/* ========================================
+   Responsive
+======================================== */
+
+@media (
+  max-width: 700px
+) {
+  .order-summary-page {
+    gap: 14px;
+
+    padding: 14px;
+  }
+}

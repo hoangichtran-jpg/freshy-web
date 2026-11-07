@@ -1,0 +1,536 @@
+@import "normalize.css";
+@import "./tokens.scss";
+
+
+/* ========================================
+   Reset
+======================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing:
+    border-box;
+}
+
+
+html,
+body,
+#root {
+  width: 100%;
+
+  min-height: 100%;
+}
+
+
+html {
+  background:
+    var(
+      --bg-app
+    );
+}
+
+
+body {
+  margin: 0;
+
+  background:
+    var(
+      --bg-app
+    );
+
+  color:
+    var(
+      --text-primary
+    );
+
+  font-family:
+    var(
+      --font-family-base
+    );
+
+  font-size:
+    var(
+      --font-size-body
+    );
+
+  font-weight:
+    var(
+      --font-weight-body
+    );
+
+  line-height:
+    var(
+      --line-height-body
+    );
+
+  -webkit-font-smoothing:
+    antialiased;
+
+  -moz-osx-font-smoothing:
+    grayscale;
+}
+
+
+button,
+input,
+textarea,
+select {
+  font:
+    inherit;
+}
+
+
+a {
+  color:
+    inherit;
+
+  text-decoration:
+    none;
+}
+
+
+img {
+  max-width:
+    100%;
+}
+
+
+/* ========================================
+   Global brand loading
+
+   Tất cả Ant Design Spin:
+   - page
+   - table
+   - modal
+   - inline
+
+   dùng favicon ở giữa
+   + vòng brand xoay bên ngoài.
+======================================== */
+
+.ant-spin {
+  color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+}
+
+
+/* ========================================
+   Default loader
+======================================== */
+
+.ant-spin
+  .ant-spin-dot {
+  position:
+    relative;
+
+  display:
+    inline-block;
+
+  width:
+    40px !important;
+
+  height:
+    40px !important;
+
+  margin:
+    0 !important;
+
+  transform:
+    none !important;
+
+  animation:
+    none !important;
+}
+
+
+/*
+ * Ẩn 4 chấm mặc định
+ * của Ant Design.
+ */
+.ant-spin
+  .ant-spin-dot-item {
+  display:
+    none !important;
+}
+
+
+/* ========================================
+   Rotating brand ring
+======================================== */
+
+.ant-spin
+  .ant-spin-dot::before {
+  content:
+    "";
+
+  position:
+    absolute;
+
+  inset:
+    0;
+
+  border:
+    3px solid
+    rgba(
+      123,
+      75,
+      8,
+      0.14
+    );
+
+  border-top-color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+
+  border-right-color:
+    var(
+      --brand-gold-500,
+      #b99054
+    );
+
+  border-radius:
+    50%;
+
+  animation:
+    freshy-loader-spin
+    0.8s
+    linear
+    infinite;
+}
+
+
+/* ========================================
+   Favicon inside loader
+======================================== */
+
+.ant-spin
+  .ant-spin-dot::after {
+  content:
+    "";
+
+  position:
+    absolute;
+
+  inset:
+    7px;
+
+  border-radius:
+    7px;
+
+  background:
+    url("../assets/favicon.ico")
+    center
+    center /
+    contain
+    no-repeat;
+}
+
+
+/* ========================================
+   Small Spin
+======================================== */
+
+.ant-spin-sm
+  .ant-spin-dot {
+  width:
+    24px !important;
+
+  height:
+    24px !important;
+}
+
+
+.ant-spin-sm
+  .ant-spin-dot::before {
+  border-width:
+    2px;
+}
+
+
+.ant-spin-sm
+  .ant-spin-dot::after {
+  inset:
+    4px;
+
+  border-radius:
+    4px;
+}
+
+
+/* ========================================
+   Large Spin
+======================================== */
+
+.ant-spin-lg
+  .ant-spin-dot {
+  width:
+    52px !important;
+
+  height:
+    52px !important;
+}
+
+
+.ant-spin-lg
+  .ant-spin-dot::before {
+  border-width:
+    3px;
+}
+
+
+.ant-spin-lg
+  .ant-spin-dot::after {
+  inset:
+    9px;
+
+  border-radius:
+    8px;
+}
+
+
+/* ========================================
+   Spin text
+======================================== */
+
+.ant-spin
+  .ant-spin-text {
+  color:
+    var(
+      --text-muted,
+      #938980
+    ) !important;
+
+  font-size:
+    var(
+      --font-size-body-sm
+    );
+
+  font-weight:
+    var(
+      --font-weight-medium
+    );
+
+  line-height:
+    var(
+      --line-height-body-sm
+    );
+}
+
+
+/* ========================================
+   Ant Design table loading overlay
+======================================== */
+
+.ant-spin-nested-loading
+  > div
+  > .ant-spin {
+  max-height:
+    none;
+}
+
+
+/*
+ * Overlay của table giữ nhẹ,
+ * không phủ trắng quá mạnh.
+ */
+.ant-spin-nested-loading
+  > div
+  > .ant-spin
+  .ant-spin-dot {
+  margin-top:
+    0 !important;
+}
+
+
+.ant-spin-blur {
+  opacity:
+    0.55;
+}
+
+
+.ant-spin-blur::after {
+  opacity:
+    0.2;
+}
+
+
+/* ========================================
+   Button loading
+
+   Button loading của AntD
+   không dùng .ant-spin nên
+   cần style riêng.
+======================================== */
+
+.ant-btn-loading-icon
+  .anticon-loading {
+  position:
+    relative;
+
+  display:
+    inline-flex !important;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  width:
+    18px;
+
+  height:
+    18px;
+
+  margin-right:
+    2px;
+
+  animation:
+    none !important;
+}
+
+
+/*
+ * Ẩn icon LoadingOutlined
+ * mặc định.
+ */
+.ant-btn-loading-icon
+  .anticon-loading
+  svg {
+  display:
+    none;
+}
+
+
+/* ========================================
+   Button loading ring
+======================================== */
+
+.ant-btn-loading-icon
+  .anticon-loading::before {
+  content:
+    "";
+
+  position:
+    absolute;
+
+  inset:
+    0;
+
+  border:
+    2px solid
+    rgba(
+      123,
+      75,
+      8,
+      0.18
+    );
+
+  border-top-color:
+    currentColor;
+
+  border-radius:
+    50%;
+
+  animation:
+    freshy-loader-spin
+    0.75s
+    linear
+    infinite;
+}
+
+
+/* ========================================
+   Button favicon
+======================================== */
+
+.ant-btn-loading-icon
+  .anticon-loading::after {
+  content:
+    "";
+
+  position:
+    absolute;
+
+  inset:
+    4px;
+
+  background:
+    url("../assets/favicon.ico")
+    center
+    center /
+    contain
+    no-repeat;
+}
+
+
+/* ========================================
+   Primary button loading
+
+   Với button nền nâu:
+   vòng dùng màu sáng để nhìn rõ,
+   favicon vẫn giữ nguyên.
+======================================== */
+
+.ant-btn-primary
+  .ant-btn-loading-icon
+  .anticon-loading::before,
+.order-summary-export-modal__submit
+  .ant-btn-loading-icon
+  .anticon-loading::before {
+  border-color:
+    rgba(
+      255,
+      255,
+      255,
+      0.28
+    );
+
+  border-top-color:
+    #fff;
+}
+
+
+/* ========================================
+   Animation
+======================================== */
+
+@keyframes freshy-loader-spin {
+  from {
+    transform:
+      rotate(
+        0deg
+      );
+  }
+
+  to {
+    transform:
+      rotate(
+        360deg
+      );
+  }
+}
+
+
+/* ========================================
+   Accessibility
+======================================== */
+
+@media (
+  prefers-reduced-motion:
+    reduce
+) {
+  .ant-spin
+    .ant-spin-dot::before,
+  .ant-btn-loading-icon
+    .anticon-loading::before {
+    animation-duration:
+      1.8s;
+  }
+}

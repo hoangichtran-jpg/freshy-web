@@ -1,0 +1,71 @@
+.shift-close-blockers-modal {
+  .ant-modal-content { padding: 0; border-radius: 16px; overflow: hidden; border: 1px solid #e7dfd6; box-shadow: 0 18px 50px rgba(46,33,23,.16); }
+  .ant-modal-body { padding: 0; }
+  .ant-modal-close { top: 17px; right: 17px; color: #93867b; }
+}
+.shift-close-blockers-modal__header { padding: 22px 27px 18px; border-bottom: 1px solid #eee8e2; }
+.shift-close-blockers-modal__eyebrow { color: #94867b; font-size: 11px; font-weight: 750; letter-spacing: .13em; margin-bottom: 8px; }
+.shift-close-blockers-modal__heading { display: flex; align-items: flex-start; gap: 8px; padding-right: 35px; }
+.shift-close-blockers-modal__heading h2 { color: #342b24; font-size: 22px; font-weight: 650; margin: 0; line-height: 1.35; }
+.shift-close-blockers-modal__heading p { color: #86796f; font-size: 13px; margin: 4px 0 0; }
+.shift-close-blockers-modal__back.ant-btn { margin-left: -9px; color: #8a7867; }
+.shift-close-blockers-modal__body { display: flex; flex-direction: column; gap: 12px; padding: 20px 27px; max-height: min(63vh,570px); overflow-y: auto; }
+.shift-close-blockers-modal__body--summary { gap: 0; padding-top: 22px; padding-bottom: 22px; }
+.shift-close-blockers-modal__warning { display: flex; align-items: flex-start; gap: 12px; background: #fff9f0; border: 1px solid #eee1cf; border-radius: 11px; padding: 15px 16px; }
+.shift-close-blockers-modal__warning > .anticon { color: #ab772d; font-size: 19px; padding-top: 1px; flex: 0 0 auto; }
+.shift-close-blockers-modal__warning strong { color: #4c3b2b; font-size: 15px; font-weight: 650; }
+.shift-close-blockers-modal__warning p { color: #7c6a59; font-size: 13px; line-height: 1.55; margin: 5px 0 0; }
+/* A single navigational row: not a second warning card or a competing CTA. */
+.shift-close-blockers-modal__summary-link { display: flex; align-items: center; justify-content: space-between; gap: 14px; width: 100%; margin-top: 13px; border: 1px solid #e9e2db; border-radius: 10px; padding: 13px 15px; color: #865715; background: white; font: inherit; text-align: left; cursor: pointer; transition: border-color .15s ease, background .15s ease; }
+.shift-close-blockers-modal__summary-link-copy { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.shift-close-blockers-modal__summary-link strong { font-size: 14px; font-weight: 650; }
+.shift-close-blockers-modal__summary-link small { color: #948579; font-size: 12px; font-weight: 400; overflow-wrap: anywhere; }
+.shift-close-blockers-modal__summary-link > .anticon { font-size: 12px; color: #a2855b; }
+.shift-close-blockers-modal__summary-link:hover, .shift-close-blockers-modal__group-button:hover { background: #fdfaf6; border-color: #d9c7b0; }
+.shift-close-blockers-modal__summary-link:focus-visible, .shift-close-blockers-modal__group-button:focus-visible, .shift-close-blockers-modal__request:focus-visible { outline: 2px solid #9b691f; outline-offset: 3px; }
+/* Only appears when admission PAUSED was confirmed; intentionally low-emphasis. */
+.shift-close-blockers-modal__admission-note { display: flex; align-items: flex-start; gap: 8px; margin: 13px 2px 0; font-size: 12px; line-height: 1.55; color: #877c70; }
+.shift-close-blockers-modal__admission-note > .anticon { margin-top: 2px; color: #97877a; flex: 0 0 auto; }
+.shift-close-blockers-modal__toolbar { display: flex; align-items: center; justify-content: space-between; gap: 8px; color: #605045; font-size: 13px; font-weight: 650; }
+.shift-close-blockers-modal__loading { display: flex; align-items: center; justify-content: center; gap: 12px; min-height: 130px; color: #8a7b70; font-size: 13px; }
+.shift-close-blockers-modal__group { overflow: hidden; border: 1px solid #e9dfd7; border-radius: 12px; background: #fff; }
+.shift-close-blockers-modal__group-button { display: flex; align-items: center; gap: 10px; width: 100%; text-align: left; border: 0; padding: 14px; background: white; cursor: pointer; color: #805315; }
+.shift-close-blockers-modal__group-main { display: flex; flex-direction: column; gap: 5px; min-width: 0; flex: 1; }
+.shift-close-blockers-modal__group-main strong { color: #413329; font-size: 14px; }
+.shift-close-blockers-modal__group-main small { color: #8b7a6d; font-size: 12px; font-weight: 400; line-height: 1.5; }
+.shift-close-blockers-modal__count { white-space: nowrap; color: #8b5f26; background: #fbefdf; border-radius: 99px; padding: 4px 9px; font-size: 12px; font-weight: 650; }
+.shift-close-blockers-modal__group-button > .anticon:last-child { transition: transform .2s ease; }
+.shift-close-blockers-modal__chevron--open { transform: rotate(90deg); }
+.shift-close-blockers-modal__requests { border-top: 1px solid #eee5dd; background: #fdfaf7; padding: 6px 10px; }
+.shift-close-blockers-modal__request { display: flex; justify-content: space-between; align-items: center; gap: 12px; width: 100%; padding: 11px 8px; text-align: left; border: 0; border-bottom: 1px solid #eee8e1; background: transparent; color: #805315; cursor: pointer; }
+.shift-close-blockers-modal__request:last-child { border-bottom: 0; }
+.shift-close-blockers-modal__request:hover { background: #f8f0e6; }
+.shift-close-blockers-modal__request > span { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.shift-close-blockers-modal__request strong { color: #4a392d; font-size: 13px; overflow-wrap: anywhere; }
+.shift-close-blockers-modal__request small { color: #86796d; font-size: 12px; }
+.shift-close-blockers-modal__detail-head { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; }
+.shift-close-blockers-modal__detail-head strong { color: #44352b; font-size: 16px; }
+.shift-close-blockers-modal__detail-head p { color: #82746a; font-size: 12px; margin: 5px 0 0; }
+.shift-close-blockers-modal__detail-head span { color: #946629; font-size: 12px; white-space: nowrap; background: #fff0d9; padding: 4px 8px; border-radius: 99px; }
+.shift-close-blockers-modal__detail-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
+.shift-close-blockers-modal__detail-grid > div { display: flex; flex-direction: column; gap: 5px; background: #faf7f3; border-radius: 9px; padding: 12px; overflow-wrap: anywhere; }
+.shift-close-blockers-modal__detail-grid small { color: #85766a; font-size: 12px; }
+.shift-close-blockers-modal__detail-grid strong { color: #4b392d; font-size: 13px; }
+.shift-close-blockers-modal__subheading { margin: 8px 0 0; font-size: 14px; color: #44352b; }
+.shift-close-blockers-modal__item { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 5px 12px; border-bottom: 1px solid #eee6de; padding: 10px 0; color: #4b392f; font-size: 13px; }
+.shift-close-blockers-modal__item small { width: 100%; color: #85786c; }
+.shift-close-blockers-modal__muted { color: #85786c; font-size: 12px; }
+.shift-close-blockers-modal__footer { display: flex; justify-content: flex-end; gap: 10px; align-items: center; margin: 0 27px; padding: 16px 0 22px; border-top: 1px solid #eee8e2; }
+@media(max-width:576px){ .shift-close-blockers-modal__header { padding: 20px 18px 15px; } .shift-close-blockers-modal__body{ padding: 18px; } .shift-close-blockers-modal__footer{ margin: 0 18px; flex-direction: column-reverse; align-items: stretch; } .shift-close-blockers-modal__footer .app-button{ width: 100%; } .shift-close-blockers-modal__detail-grid{grid-template-columns:1fr;} }
+
+
+/* V4: a deliberate inline destructive confirmation, not a second stacked modal. */
+.shift-close-blockers-modal__pending-action {
+  padding: 15px 16px; margin-top: 14px; border: 1px solid #eadbcb;
+  border-radius: 10px; background: #fffcf7;
+  p { margin: 0 0 12px; font-size: 13px; line-height: 1.6; color: #74675c; }
+}
+.shift-close-blockers-modal__cancel-confirm {
+  strong { display: block; margin-bottom: 7px; color: #422e22; font-size: 14px; }
+  > div { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 9px; }
+}

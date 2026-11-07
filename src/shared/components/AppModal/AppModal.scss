@@ -1,0 +1,19 @@
+/* ========================================
+   Shared modal boundary
+======================================== */
+
+/*
+ * AppModal intentionally keeps visual styling light.
+ *
+ * Feature/composite modals still own their content,
+ * header/footer layout and any domain-specific sizing.
+ *
+ * This primitive centralizes the AntD Modal dependency
+ * and the application-wide viewport boundary.
+ */
+.app-modal.ant-modal {
+  max-width:
+    calc(
+      100vw - 24px
+    );
+}

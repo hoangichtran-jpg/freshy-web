@@ -1,0 +1,142 @@
+.banner-stats {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+
+  overflow: hidden;
+
+  border: 1px solid #e7dfd8;
+  border-radius: 12px;
+
+  background: #ffffff;
+}
+
+/* ========================================
+   ITEM
+======================================== */
+
+.banner-stats__item {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+
+  padding:
+    16px
+    18px;
+}
+
+.banner-stats__item + .banner-stats__item {
+  border-left: 1px solid #eee8e2;
+}
+
+/* ========================================
+   LABEL
+======================================== */
+
+.banner-stats__label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: #746961;
+
+  font-size:
+    var(--font-size-caption);
+  font-weight: var(--font-weight-semibold);
+
+  line-height: 1.4;
+}
+
+/* ========================================
+   DOT
+======================================== */
+
+.banner-stats__dot {
+  width: 7px;
+  height: 7px;
+
+  flex: 0 0 auto;
+
+  border-radius: 999px;
+
+  background: #9b8f85;
+}
+
+.banner-stats__item--active
+  .banner-stats__dot {
+  background: #4f8b65;
+}
+
+.banner-stats__item--inactive
+  .banner-stats__dot {
+  background: #a6756c;
+}
+
+/* ========================================
+   VALUE
+======================================== */
+
+.banner-stats__value {
+  margin-top: 7px;
+
+  color: #40352d;
+
+  font-size:
+    var(--font-size-title);
+  font-weight: var(--font-weight-bold);
+
+  line-height: 1.15;
+
+  font-variant-numeric: tabular-nums;
+}
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.banner-stats__description {
+  margin-top: 4px;
+
+  color: #968a81;
+
+  font-size:
+    var(--font-size-meta);
+  font-weight: var(--font-weight-regular);
+
+  line-height: 1.45;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 640px) {
+  .banner-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .banner-stats__item + .banner-stats__item {
+    border-top: 1px solid #eee8e2;
+    border-left: 0;
+  }
+
+  .banner-stats__item {
+    padding:
+      14px
+      16px;
+  }
+
+  .banner-stats__value {
+    font-size:
+    var(--font-size-title);
+  }
+}

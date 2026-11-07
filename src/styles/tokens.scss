@@ -1,0 +1,278 @@
+:root {
+  /* ========================================
+     Brand
+  ======================================== */
+
+  --brand-primary-900: #5b3504;
+  --brand-primary-800: #6b4106;
+  --brand-primary-700: #7b4b08;
+  --brand-primary-600: #8b560a;
+  --brand-primary-500: #9d6610;
+
+  --brand-primary: var(--brand-primary-700);
+  --brand-primary-hover: var(--brand-primary-600);
+  --brand-primary-active: var(--brand-primary-800);
+
+  --brand-gold-700: #b98908;
+  --brand-gold-600: #c9980e;
+  --brand-gold-500: #d9a81a;
+  --brand-gold-400: #e6bc3a;
+  --brand-gold-300: #f0d26e;
+
+  --brand-gold: var(--brand-gold-500);
+
+  /* ========================================
+     Brand cream
+  ======================================== */
+
+  --brand-cream-100: #fbf9f2;
+  --brand-cream-200: #f6f1e4;
+  --brand-cream-300: #eee6d1;
+
+  /* ========================================
+     Background
+  ======================================== */
+
+  --bg-app: #f8f7f3;
+  --bg-surface: #ffffff;
+  --bg-soft: #f6f1e4;
+  --bg-muted: #f8fafc;
+
+  /* ========================================
+     Header
+  ======================================== */
+
+  --header-bg: #f6e8d2;
+  --header-border: #e7d5b8;
+
+  --header-nav-hover: rgba(123, 75, 8, 0.07);
+  --header-nav-active: rgba(123, 75, 8, 0.11);
+
+  /* ========================================
+     Text color
+  ======================================== */
+
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --text-muted: #6b7280;
+  --text-placeholder: #9ca3af;
+
+  --text-on-primary: #ffffff;
+
+  /* ========================================
+     Typography
+  ======================================== */
+
+  --font-family-base:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  /* Weights */
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Page title */
+
+  --font-size-page-title: 30px;
+  --font-size-page-title-mobile: 24px;
+  --font-weight-page-title: var(--font-weight-bold);
+  --line-height-page-title: 1.25;
+  --letter-spacing-page-title: -0.02em;
+
+  /* Section title */
+
+  --font-size-section-title: 20px;
+  --font-weight-section-title: var(--font-weight-bold);
+  --line-height-section-title: 1.35;
+
+  /* Large display */
+
+  --font-size-display-xl: 48px;
+  --font-weight-display-xl: var(--font-weight-bold);
+  --line-height-display-xl: 1.08;
+
+  --font-size-display-lg: 42px;
+  --font-weight-display-lg: var(--font-weight-bold);
+  --line-height-display-lg: 1.1;
+
+  /* Content title */
+
+  --font-size-title: 24px;
+  --font-weight-title: var(--font-weight-bold);
+  --line-height-title: 1.3;
+
+  /* Card / modal / component heading */
+
+  --font-size-heading-lg: 18px;
+  --font-weight-heading-lg: var(--font-weight-semibold);
+  --line-height-heading-lg: 1.4;
+
+  --font-size-heading: 18px;
+  --font-weight-heading: var(--font-weight-semibold);
+  --line-height-heading: 1.4;
+
+  /* Body */
+
+  --font-size-body-lg: 16px;
+  --font-weight-body-lg: var(--font-weight-regular);
+  --line-height-body-lg: 1.5;
+
+
+  --font-size-body: 16px;
+  --font-weight-body: var(--font-weight-regular);
+  --line-height-body: 1.5;
+
+  /* Supporting text */
+
+  --font-size-body-sm: 14px;
+  --font-weight-body-sm: var(--font-weight-regular);
+  --line-height-body-sm: 1.5;
+
+  /* Form / metadata label */
+
+  --font-size-label: 14px;
+  --font-weight-label: var(--font-weight-semibold);
+  --line-height-label: 1.4;
+
+  /* Caption */
+
+  --font-size-caption: 13px;
+  --font-weight-caption: var(--font-weight-regular);
+  --line-height-caption: 1.4;
+
+  /* Meta */
+
+  --font-size-meta: 13px;
+  --font-weight-meta: var(--font-weight-medium);
+  --line-height-meta: 1.45;
+
+  /* Overline / micro label */
+
+  --font-size-overline: 10px;
+  --font-weight-overline: var(--font-weight-semibold);
+  --line-height-overline: 1.4;
+
+  /* ========================================
+     Border
+  ======================================== */
+
+  --border-default: #e5e7eb;
+  --border-soft: #f1f5f9;
+  --border-strong: #d1d5db;
+
+  /* ========================================
+     Functional
+  ======================================== */
+
+  --color-info: #2563eb;
+  --color-info-hover: #1d4ed8;
+  --color-info-soft: #dbeafe;
+
+  --color-success: #16a34a;
+  --color-success-soft: #dcfce7;
+
+  --color-warning: #d97706;
+  --color-warning-soft: #fef3c7;
+
+  --color-error: #dc2626;
+  --color-error-hover: #b91c1c;
+  --color-error-soft: #fee2e2;
+
+  /* ========================================
+     Interactive state
+  ======================================== */
+
+  --state-hover: #f8fafc;
+
+  --state-brand-hover: #fbf8f0;
+  --state-brand-selected: #f6f1e4;
+
+  /* ========================================
+     Shadow
+  ======================================== */
+
+  --shadow-sm:
+    0 1px 2px rgba(31, 41, 55, 0.06);
+
+  --shadow-md:
+    0 4px 12px rgba(31, 41, 55, 0.08);
+
+  --shadow-lg:
+    0 10px 30px rgba(31, 41, 55, 0.12);
+
+  /* ========================================
+     Radius
+  ======================================== */
+
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+  --radius-xl: 12px;
+  --radius-pill: 999px;
+
+  /* ========================================
+     Layout
+  ======================================== */
+
+  --app-header-height: 64px;
+
+  --app-sidebar-width: 220px;
+  --app-sidebar-collapsed-width: 72px;
+
+  /* ========================================
+     Sidebar
+  ======================================== */
+
+  --sidebar-bg: #fcfaf5;
+  --sidebar-border: #eadfce;
+
+  --sidebar-item-hover: #f8f1e5;
+  --sidebar-item-active: #f3ead9;
+
+  --sidebar-bg-gradient:
+    linear-gradient(
+      180deg,
+      #fbf6ec 0%,
+      #fcfaf5 22%,
+      #ffffff 100%
+    );
+
+  /* ========================================
+     Divider
+  ======================================== */
+
+  --divider-gradient-horizontal:
+    linear-gradient(
+      90deg,
+      rgba(123, 75, 8, 0.05) 0%,
+      rgba(217, 168, 26, 0.45) 20%,
+      rgba(123, 75, 8, 0.55) 50%,
+      rgba(217, 168, 26, 0.45) 80%,
+      rgba(123, 75, 8, 0.05) 100%
+    );
+
+  --divider-gradient-vertical:
+    linear-gradient(
+      180deg,
+      rgba(123, 75, 8, 0.04) 0%,
+      rgba(217, 168, 26, 0.32) 20%,
+      rgba(123, 75, 8, 0.42) 50%,
+      rgba(217, 168, 26, 0.32) 80%,
+      rgba(123, 75, 8, 0.04) 100%
+    );
+
+  --header-bg-gradient:
+    linear-gradient(
+      180deg,
+      #f8ecd9 0%,
+      #f4e2c7 100%
+    );
+}

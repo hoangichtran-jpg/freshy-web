@@ -1,0 +1,35 @@
+
+/* Edit-only styles. Cards/modal chrome use shared open-shift design. */
+.inventory-edit__reason {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 12px 0 16px;
+}
+.inventory-edit__reason label {
+  font-weight: 600;
+  color: #514239;
+  font-size: 13px;
+}
+.inventory-edit__reason .ant-input {
+  resize: vertical;
+  border-radius: 8px;
+}
+.inventory-edit__reason > span {
+  font-size: 12px;
+  color: #9b5340;
+}
+.inventory-edit__count {
+  margin-right: auto;
+  font-size: 12px;
+  color: #82766c;
+}
+.shift-inventory-edit-modal .shift-inventory-modal__body {
+  padding-bottom: 0;
+}
+@media(max-width:768px) {
+  .inventory-edit__count {
+    width: 100%;
+    text-align: center;
+  }
+}

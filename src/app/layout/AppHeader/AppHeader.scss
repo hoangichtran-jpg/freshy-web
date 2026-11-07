@@ -1,0 +1,531 @@
+.app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  display: grid;
+  grid-template-columns:
+    220px
+    minmax(0, 1fr)
+    auto;
+  align-items: center;
+
+  width: 100%;
+  height: var(--app-header-height);
+
+  padding: 0 28px;
+
+  background: var(--header-bg-gradient);
+
+  border-bottom: 0;
+}
+
+/* ========================================
+   Brand
+======================================== */
+
+.app-header__brand {
+  display: flex;
+  align-items: center;
+
+  min-width: 0;
+}
+
+.app-header__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  text-decoration: none;
+}
+
+.app-header__logo-icon {
+  width: 36px !important;
+  height: 36px !important;
+
+  object-fit: contain;
+}
+
+.app-header__logo-name {
+  width: auto !important;
+  max-width: 128px;
+  height: 30px !important;
+
+  object-fit: contain;
+}
+
+/* ========================================
+   Navigation
+======================================== */
+
+.app-header__navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+  height: 100%;
+}
+
+.app-header__navigation .ant-tabs {
+  height: 100%;
+}
+
+.app-header__navigation .ant-tabs-nav {
+  height: 100%;
+  margin: 0;
+}
+
+.app-header__navigation
+  .ant-tabs-nav::before {
+  display: none;
+}
+
+.app-header__navigation
+  .ant-tabs-nav-wrap {
+  align-items: center;
+}
+
+.app-header__navigation
+  .ant-tabs-nav-list {
+  gap: 28px;
+}
+
+.app-header__navigation
+  .ant-tabs-tab {
+  position: relative;
+
+  margin: 0;
+  padding: 21px 2px 18px;
+
+  border-radius: 0;
+
+  color: var(--text-secondary);
+
+  font-size:
+    var(--font-size-body-lg);
+  font-weight: var(--font-weight-medium);
+
+  transition:
+    color 0.15s ease;
+}
+
+/* bỏ nền pill cũ */
+.app-header__navigation
+  .ant-tabs-tab:hover {
+  color: var(--brand-primary);
+
+  background: transparent;
+}
+
+.app-header__navigation
+  .ant-tabs-tab.ant-tabs-tab-active {
+  background: transparent;
+}
+
+.app-header__navigation
+  .ant-tabs-tab.ant-tabs-tab-active
+  .ant-tabs-tab-btn {
+  color: var(--brand-primary);
+
+  font-weight: var(--font-weight-semibold);
+}
+
+/* underline kiểu mẫu */
+.app-header__navigation
+  .ant-tabs-ink-bar {
+  display: block;
+
+  height: 2px;
+
+  border-radius: var(--radius-pill);
+
+  background: var(--brand-primary);
+}
+
+.app-header__nav-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  white-space: nowrap;
+}
+
+.app-header__nav-label .anticon {
+  color: inherit;
+
+  font-size: 15px;
+}
+
+/* ========================================
+   Right side
+======================================== */
+
+.app-header__actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+
+  min-width: 0;
+}
+
+/* Mobile navigation trigger */
+
+.app-header__mobile-menu.ant-btn {
+  display: none;
+}
+
+/* ========================================
+   Profile pill
+======================================== */
+
+.app-header__profile {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  min-width: 120px;
+  height: 44px;
+
+  padding: 4px 14px 4px 5px;
+
+  border: 1px solid
+    rgba(123, 75, 8, 0.35);
+
+  border-radius: var(--radius-pill);
+
+  background: transparent;
+
+  color: var(--text-secondary);
+
+  cursor: pointer;
+
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease,
+    background 0.15s ease;
+}
+
+.app-header__profile:hover {
+  color: var(--brand-primary);
+
+  border-color: var(--brand-primary);
+
+  background: var(--header-nav-hover);
+}
+
+.app-header__avatar {
+  display: block;
+
+  width: 34px;
+  height: 34px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+}
+
+.app-header__profile-name {
+  max-width: 130px;
+
+  overflow: hidden;
+
+  color: inherit;
+
+  font-size:
+    var(--font-size-body-sm);
+  font-weight: var(--font-weight-semibold);
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ========================================
+   Auth buttons
+======================================== */
+
+.app-header__auth {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.app-header__auth .ant-btn {
+  height: 40px;
+
+  padding: 0 17px;
+
+  border-radius: 9px;
+
+  font-size:
+    var(--font-size-body-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1;
+
+  box-shadow: none;
+
+  transition:
+    background 150ms ease,
+    border-color 150ms ease,
+    color 150ms ease,
+    box-shadow 150ms ease,
+    transform 150ms ease;
+}
+
+.app-header__auth
+.ant-btn-primary {
+  border-color: #6f4308;
+
+  background: #6f4308;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 1px 2px
+    rgba(55, 35, 14, 0.14);
+}
+
+.app-header__auth
+.ant-btn-primary:hover,
+.app-header__auth
+.ant-btn-primary:focus {
+  border-color: #5d3706 !important;
+
+  background: #5d3706 !important;
+
+  color: #ffffff !important;
+}
+
+.app-header__auth
+.ant-btn-primary:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 5px 12px
+    rgba(55, 35, 14, 0.16);
+}
+
+.app-header__auth
+.ant-btn-primary:active {
+  transform: translateY(0);
+
+  border-color: #4e2e05 !important;
+
+  background: #4e2e05 !important;
+
+  box-shadow: none;
+}
+
+.app-header__auth
+.ant-btn-primary:focus-visible {
+  outline:
+    3px solid
+    rgba(111, 67, 8, 0.18);
+
+  outline-offset: 2px;
+}
+
+/* ========================================
+   Responsive
+======================================== */
+
+@media (max-width: 1200px) {
+  .app-header {
+    grid-template-columns:
+      180px
+      minmax(0, 1fr)
+      auto;
+
+    padding: 0 20px;
+  }
+
+  .app-header__navigation
+    .ant-tabs-nav-list {
+    gap: 18px;
+  }
+
+  .app-header__navigation
+    .ant-tabs-tab {
+    font-size:
+    var(--font-size-body);
+  }
+
+  .app-header__profile-name {
+    display: none;
+  }
+
+  .app-header__profile {
+    min-width: 44px;
+
+    padding-right: 5px;
+  }
+}
+
+@media (max-width: 900px) {
+  .app-header {
+    grid-template-columns:
+      auto
+      minmax(0, 1fr)
+      auto;
+  }
+
+  .app-header__logo-name {
+    display: none;
+  }
+
+  .app-header__navigation {
+    overflow: hidden;
+  }
+
+  .app-header__navigation
+    .ant-tabs-nav-list {
+    gap: 12px;
+  }
+}
+
+/* ========================================
+   Mobile header / navigation
+======================================== */
+
+@media (max-width: 768px) {
+  .app-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 0 12px;
+  }
+
+  .app-header__brand {
+    flex: 1 1 auto;
+
+    gap: 6px;
+  }
+
+  .app-header__mobile-menu.ant-btn {
+    display: inline-flex;
+
+    flex: 0 0 40px;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    padding: 0;
+
+    border-radius: 10px;
+
+    color: var(--text-secondary);
+
+    font-size: 19px;
+  }
+
+  .app-header__mobile-menu.ant-btn:hover,
+  .app-header__mobile-menu.ant-btn:focus-visible {
+    background: var(--header-nav-hover) !important;
+
+    color: var(--brand-primary) !important;
+  }
+
+  .app-header__logo-name {
+    display: block;
+
+    max-width: 104px;
+    height: 26px !important;
+  }
+
+  .app-header__navigation {
+    display: none;
+  }
+
+  .app-header__actions {
+    flex: 0 0 auto;
+
+    gap: 0;
+  }
+
+  .app-header__profile {
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+
+    padding: 3px;
+
+    border-radius: 50%;
+  }
+
+  .app-header__avatar {
+    width: 32px;
+    height: 32px;
+  }
+
+  .app-header__auth .ant-btn {
+    height: 38px;
+
+    padding: 0 14px;
+  }
+}
+
+
+.app-header__mobile-drawer
+  .ant-drawer-header {
+  padding: 16px;
+
+  border-bottom: 1px solid var(--border-default);
+}
+
+
+.app-header__mobile-drawer
+  .ant-drawer-title {
+  color: var(--text-primary);
+
+  font-size: var(--font-size-heading);
+  font-weight: var(--font-weight-heading);
+}
+
+
+.app-header__mobile-drawer
+  .ant-drawer-body {
+  padding: 8px 10px 16px;
+}
+
+
+.app-header__mobile-drawer
+  .ant-menu {
+  border-inline-end: 0 !important;
+}
+
+
+.app-header__mobile-drawer
+  .ant-menu-item,
+.app-header__mobile-drawer
+  .ant-menu-submenu-title {
+  min-height: 44px;
+
+  margin-block: 4px;
+
+  border-radius: 10px;
+
+  color: var(--text-secondary);
+
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-medium);
+}
+
+
+.app-header__mobile-drawer
+  .ant-menu-item-selected {
+  background: var(--sidebar-item-active) !important;
+
+  color: var(--brand-primary) !important;
+
+  font-weight: var(--font-weight-semibold);
+}

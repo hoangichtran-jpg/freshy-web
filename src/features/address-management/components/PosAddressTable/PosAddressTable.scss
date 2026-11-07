@@ -1,0 +1,517 @@
+/* ========================================
+   INDEX
+======================================== */
+
+.pos-address-table__index {
+  color:
+    var(
+      --text-placeholder,
+      #9a9087
+    );
+
+  font-size:
+    var(--font-size-caption);
+  font-weight: var(--font-weight-medium);
+
+  font-variant-numeric:
+    tabular-nums;
+}
+
+
+/* ========================================
+   ADDRESS
+======================================== */
+
+.pos-address-table__address {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+
+  gap: 2px;
+}
+
+
+.pos-address-table__address-name {
+  display: block;
+
+  overflow: hidden;
+
+  color:
+    var(
+      --text-primary,
+      #40352d
+    );
+
+  font-size:
+    var(--font-size-body-sm);
+  font-weight: var(--font-weight-semibold);
+
+  line-height:
+    var(--line-height-body-sm);
+
+  text-overflow:
+    ellipsis;
+
+  white-space:
+    nowrap;
+}
+
+
+.pos-address-table__address-meta {
+  color:
+    var(
+      --text-placeholder,
+      #9a9087
+    );
+
+  font-size:
+    var(--font-size-overline);
+  font-weight: var(--font-weight-medium);
+}
+
+
+/* ========================================
+   UNIT
+======================================== */
+
+.pos-address-table__unit {
+  display: inline-flex;
+
+  align-items: center;
+
+  width: fit-content;
+  max-width: 150px;
+  height: 30px;
+
+  padding:
+    0 11px;
+
+  overflow: hidden;
+
+  border: 0;
+
+  border-radius:
+    8px;
+
+  background:
+    #f8f4ef;
+
+  color:
+    #79521a;
+
+  font-size:
+    var(--font-size-meta);
+  font-weight: var(--font-weight-semibold);
+
+  text-overflow:
+    ellipsis;
+
+  white-space:
+    nowrap;
+}
+
+
+/* ========================================
+   SHIPPING FEE
+======================================== */
+
+.pos-address-table__fee {
+  display: inline-flex;
+
+  align-items: center;
+
+  height: 30px;
+
+  padding:
+    0 11px;
+
+  border: 0;
+
+  border-radius:
+    8px;
+
+  background:
+    #f5f0e8;
+
+  color:
+    #73501d;
+
+  font-size:
+    var(--font-size-meta);
+  font-weight: var(--font-weight-bold);
+
+  font-variant-numeric:
+    tabular-nums;
+
+  white-space:
+    nowrap;
+}
+
+
+/* ========================================
+   ORDER LINK
+======================================== */
+
+.pos-address-table__link-status.ant-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: auto;
+  height: 30px;
+
+  padding:
+    0 11px;
+
+  gap: 6px;
+
+  border: 0;
+
+  border-radius:
+    8px;
+
+  background:
+    #eef7ef;
+
+  color:
+    #58775d;
+
+  font-size:
+    var(--font-size-meta);
+  font-weight: var(--font-weight-semibold);
+
+  box-shadow: none;
+
+  cursor: pointer;
+
+  transition:
+    background-color 150ms ease,
+    color 150ms ease,
+    transform 150ms ease;
+}
+
+
+.pos-address-table__link-status.ant-btn
+  .anticon {
+  font-size: 12px;
+}
+
+
+.pos-address-table__link-status.ant-btn:hover,
+.pos-address-table__link-status.ant-btn:focus {
+  border: 0 !important;
+
+  background:
+    #e3f1e5 !important;
+
+  color:
+    #466a4d !important;
+}
+
+
+.pos-address-table__link-status.ant-btn:active {
+  transform:
+    translateY(1px);
+}
+
+
+.pos-address-table__link-status.ant-btn:disabled {
+  border: 0 !important;
+
+  background:
+    #f2f4f1 !important;
+
+  color:
+    #9ca59d !important;
+
+  opacity: 0.7;
+}
+
+
+/* ========================================
+   EMPTY VALUE
+======================================== */
+
+.pos-address-table__empty {
+  color:
+    var(
+      --text-placeholder,
+      #9a9087
+    );
+
+  font-size:
+    var(--font-size-meta);
+}
+
+
+/* ========================================
+   MORE ACTION
+======================================== */
+
+.pos-address-table__more-button.ant-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  min-width: 34px;
+  height: 34px;
+
+  padding: 0;
+
+  border: 0;
+
+  border-radius: 9px;
+
+  background:
+    transparent;
+
+  color:
+    #85796f;
+
+  box-shadow: none;
+
+  font-size: 18px;
+
+  transition:
+    background-color 150ms ease,
+    color 150ms ease;
+}
+
+
+.pos-address-table__more-button.ant-btn:hover,
+.pos-address-table__more-button.ant-btn:focus {
+  background:
+    #f5efe8 !important;
+
+  color:
+    var(
+      --brand-primary,
+      #7b4b08
+    ) !important;
+}
+
+
+.pos-address-table__more-button.ant-btn:disabled {
+  background:
+    transparent !important;
+
+  opacity: 0.45;
+}
+
+
+/* ========================================
+   DROPDOWN
+======================================== */
+
+.pos-address-table__dropdown
+  .ant-dropdown-menu {
+  min-width: 220px;
+
+  padding: 6px;
+
+  border:
+    1px solid
+    #eee6dd;
+
+  border-radius: 12px;
+
+  background: #fff;
+
+  box-shadow:
+    0 12px 32px
+    rgba(
+      63,
+      48,
+      35,
+      0.12
+    );
+}
+
+
+.pos-address-table__dropdown
+  .ant-dropdown-menu-item {
+  min-height: 38px;
+
+  padding:
+    8px 10px;
+
+  border-radius: 8px;
+
+  color:
+    #51473f;
+
+  font-size:
+    var(--font-size-caption);
+  font-weight: var(--font-weight-semibold);
+
+  gap: 8px;
+}
+
+
+.pos-address-table__dropdown
+  .ant-dropdown-menu-item
+  .anticon {
+  color:
+    #83766b;
+
+  font-size: 14px;
+}
+
+
+.pos-address-table__dropdown
+  .ant-dropdown-menu-item:not(
+    .ant-dropdown-menu-item-danger
+  ):hover {
+  background:
+    #f8f3ed;
+
+  color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+}
+
+
+.pos-address-table__dropdown
+  .ant-dropdown-menu-item:not(
+    .ant-dropdown-menu-item-danger
+  ):hover
+  .anticon {
+  color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+}
+
+
+.pos-address-table__dropdown
+  .ant-dropdown-menu-item-danger {
+  color:
+    #b14f47;
+}
+
+
+.pos-address-table__dropdown
+  .ant-dropdown-menu-item-danger
+  .anticon {
+  color:
+    #b14f47;
+}
+
+
+.pos-address-table__dropdown
+  .ant-dropdown-menu-item-danger:hover {
+  background:
+    #fff1ef !important;
+
+  color:
+    #9e4039 !important;
+}
+
+
+.pos-address-table__dropdown
+  .ant-dropdown-menu-item-divider {
+  margin:
+    4px 6px;
+
+  background:
+    #eee8e2;
+}
+
+
+/* ========================================
+   ERROR / EMPTY
+======================================== */
+
+.pos-address-table__state {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 180px;
+
+  gap: 6px;
+
+  text-align: center;
+}
+
+
+.pos-address-table__state-title {
+  color:
+    var(
+      --text-primary,
+      #40352d
+    );
+
+  font-size:
+    var(--font-size-body-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+
+.pos-address-table__state-description {
+  color:
+    var(
+      --text-placeholder,
+      #9a9087
+    );
+
+  font-size:
+    var(--font-size-caption);
+}
+
+
+.pos-address-table__retry.ant-btn {
+  height: 34px;
+
+  margin-top: 8px;
+
+  padding:
+    0 12px;
+
+  border:
+    1px solid
+    #dcc9ad;
+
+  border-radius: 8px;
+
+  background:
+    #faf4eb;
+
+  color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+
+  font-size:
+    var(--font-size-caption);
+  font-weight: var(--font-weight-semibold);
+}
+
+
+.pos-address-table__retry.ant-btn:hover,
+.pos-address-table__retry.ant-btn:focus {
+  border-color:
+    var(
+      --brand-primary,
+      #7b4b08
+    ) !important;
+
+  background:
+    #f4e8d7 !important;
+
+  color:
+    var(
+      --brand-primary,
+      #7b4b08
+    ) !important;
+}

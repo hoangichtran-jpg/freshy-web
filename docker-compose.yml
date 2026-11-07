@@ -1,0 +1,18 @@
+services:
+    freshy:
+        image: ghcr.io/letthai/freshy_manager:prod
+        container_name: freshy_frontend
+        labels:
+            - 'com.centurylinklabs.watchtower.enable=true'
+        restart: always
+        ports:
+            - '8180:80'
+        volumes:
+            - freshy_data:/app
+        networks:
+            - react_network
+volumes:
+    freshy_data:
+networks:
+    react_network:
+        driver: bridge

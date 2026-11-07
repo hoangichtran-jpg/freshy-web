@@ -1,0 +1,304 @@
+/* ========================================
+   PAGE
+======================================== */
+
+.service-quality-page {
+  box-sizing:
+    border-box;
+
+  display:
+    flex;
+
+  width:
+    100%;
+
+  height:
+    100%;
+
+  min-width:
+    0;
+
+  min-height:
+    0;
+
+  flex-direction:
+    column;
+
+  gap:
+    18px;
+
+  padding:
+    24px
+    24px
+    20px;
+
+  overflow:
+    hidden;
+
+  background:
+    var(
+      --bg-app,
+      #f6f3ef
+    );
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.service-quality-page
+  > .management-page-header {
+  width:
+    100%;
+
+  min-width:
+    0;
+
+  flex:
+    0
+    0
+    auto;
+}
+
+
+/* ========================================
+   HEADER ACTIONS
+======================================== */
+
+.service-quality-page__header-actions {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    10px;
+}
+
+
+/* ========================================
+   REFRESH
+======================================== */
+
+.service-quality-page__refresh.ant-btn {
+  display:
+    inline-flex;
+
+  height:
+    44px;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  padding:
+    0
+    14px;
+
+  border:
+    1px solid
+    #ded4c9;
+
+  border-radius:
+    10px;
+
+  background:
+    #ffffff;
+
+  color:
+    #7b4b08;
+
+  font-size:
+    var(--font-size-caption);
+
+  font-weight: var(--font-weight-semibold);
+
+  box-shadow:
+    none;
+
+  transition:
+    border-color
+      140ms ease,
+    background-color
+      140ms ease,
+    color
+      140ms ease,
+    box-shadow
+      140ms ease;
+}
+
+
+.service-quality-page__refresh.ant-btn:hover,
+.service-quality-page__refresh.ant-btn:focus {
+  border-color:
+    #bca68d !important;
+
+  background:
+    #faf7f3 !important;
+
+  color:
+    #7b4b08 !important;
+}
+
+
+.service-quality-page__refresh.ant-btn:focus-visible {
+  outline:
+    none;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(
+      123,
+      75,
+      8,
+      0.1
+    );
+}
+
+
+/* ========================================
+   STATS
+======================================== */
+
+.service-quality-page
+  > .service-quality-stats {
+  flex:
+    0
+    0
+    auto;
+}
+
+
+/* ========================================
+   CONTENT
+
+   Header        fixed
+   Stats         fixed
+   Toolbar       fixed
+   Table header  fixed
+   Rows          scroll
+   Pagination    fixed
+======================================== */
+
+.service-quality-page__content {
+  display:
+    flex;
+
+  width:
+    100%;
+
+  min-width:
+    0;
+
+  min-height:
+    0;
+
+  flex:
+    1
+    1
+    auto;
+
+  flex-direction:
+    column;
+
+  overflow:
+    hidden;
+}
+
+
+.service-quality-page__content
+  > .service-quality-toolbar {
+  flex:
+    0
+    0
+    auto;
+}
+
+
+.service-quality-page__content
+  > .service-quality-table {
+  flex:
+    1
+    1
+    auto;
+
+  min-height:
+    0;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (
+  max-width: 1024px
+) {
+  .service-quality-page {
+    padding:
+      18px;
+  }
+}
+
+
+@media (
+  max-width: 768px
+) {
+  .service-quality-page {
+    height:
+      auto;
+
+    min-height:
+      100%;
+
+    gap:
+      14px;
+
+    padding:
+      14px;
+
+    overflow:
+      visible;
+  }
+
+
+  .service-quality-page__header-actions {
+    width:
+      100%;
+
+    flex-wrap:
+      wrap;
+  }
+
+
+  .service-quality-page__content {
+    min-height:
+      480px;
+
+    overflow:
+      visible;
+  }
+}
+
+
+@media (
+  max-width: 520px
+) {
+  .service-quality-page__header-actions {
+    align-items:
+      stretch;
+
+    flex-direction:
+      column;
+  }
+
+
+  .service-quality-page__refresh.ant-btn {
+    width:
+      100%;
+  }
+}

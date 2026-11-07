@@ -1,0 +1,267 @@
+/* ========================================
+   INDEX
+======================================== */
+
+.registration-requests-table__index {
+  color:
+    var(
+      --text-placeholder,
+      #9a9087
+    );
+
+  font-size:
+    var(--font-size-caption);
+
+  font-variant-numeric:
+    tabular-nums;
+}
+
+
+/* ========================================
+   NAME
+======================================== */
+
+.registration-requests-table__name {
+  display: block;
+
+  overflow: hidden;
+
+  color:
+    var(
+      --text-primary,
+      #40352d
+    );
+
+  font-size:
+    var(--font-size-body-sm);
+  font-weight: var(--font-weight-semibold);
+
+  text-overflow:
+    ellipsis;
+
+  white-space:
+    nowrap;
+}
+
+
+/* ========================================
+   PHONE
+======================================== */
+
+.registration-requests-table__phone {
+  display: block;
+
+  color:
+    #62574f;
+
+  font-size:
+    var(--font-size-caption);
+  font-weight: var(--font-weight-medium);
+
+  font-variant-numeric:
+    tabular-nums;
+
+  white-space:
+    nowrap;
+}
+
+
+/* ========================================
+   ADDRESS
+======================================== */
+
+.registration-requests-table__address {
+  display: block;
+
+  overflow: hidden;
+
+  color:
+    var(
+      --text-secondary,
+      #746960
+    );
+
+  font-size:
+    var(--font-size-caption);
+
+  text-overflow:
+    ellipsis;
+
+  white-space:
+    nowrap;
+}
+
+
+/* ========================================
+   ACTIONS
+======================================== */
+
+.registration-requests-table__actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  white-space:
+    nowrap;
+}
+
+
+.registration-requests-table__actions
+  .ant-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  height: 34px;
+
+  padding:
+    0 10px;
+
+  border-radius: 8px;
+
+  font-size:
+    var(--font-size-meta);
+  font-weight: var(--font-weight-semibold);
+
+  box-shadow: none;
+
+  transition:
+    border-color
+      0.15s ease,
+    background
+      0.15s ease,
+    color
+      0.15s ease;
+}
+
+
+/* ========================================
+   APPROVE
+   Freshy brand action
+======================================== */
+
+.registration-requests-table__approve.ant-btn {
+  border:
+    1px solid
+    #dcc9ad;
+
+  background:
+    #faf4eb;
+
+  color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+}
+
+
+.registration-requests-table__approve.ant-btn:hover,
+.registration-requests-table__approve.ant-btn:focus {
+  border-color:
+    var(
+      --brand-primary,
+      #7b4b08
+    ) !important;
+
+  background:
+    #f4e8d7 !important;
+
+  color:
+    var(
+      --brand-primary,
+      #7b4b08
+    ) !important;
+}
+
+
+/* ========================================
+   REJECT
+======================================== */
+
+.registration-requests-table__reject.ant-btn {
+  border:
+    1px solid
+    #e8c8c4;
+
+  background:
+    #fff5f3;
+
+  color:
+    #ad554d;
+}
+
+
+.registration-requests-table__reject.ant-btn:hover,
+.registration-requests-table__reject.ant-btn:focus {
+  border-color:
+    #dfa8a2 !important;
+
+  background:
+    #fcede9 !important;
+
+  color:
+    #9b4038 !important;
+}
+
+
+/* ========================================
+   DISABLED
+======================================== */
+
+.registration-requests-table__actions
+  .ant-btn:disabled {
+  border-color:
+    #e4ddd7 !important;
+
+  background:
+    #f8f6f4 !important;
+
+  color:
+    #b5aaa2 !important;
+}
+
+
+/* ========================================
+   EMPTY STATE
+======================================== */
+
+.registration-requests-table
+  .ant-empty {
+  margin:
+    48px 0;
+}
+
+
+.registration-requests-table
+  .ant-empty-description {
+  color:
+    var(
+      --text-muted,
+      #938980
+    );
+
+  font-size:
+    var(--font-size-caption);
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+  .registration-requests-table__actions {
+    gap: 5px;
+  }
+
+
+  .registration-requests-table__actions
+    .ant-btn {
+    padding:
+      0 8px;
+  }
+}

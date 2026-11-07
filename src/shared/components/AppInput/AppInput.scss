@@ -1,0 +1,286 @@
+/* ========================================
+   Shared input foundation
+======================================== */
+
+.app-input.ant-input,
+.app-input.ant-input-affix-wrapper,
+.app-textarea.ant-input {
+  width: 100%;
+
+  border:
+    1px solid
+    var(
+      --border-default,
+      #e5e7eb
+    );
+
+  border-radius:
+    var(
+      --radius-md,
+      8px
+    );
+
+  background:
+    var(
+      --bg-surface,
+      #fff
+    );
+
+  color:
+    var(
+      --text-primary,
+      #1f2937
+    );
+
+  font-family: inherit;
+
+  font-size:
+    var(
+      --font-size-body-sm
+    );
+
+  font-weight:
+    var(
+      --font-weight-regular
+    );
+
+  line-height:
+    var(
+      --line-height-body-sm
+    );
+
+  box-shadow: none;
+
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    background-color 0.15s ease;
+}
+
+
+/* ========================================
+   Single-line sizes
+======================================== */
+
+.app-input--sm.ant-input,
+.app-input--sm.ant-input-affix-wrapper {
+  min-height: 36px;
+}
+
+
+.app-input--md.ant-input,
+.app-input--md.ant-input-affix-wrapper {
+  min-height: 42px;
+}
+
+
+.app-input--lg.ant-input,
+.app-input--lg.ant-input-affix-wrapper {
+  min-height: 44px;
+}
+
+
+.app-input.ant-input {
+  padding:
+    0 12px;
+}
+
+
+.app-input.ant-input-affix-wrapper {
+  padding:
+    0 12px;
+}
+
+
+.app-input.ant-input-affix-wrapper
+  > .ant-input {
+  min-height: 0;
+
+  padding: 0;
+
+  border: 0;
+
+  border-radius: 0;
+
+  background: transparent;
+
+  color: inherit;
+
+  font: inherit;
+
+  box-shadow: none;
+}
+
+
+/* ========================================
+   Textarea
+======================================== */
+
+.app-textarea.ant-input {
+  padding:
+    10px 12px;
+
+  resize: vertical;
+}
+
+
+/* ========================================
+   Placeholder
+======================================== */
+
+.app-input.ant-input::placeholder,
+.app-input.ant-input-affix-wrapper
+  .ant-input::placeholder,
+.app-textarea.ant-input::placeholder {
+  color:
+    var(
+      --text-placeholder,
+      #9ca3af
+    );
+}
+
+
+/* ========================================
+   Hover / focus
+======================================== */
+
+.app-input.ant-input:not(
+    :disabled
+  ):hover,
+.app-input.ant-input-affix-wrapper:not(
+    .ant-input-affix-wrapper-disabled
+  ):hover,
+.app-textarea.ant-input:not(
+    :disabled
+  ):hover {
+  border-color:
+    var(
+      --brand-primary-500,
+      #9d6610
+    );
+}
+
+
+.app-input.ant-input:focus,
+.app-input.ant-input-focused,
+.app-input.ant-input-affix-wrapper-focused,
+.app-input.ant-input-affix-wrapper:focus-within,
+.app-textarea.ant-input:focus,
+.app-textarea.ant-input-focused {
+  border-color:
+    var(
+      --brand-primary,
+      #7b4b08
+    );
+
+  outline: none;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(
+      123,
+      75,
+      8,
+      0.08
+    );
+}
+
+
+/* ========================================
+   Error
+======================================== */
+
+.app-input.ant-input-status-error,
+.app-input.ant-input-affix-wrapper-status-error,
+.app-textarea.ant-input-status-error {
+  border-color:
+    var(
+      --color-error,
+      #dc2626
+    );
+}
+
+
+.app-input.ant-input-status-error:focus,
+.app-input.ant-input-affix-wrapper-status-error.ant-input-affix-wrapper-focused,
+.app-textarea.ant-input-status-error:focus {
+  border-color:
+    var(
+      --color-error,
+      #dc2626
+    );
+
+  box-shadow:
+    0 0 0 3px
+    rgba(
+      220,
+      38,
+      38,
+      0.1
+    );
+}
+
+
+/* ========================================
+   Disabled
+======================================== */
+
+.app-input.ant-input:disabled,
+.app-input.ant-input-disabled,
+.app-input.ant-input-affix-wrapper-disabled,
+.app-textarea.ant-input:disabled,
+.app-textarea.ant-input-disabled {
+  border-color:
+    var(
+      --border-default,
+      #e5e7eb
+    );
+
+  background:
+    var(
+      --bg-muted,
+      #f8fafc
+    );
+
+  color:
+    var(
+      --text-muted,
+      #6b7280
+    );
+
+  cursor: not-allowed;
+
+  box-shadow: none;
+}
+
+
+/* ========================================
+   Affix / clear / password icons
+======================================== */
+
+.app-input.ant-input-affix-wrapper
+  .ant-input-prefix,
+.app-input.ant-input-affix-wrapper
+  .ant-input-suffix,
+.app-input.ant-input-affix-wrapper
+  .ant-input-clear-icon,
+.app-input.ant-input-affix-wrapper
+  .ant-input-password-icon {
+  color:
+    var(
+      --text-placeholder,
+      #9ca3af
+    );
+}
+
+
+.app-input.ant-input-affix-wrapper
+  .ant-input-clear-icon:hover,
+.app-input.ant-input-affix-wrapper
+  .ant-input-password-icon:hover {
+  color:
+    var(
+      --text-secondary,
+      #4b5563
+    );
+}
